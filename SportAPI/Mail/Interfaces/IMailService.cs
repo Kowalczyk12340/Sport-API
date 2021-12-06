@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using SportAPI.Mail.Models;
 using System.Threading.Tasks;
 
 namespace SportAPI.Mail.Interfaces
 {
-  interface IMailService
+  public interface IMailService
   {
+    Task<bool> SendAsync(Email mail);
   }
 }
