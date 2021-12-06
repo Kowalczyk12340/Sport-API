@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Models
 {
-  public class CategorySport
+  public class CategorySport : DomainEntity
   {
     public int CategorySportId { get; set; }
     public string CategorySportName { get; set; }

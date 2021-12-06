@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SportAPI</name>
+    </assembly>
+    <members>
+        <member name="P:SportAPI.Sport.Commands.ApproveIdeaCommand.IdeaId">
+            <summary>
+            ID of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.ApproveIdeaCommand.ImplementingFirstPersonId">
+            <summary>
+            ID of the first person implementing the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.ApproveIdeaCommand.ImplementingSecondPersonId">
+            <summary>
+            ID of the second person implementing the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.ApproveIdeaCommand.ImplementationDate">
+            <summary>
+            Projected date of idea implementation
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.CreationTime">
+            <summary>
+            Timestamp of idea creation
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.SiteId">
+            <summary>
+            ID of the site where the idea originates from
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.AuthorIfsNo">
+            <summary>
+            IFS number of idea's author
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.CoAuthorIfsNo">
+            <summary>
+            IFS number of idea's co-author
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.DepartmentId">
+            <summary>
+            ID of the department being subject of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.OriginDepartmentId">
+            <summary>
+            ID of the department where the idea originates from<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.CustomerId">
+            <summary>
+            ID of the customer being subject of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.Title">
+            <summary>
+            Title of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.Description">
+            <summary>
+            Description of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.Solution">
+            <summary>
+            Proposed solution of solving the idea's problem<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.Benefits">
+            <summary>
+            Possible benefits of implementing the idea<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.EstimatedSavings">
+            <summary>
+            How much money will the company save by implementing the idea<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.CreateIdeaCommand.SelectedCategories">
+            <summary>
+            IDs of selected categories
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.IdeaId">
+            <summary>
+            ID of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.DepartmentId">
+            <summary>
+            ID of the department being subject of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.OriginDepartmentId">
+            <summary>
+            ID of the department where the idea originates from<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.CustomerId">
+            <summary>
+            ID of the customer being subject of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.Title">
+            <summary>
+            Title of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.Description">
+            <summary>
+            Description of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.Solution">
+            <summary>
+            Proposed solution of solving the idea's problem<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.Benefits">
+            <summary>
+            Possible benefits of implementing the idea<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.EstimatedSavings">
+            <summary>
+            How much money will the company save by implementing the idea<br />
+            This field is required for some sites, specified by MandatoryFields column in the database
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.SelectedCategories">
+            <summary>
+            IDs of selected categories
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.ImplementationDate">
+            <summary>
+            Projected date of idea implementation<br />
+            This field can be edited only if idea's status is Activity
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.ImplementingFirstPersonId">
+            <summary>
+            ID of the first person implementing the idea<br />
+            This field can be edited only if idea's status is Activity
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.ImplementingSecondPersonId">
+            <summary>
+            ID of the second person implementing the idea<br />
+            This field can be edited only if idea's status is Activity
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.EditIdeaCommand.Reason">
+            <summary>
+            Reason of idea rejection<br />
+            This field can be edited only if idea's status is Rejected
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.RejectIdeaCommand.IdeaId">
+            <summary>
+            ID of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.RejectIdeaCommand.RejectingPersonId">
+            <summary>
+            ID of the person rejecting the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.RejectIdeaCommand.Reason">
+            <summary>
+            Reason of idea rejection
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.SuccessIdeaCommand.IdeaId">
+            <summary>
+            ID of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.SuccessIdeaCommand.AfterImage">
+            <summary>
+            Image of idea's subject after implementation
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.SuccessIdeaCommand.RealSavings">
+            <summary>
+            Actual savings after idea's implementation
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.UploadBeforeImageCommand.IdeaId">
+            <summary>
+            ID of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Commands.UploadBeforeImageCommand.BeforeImage">
+            <summary>
+            Image of idea's subject before implementation
+            </summary>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.UploadBeforeImage(System.Int64,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Uploads before image of an idea
+            </summary>
+            <param name="id">ID of the idea</param>
+            <param name="file">Before image of the idea</param>
+            <returns>No content</returns>
+            <response code="204">Idea exists and image has been successfully uploaded</response>
+            <response code="400">Idea exists, but given file is invalid - refer to the error message</response>
+            <response code="404">Idea does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.GetSport(SportAPI.Sport.Queries.GetSportQuery,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.ApiBehaviorOptions})">
+            <summary>
+            Gets list of Sport with basic information
+            </summary>
+            <param name="query">Query with parameters</param>
+            <returns>List of Sport with basic information</returns>
+            <response code="200">Query has been successfully executed</response>
+            <response code="400">Given parameters were invalid - refer to the error message</response>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.GetIdea(System.Int64)">
+            <summary>
+            Gets one idea with all details
+            </summary>
+            <param name="id">ID of the idea</param>
+            <returns>Full idea</returns>
+            <response code="200">Idea exists and has been successfully retrieved</response>
+            <response code="404">Idea does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.EditIdea(System.Int64,SportAPI.Sport.Commands.EditIdeaCommand,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.ApiBehaviorOptions})">
+            <summary>
+            Modifies the given idea
+            </summary>
+            <param name="id">ID of the idea</param>
+            <param name="command">Command parameters</param>
+            <param name="apiOptions">API options</param>
+            <returns>Full idea</returns>
+            <response code="200">Idea exists and has been successfully modified</response>
+            <response code="400">Idea exists, but given parameters were invalid - refer to the error message</response>
+            <response code="404">Idea does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.CreateIdea(SportAPI.Sport.Commands.CreateIdeaCommand,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.ApiBehaviorOptions})">
+            <summary>
+            Creates a new idea
+            </summary>
+            <param name="command">Command parameters</param>
+            <param name="apiOptions">API options</param>
+            <returns>The newly created idea</returns>
+            <response code="201">Idea has been successfully created</response>
+            <response code="400">Given parameters were invalid - refer to the error message</response>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.ApproveIdea(System.Int64,SportAPI.Sport.Commands.ApproveIdeaCommand,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.ApiBehaviorOptions})">
+            <summary>
+            Approves an idea (changes its status to Activity) and distributes points
+            </summary>
+            <param name="id">ID of the idea</param>
+            <param name="command">Command parameters</param>
+            <param name="apiOptions">API options</param>
+            <returns>No content</returns>
+            <response code="204">Idea exists and has been successfully approved</response>
+            <response code="400">Idea exists, but given parameters were invalid - refer to the error message</response>
+            <response code="404">Idea does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.RejectIdea(System.Int64,SportAPI.Sport.Commands.RejectIdeaCommand,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.ApiBehaviorOptions})">
+            <summary>
+            Rejects an idea (changes its status to Rejected)
+            </summary>
+            <param name="id">ID of the idea</param>
+            <param name="command">Command parameters</param>
+            <param name="apiOptions">API options</param>
+            <returns>No content</returns>
+            <response code="204">Idea exists and has been successfully rejected</response>
+            <response code="400">Idea exists, but given parameters were invalid - refer to the error message</response>
+            <response code="404">Idea does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sport.Controllers.SportController.SuccessIdea(System.Int64,SportAPI.Sport.Commands.SuccessIdeaCommand,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.ApiBehaviorOptions})">
+            <summary>
+            Closes an idea (changes its status to Success) and distributes points
+            </summary>
+            <param name="id">ID of the idea</param>
+            <param name="command">Command parameters</param>
+            <param name="apiOptions">API options</param>
+            <returns>No content</returns>
+            <response code="204">Idea exists and has been successfully closed</response>
+            <response code="400">Idea exists, but given parameters were invalid - refer to the error message</response>
+            <response code="404">Idea does not exist</response>
+        </member>
+        <member name="F:SportAPI.Sport.Status.Idea">
+            <summary>
+            Idea - Idea created, not yet approved nor rejected
+            </summary>
+            <value>0</value>
+        </member>
+        <member name="F:SportAPI.Sport.Status.Activity">
+            <summary>
+            Activity - Idea approved, currently being implemented
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:SportAPI.Sport.Status.Success">
+            <summary>
+            Success - Idea implemented and closed
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:SportAPI.Sport.Status.Rejected">
+            <summary>
+            Rejected - Idea rejected, will not be implemented
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="F:SportAPI.Sport.PromotionStatus.None">
+            <summary>
+            None - Idea hasn't been proposed for a month or year reward
+            </summary>
+            <value>0</value>
+        </member>
+        <member name="F:SportAPI.Sport.PromotionStatus.MonthProposed">
+            <summary>
+            MonthProposed - Idea has been proposed for a month reward
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:SportAPI.Sport.PromotionStatus.MonthWinner">
+            <summary>
+            MonthWinner - Idea has won the month reward
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:SportAPI.Sport.PromotionStatus.YearWinner">
+            <summary>
+            YearWinner - Idea has won the year reward
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="P:SportAPI.Sport.Queries.GetIdeaQuery.IdeaId">
+            <summary>
+            ID of the idea
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Queries.GetSportQuery.SiteId">
+            <summary>
+            Only Sport which originate from the site under this ID will be returned
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Queries.GetSportQuery.After">
+            <summary>
+            Only Sport created after this timestamp will be returned
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Queries.GetSportQuery.Groups">
+            <summary>
+            Only Sport having these group symbols will be returned
+            </summary>
+        </member>
+        <member name="P:SportAPI.Sport.Queries.GetSportQuery.Statuses">
+            <summary>
+            Only Sport having these statuses will be returned
+            </summary>
+        </member>
+        <member name="T:SportAPI.Infrastructure.Middleware.SportAPIDbAuthMiddleware">
+            <summary>
+            Middleware responsible for DBHash authorization method.
+            This method uses user's domain login and a hash generated from string consisting of user's ID and last name
+            concatenated without any space. 
+            Data has to be passed in DBHash header.
+            Example: sietoda 66d792c29a56938bce1343760ff0063f
+            </summary>
+        </member>
+        <member name="M:SportAPI.Infrastructure.Middleware.SportAPIDbAuthMiddleware.CreateHash(System.Byte[])">
+            <summary>
+            Generates hash from given string using MD5 algorithm.
+            </summary>
+            <param name="input">String to generate the hash from</param>
+            <returns></returns>
+        </member>
+        <member name="T:SportAPI.Infrastructure.Middleware.SportAPIIfsMiddleware">
+            <summary>
+            Middleware responsible for IFS authorization method.
+            This method uses user's IFS number and site name.
+            Data has to be passed in IFS header.
+            Example: 6789 Parnu
+            </summary>
+        </member>
+        <member name="T:SportAPI.Infrastructure.Middleware.SportAPITokenAuthMiddleware">
+            <summary>
+            Middleware responsible for Token authorization method.
+            This method uses a GUID token generated by developers.
+            Data has to be passed in Authorization header.
+            Example: Token 75e0d16c-c920-47c2-b701-aa140105085d
+            </summary>
+        </member>
+        <member name="F:SportAPI.Infrastructure.Persistance.Models.VoucherStatus.Created">
+            <summary>
+            Created - Voucher ordered
+            </summary>
+            <value>0</value>
+        </member>
+        <member name="F:SportAPI.Infrastructure.Persistance.Models.VoucherStatus.Pending">
+            <summary>
+            Pending - Voucher waits for realization
+            </summary>
+            <value>1</value>
+        </member>
+        <member name="F:SportAPI.Infrastructure.Persistance.Models.VoucherStatus.Ready">
+            <summary>
+            Ready - Voucher is ready to collect
+            </summary>
+            <value>2</value>
+        </member>
+        <member name="F:SportAPI.Infrastructure.Persistance.Models.VoucherStatus.Closed">
+            <summary>
+            Closed - Voucher collected
+            </summary>
+            <value>3</value>
+        </member>
+        <member name="M:SportAPI.Sites.Controllers.SitesController.GetSites">
+            <summary>
+            Gets list of sites with basic information
+            </summary>
+            <returns>List of sites with basic information</returns>
+            <response code="200">Query has been successfully executed</response>
+        </member>
+        <member name="M:SportAPI.Sites.Controllers.SitesController.GetCategories(System.Int64)">
+            <summary>
+            Gets list of categories with basic information
+            </summary>
+            <param name="siteId">ID of the site</param>
+            <returns>List of categories with basic information</returns>
+            <response code="200">Site exists and its categories have been successfully returned</response>
+            <response code="404">Site does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sites.Controllers.SitesController.GetDepartments(System.Int64)">
+            <summary>
+            Gets list of departments with basic information
+            </summary>
+            <param name="siteId">ID of the site</param>
+            <returns>List of departments with basic information</returns>
+            <response code="200">Site exists and its departments have been successfully returned</response>
+            <response code="404">Site does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sites.Controllers.SitesController.GetCustomers(System.Int64)">
+            <summary>
+            Gets list of customers with basic information
+            </summary>
+            <param name="siteId">ID of the site</param>
+            <returns>List of customers with basic information</returns>
+            <response code="200">Site exists and its customers have been successfully returned</response>
+            <response code="404">Site does not exist</response>
+        </member>
+        <member name="M:SportAPI.Sites.Controllers.SitesController.GetVouchers(System.Int64,SportAPI.Sites.Queries.GetVouchersQuery,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.ApiBehaviorOptions})">
+            <summary>
+            Gets list of vouchers with basic information
+            </summary>
+            <param name="siteId">ID of the site</param>
+            <param name="query">Query with parameters</param>
+            <param name="apiOptions">API options</param>
+            <returns>List of vouchers with basic information</returns>
+            <response code="200">Site exists and its vouchers have been successfully returned</response>
+            <response code="400">Site exists, but it does not use vouchers or given parameters were invalid - refer to the error message</response>
+            <response code="404">Site does not exist</response>
+        </member>
+    </members>
+</doc>

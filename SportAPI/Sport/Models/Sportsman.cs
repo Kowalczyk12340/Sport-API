@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Models
 {
-  public class Sportsman
+  public class Sportsman : DomainEntity
   {
     public int SportsmanId { get; set; }
     public int CategorySportsmanId { get; set; }
@@ -16,6 +16,6 @@ namespace SportAPI.Sport.Models
     public string Discipline { get; set; }
     public BetterFoot Foot { get; set; }
     public string Description { get; set; }
-    public virtual Sport Sport { get; set; }
+    public virtual SportDiscipline Sport { get; set; }
   }
 }

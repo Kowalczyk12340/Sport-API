@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Models
 {
-  public class Journalist
+  public class Journalist : DomainEntity
   {
     public int JournalistId { get; set; }
+    public int DepartmentId { get; set; }
     public int Name { get; set; }
     public int Surname { get; set; }
     public int Position { get; set; }

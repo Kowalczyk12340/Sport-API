@@ -28,14 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Middlewares\" />
-    <Folder Include="Sport\Controllers\" />
-    <Folder Include="Sport\Data\" />
-    <Folder Include="Sport\Exceptions\" />
-    <Folder Include="Sport\Models\" />
-    <Folder Include="Sport\Services\" />
-    <Folder Include="Sport\Seeders\" />
-    <Folder Include="Sport\Profiles\" />
+    <Folder Include="Sport\Models\Dtos\Create\" />
+    <Folder Include="Sport\Models\Dtos\Update\" />
   </ItemGroup>
 
 </Project>

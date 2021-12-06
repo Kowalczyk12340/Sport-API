@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -15,6 +15,13 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
     <PackageReference Include="Quartz.AspNetCore" Version="3.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ActiveDirectory\" />
+    <Folder Include="Common\" />
+    <Folder Include="UseCases\" />
+    <Folder Include="Sports\" />
   </ItemGroup>
 
 </Project>

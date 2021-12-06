@@ -1,9 +1,11 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
+using SportAPI.Sport.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Data
@@ -12,7 +14,7 @@ namespace SportAPI.Sport.Data
   {
     private readonly IMediator _mediator;
 
-    public SportDbContext(DbContextOptions<KaizenContext> options, IMediator mediator) : base(options)
+    public SportDbContext(DbContextOptions<SportDbContext> options, IMediator mediator) : base(options)
     {
       _mediator = mediator;
     }
@@ -47,34 +49,18 @@ namespace SportAPI.Sport.Data
       modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
-    public DbSet<CartItem> CartItems { get; set; }
-    public DbSet<AuthToken> AuthTokens { get; set; }
-    public DbSet<Category> Categories { get; set; }
+    public DbSet<CategorySport> CategorySports { get; set; }
+    public DbSet<AuthTokenConfiguration> AuthTokens { get; set; }
+    public DbSet<CategorySportsman> CategorySportsmans { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Department> Departments { get; set; }
-    public DbSet<GlobalCategory> GlobalCategories { get; set; }
-    public DbSet<Idea> Ideas { get; set; }
-    public DbSet<SelectedCategory> IdeaCategory { get; set; }
-    public DbSet<IdeaImages> Images { get; set; }
-    public DbSet<KaizenUser> KaizenUsers { get; set; }
-    public DbSet<KaizenUserUserGroup> KaizenUserUserGroup { get; set; }
-    public DbSet<NavAccessRights> NavAccessRights { get; set; }
-    public DbSet<NavGroup> NavGroup { get; set; }
-    public DbSet<NavItem> NavItem { get; set; }
-    public DbSet<NavTab> NavTab { get; set; }
-    public DbSet<NotificationSettings> NotificationSettings { get; set; }
-    public DbSet<PaymentItem> PaymentItem { get; set; }
-    public DbSet<PriceDefinition> PriceDefinition { get; set; }
-    public DbSet<RedeemingVoucher> RedeemingVoucher { get; set; }
-    public DbSet<ShopDefinition> ShopDefinition { get; set; }
-    public DbSet<Site> Site { get; set; }
-    public DbSet<StatResult> StatResult { get; set; }
-    public DbSet<UserGroup> UserGroup { get; set; }
-    public DbSet<VoucherDefinition> VoucherDefinition { get; set; }
-    public DbSet<WeChatIdeas> WeChatIdeasLog { get; set; }
-    public DbSet<PointDefinition> PointDefinitions { get; set; }
-    public DbSet<Transaction> Transactions { get; set; }
-    public DbSet<VoucherRedeem> VoucherRedeem { get; set; }
+    public DbSet<Information> Informations { get; set; }
+    public DbSet<Journalist> Journalists { get; set; }
+    public DbSet<SportDiscipline> Disciplines { get; set; }
+    public DbSet<Sportsman> Sportsmen { get; set; }
+    public DbSet<SportSportsman> SportSportsmen { get; set; }
+    public DbSet<StatusInformation> StatusInformations { get; set; }
+    public DbSet<User> Users { get; set; }
   }
 
   public static class SportDbContextExtensions
