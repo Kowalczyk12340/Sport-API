@@ -94,17 +94,17 @@ namespace SportAPI
       services.AddScoped<StatusInformationSeeder>();
       services.AddScoped<UserSeeder>();
       services.AddAutoMapper(this.GetType().Assembly);
-      //services.AddScoped<ICategorySportService, CategorySportService>();
-      //services.AddScoped<ICategorySportsmanService, CategorySportsmanService>();
-      //services.AddScoped<ICustomerService, CustomerService>();
-      //services.AddScoped<IDepartmentService, DepartmentService>();
-      //services.AddScoped<IInformationService, InformationService>();
-      //services.AddScoped<IJouralistService, JournalistService>();
-      //services.AddScoped<ISportDisciplineService, SportDisciplineService>();
-      //services.AddScoped<ISportsmanService, SportsmanService>();
-      //services.AddScoped<ISportSportsmanService, SportSportsmanService>();
-      //services.AddScoped<IStatusInformationService, InformationService>();
-      //services.AddScoped<IUserService, UserService>();
+      services.AddScoped<ICategorySportService, CategorySportService>();
+      services.AddScoped<ICategorySportsmanService, CategorySportsmanService>();
+      services.AddScoped<ICustomerService, CustomerService>();
+      services.AddScoped<IDepartmentService, DepartmentService>();
+      services.AddScoped<IInformationService, InformationService>();
+      services.AddScoped<IJournalistService, JournalistService>();
+      services.AddScoped<ISportDisciplineService, SportDisciplineService>();
+      services.AddScoped<ISportsmanService, SportsmanService>();
+      services.AddScoped<ISportSportsmanService, SportSportsmanService>();
+      services.AddScoped<IStatusInformationService, StatusInformationService>();
+      services.AddScoped<IUserService, UserService>();
       services.AddScoped<ErrorHandlingMiddleware>();
       services.AddScoped<RequestTimeMiddleware>();
     }
