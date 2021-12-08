@@ -31,6 +31,10 @@ namespace SportAPI.Sport.Configurations
       .IsRequired()
       .HasMaxLength(16);
 
+      builder.Property(e => e.Nationality)
+      .IsRequired()
+      .HasMaxLength(40);
+
       builder.Property(e => e.Position)
         .IsRequired()
         .HasMaxLength(115);

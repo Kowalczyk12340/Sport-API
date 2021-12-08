@@ -77,3 +77,4 @@ C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.dll
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\ref\SportAPI.dll
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.pdb
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.genruntimeconfig.cache
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\bin\Debug\net5.0\BCrypt.Net-Next.dll

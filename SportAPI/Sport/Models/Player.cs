@@ -12,6 +12,7 @@ namespace SportAPI.Sport.Models
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Pesel { get; set; }
+    public string Nationality { get; set; }
     public string PhoneNumber { get; set; }
     public string EmailAddress { get; set; }
     public BetterFoot BetterFoot { get; set; }
