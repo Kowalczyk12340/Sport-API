@@ -8,12 +8,12 @@ namespace SportAPI.Sport.Models
   public class Department : DomainEntity
   {
     public int DepartmentId { get; set; }
-    public string Name { get; set; }
+    public string DepartmentName { get; set; }
     public long ParentId { get; set; }
     public bool IsActive { get; set; }
     public string Description { get; set; }
     public long? GroupId { get; set; }
-    public virtual Journalist Journalist { get; set; }
-    public virtual User User { get; set; }
+    public virtual IEnumerable<Journalist> Journalists { get; set; }
+    public virtual IEnumerable<User> Users { get; set; }
   }
 }

@@ -50,7 +50,7 @@ namespace SportAPI.Sport.Data
     }
 
     public DbSet<CategorySport> CategorySports { get; set; }
-    public DbSet<AuthTokenConfiguration> AuthTokens { get; set; }
+    public DbSet<AuthToken> AuthTokens { get; set; }
     public DbSet<CategorySportsman> CategorySportsmans { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Department> Departments { get; set; }

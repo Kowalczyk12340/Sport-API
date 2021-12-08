@@ -19,5 +19,6 @@ namespace SportAPI.Sport.Models
     public string Post { get; set; }
     public string PostalCode { get; set; }
     public string Interestings { get; set; }
+    public bool IsActive { get; set; }
   }
 }

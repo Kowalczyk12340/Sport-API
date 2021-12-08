@@ -12,5 +12,8 @@ namespace SportAPI.Sport.Models
     public int SportsmanId { get; set; }
     public int Amount { get; set; }
     public double Worth { get; set; }
+
+    public virtual IEnumerable<SportDiscipline> Sports { get; set; }
+    public virtual IEnumerable<Sportsman> Sportsmans { get; set; }
   }
 }

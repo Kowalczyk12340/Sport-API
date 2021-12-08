@@ -7,8 +7,7 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class DepartmentDto
   {
-    public int DepartmentId { get; set; }
-    public string Name { get; set; }
+    public string DepartmentName { get; set; }
     public long ParentId { get; set; }
     public bool IsActive { get; set; }
     public string Description { get; set; }

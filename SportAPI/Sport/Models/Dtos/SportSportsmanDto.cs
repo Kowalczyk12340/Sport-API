@@ -7,7 +7,6 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class SportSportsmanDto
   {
-    public int SportSportsmanId { get; set; }
     public int SportId { get; set; }
     public int SportsmanId { get; set; }
     public int Amount { get; set; }

@@ -16,6 +16,6 @@ namespace SportAPI.Sport.Models
     public string Discipline { get; set; }
     public BetterFoot Foot { get; set; }
     public string Description { get; set; }
-    public virtual SportDiscipline Sport { get; set; }
+    public virtual IEnumerable<SportDiscipline> Sports { get; set; }
   }
 }

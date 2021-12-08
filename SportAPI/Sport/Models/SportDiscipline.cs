@@ -12,6 +12,6 @@ namespace SportAPI.Sport.Models
     public int CategorySportId { get; set; }
     public string SportName { get; set; }
     public string Description { get; set; }
-    public virtual Sportsman Sportsman { get; set; }
+    public virtual IEnumerable<Sportsman> Sportsmans { get; set; }
   }
 }

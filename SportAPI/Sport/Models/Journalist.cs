@@ -9,13 +9,12 @@ namespace SportAPI.Sport.Models
   {
     public int JournalistId { get; set; }
     public int DepartmentId { get; set; }
-    public int Name { get; set; }
-    public int Surname { get; set; }
-    public int Position { get; set; }
-    public bool IsDriver { get; set; }
+    public string Name { get; set; }
+    public string Surname { get; set; }
+    public string Position { get; set; }
     public string PhoneNumber { get; set; }
     public string EmailAddress { get; set; }
     public string Seniority { get; set; }
-    public string Interestings { get; set; }
+    public IEnumerable<Information> Informations { get; set; }
   }
 }

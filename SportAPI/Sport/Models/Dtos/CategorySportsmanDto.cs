@@ -7,7 +7,6 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class CategorySportsmanDto
   {
-    public int CategorySportsmanId { get; set; }
     public string CategorySportsmanName { get; set; }  
   }
 }

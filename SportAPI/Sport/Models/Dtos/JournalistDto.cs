@@ -7,7 +7,6 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class JournalistDto
   {
-    public int JournalistId { get; set; }
     public int DepartmentId { get; set; }
     public int Name { get; set; }
     public int Surname { get; set; }
