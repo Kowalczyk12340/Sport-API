@@ -12,6 +12,7 @@ namespace SportAPI.Sport.Models
     public int InfomationId { get; set; }
     public bool IsActive { get; set; }
     public string Login { get; set; }
-    public int Password { get; set; }
+    public string Password { get; set; }
+    public virtual SportClub SportClub { get; set; }
   }
 }

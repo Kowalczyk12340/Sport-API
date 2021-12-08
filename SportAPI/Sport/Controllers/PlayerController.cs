@@ -8,8 +8,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class UserController : ControllerBase
+  public class PlayerController : ControllerBase
   {
-
   }
 }

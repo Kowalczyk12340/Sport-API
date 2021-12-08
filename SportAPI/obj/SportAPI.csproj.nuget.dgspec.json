@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Desktop\\C#\\SportAPI\\SportAPI\\SportAPI.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\c#\\SportAPI\\SportAPI\\SportAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Desktop\\C#\\SportAPI\\SportAPI\\SportAPI.csproj": {
+    "C:\\Users\\Dell\\Desktop\\c#\\SportAPI\\SportAPI\\SportAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\C#\\SportAPI\\SportAPI\\SportAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\c#\\SportAPI\\SportAPI\\SportAPI.csproj",
         "projectName": "SportAPI",
-        "projectPath": "C:\\Users\\Dell\\Desktop\\C#\\SportAPI\\SportAPI\\SportAPI.csproj",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\c#\\SportAPI\\SportAPI\\SportAPI.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Desktop\\C#\\SportAPI\\SportAPI\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\c#\\SportAPI\\SportAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

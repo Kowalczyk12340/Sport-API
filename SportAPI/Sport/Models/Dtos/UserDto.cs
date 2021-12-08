@@ -9,9 +9,10 @@ namespace SportAPI.Sport.Models.Dtos
   {
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string CardId { get; set; }
+    public int InfomationId { get; set; }
     public bool IsActive { get; set; }
     public string Login { get; set; }
-    public int Password { get; set; }
+    public string Password { get; set; }
+    public virtual SportClubDto SportClub { get; set; }
   }
 }

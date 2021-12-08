@@ -49,18 +49,14 @@ namespace SportAPI.Sport.Data
       modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
-    public DbSet<CategorySport> CategorySports { get; set; }
     public DbSet<AuthToken> AuthTokens { get; set; }
-    public DbSet<CategorySportsman> CategorySportsmans { get; set; }
-    public DbSet<Customer> Customers { get; set; }
-    public DbSet<Department> Departments { get; set; }
-    public DbSet<Information> Informations { get; set; }
-    public DbSet<Journalist> Journalists { get; set; }
-    public DbSet<SportDiscipline> Disciplines { get; set; }
-    public DbSet<Sportsman> Sportsmen { get; set; }
-    public DbSet<SportSportsman> SportSportsmen { get; set; }
-    public DbSet<StatusInformation> StatusInformations { get; set; }
+    public DbSet<Training> Trainings { get; set; }
+    public DbSet<Match> Matches { get; set; }
+    public DbSet<Player> Players { get; set; }
+    public DbSet<Coach> Coaches { get; set; }
+    public DbSet<Address> Addresses { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<SportClub> Clubs { get; set; }
   }
 
   public static class SportDbContextExtensions
