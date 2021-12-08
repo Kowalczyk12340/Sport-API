@@ -32,11 +32,11 @@ namespace SportAPI.Mail.Models
       message.From.Add(new MailboxAddress(DisplayFrom, From));
 
       foreach (var recipient in To)
-        message.To.Add(new MailboxAddress(recipient));
+        message.To.Add(MailboxAddress.Parse(recipient));
       foreach (var recipient in CC)
-        message.Cc.Add(new MailboxAddress(recipient));
+        message.Cc.Add(MailboxAddress.Parse(recipient));
       foreach (var recipient in BCC)
-        message.Bcc.Add(new MailboxAddress(recipient));
+        message.Bcc.Add(MailboxAddress.Parse(recipient));
 
       message.Subject = Subject;
 

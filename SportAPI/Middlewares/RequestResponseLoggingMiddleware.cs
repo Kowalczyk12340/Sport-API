@@ -59,6 +59,7 @@ namespace SportAPI.Middlewares
       }
       catch (Exception exception)
       {
+        var message = exception.Message;
         hostname = "UnknownHost";
       }
 
