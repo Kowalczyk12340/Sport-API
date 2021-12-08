@@ -7,20 +7,22 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class SportClubDto
   {
-    public int Id { get; set; }
+    public long Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public string Category { get; set; }
     public bool HasOwnStadium { get; set; }
     public string ContactEmail { get; set; }
     public string ContactNumber { get; set; }
-    public int AddressId { get; set; }
-    public int UserId { get; set; }
-    public virtual Address Address { get; set; }
-    public virtual UserDto User { get; set; }
-    public virtual List<PlayerDto> Players { get; set; }
-    public virtual List<TrainingDto> Trainings { get; set; }
-    public virtual List<MatchDto> Matches { get; set; }
-    public virtual List<CoachDto> Coaches { get; set; }
+    public string City { get; set; }
+    public string Street { get; set; }
+    public string PostalCode { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Login { get; set; }
+    public List<PlayerDto> Players { get; set; }
+    public List<TrainingDto> Trainings { get; set; }
+    public List<MatchDto> Matches { get; set; }
+    public List<CoachDto> Coaches { get; set; }
   }
 }

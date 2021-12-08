@@ -7,15 +7,13 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class CoachDto
   {
-    public int Id { get; set; }
+    public long Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Pesel { get; set; }
     public string PhoneNumber { get; set; }
     public string EmailAddress { get; set; }
     public string Cash { get; set; }
-    public string Position { get; set; }
-    public int SportClubId { get; set; }
-    public virtual SportClubDto SportClub { get; set; }
+    public string SportClubName { get; set; }
   }
 }

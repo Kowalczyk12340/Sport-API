@@ -15,11 +15,6 @@ namespace SportAPI.Sport.Configurations
       builder.ToTable("User","Sport");
 
       builder.HasKey(e => e.Id);
-      builder.Property(e => e.Id).HasDefaultValueSql("NEWID()");
-
-      builder.Property(e => e.InfomationId)
-                    .HasMaxLength(32)
-                    .IsUnicode(false);
 
       builder.Property(e => e.Login)
               .HasMaxLength(32)

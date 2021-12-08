@@ -8,7 +8,7 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class PlayerDto
   {
-    public int Id { get; set; }
+    public long Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Pesel { get; set; }
@@ -16,7 +16,6 @@ namespace SportAPI.Sport.Models.Dtos
     public string EmailAddress { get; set; }
     public BetterFoot BetterFoot { get; set; }
     public string Position { get; set; }
-    public int SportClubId { get; set; }
-    public virtual SportClubDto SportClub { get; set; }
+    public string SportClubName { get; set; }
   }
 }
