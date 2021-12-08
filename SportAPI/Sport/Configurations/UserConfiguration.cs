@@ -21,7 +21,7 @@ namespace SportAPI.Sport.Configurations
               .IsRequired();
 
       builder.Property(e => e.Password)
-        .HasMaxLength(32)
+        .HasMaxLength(200)
         .IsRequired();
 
       builder.Property(e => e.FirstName)

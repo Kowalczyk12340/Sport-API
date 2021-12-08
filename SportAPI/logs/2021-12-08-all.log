@@ -101,3 +101,225 @@ CREATE TABLE [Sport].[Address] (
 2021-12-08 21:28:18.6302|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
 2021-12-08 21:28:18.7995|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
 2021-12-08 21:28:18.7995|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:50:33.2203|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:50:33.3244|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:50:33.3244|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:50:38.3474|10000|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'SportAPI.Sport.Data.SportDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'SportAPI.Sport.User', column 'Password'. Truncated value: '$2a$11$dQStN8XXtqVKIbXUxH0ZMeL9l'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResult()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:c928ba48-1848-4450-91cc-4132fefa1bea
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess) Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'SportAPI.Sport.User', column 'Password'. Truncated value: '$2a$11$dQStN8XXtqVKIbXUxH0ZMeL9l'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResult()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:c928ba48-1848-4450-91cc-4132fefa1bea
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2021-12-08 22:52:19.2826|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:52:19.3486|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:52:19.3516|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:53:15.3789|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:53:15.4525|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:53:15.4525|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:55:43.0182|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:55:43.1083|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:55:43.1217|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:56:42.4310|20102|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (30,038ms) [Parameters=[@p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 100), @p11='?' (Size = 15), @p12='?' (Size = 16), @p13='?' (DbType = Int64), @p14='?' (Size = 100), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (Size = 100), @p18='?' (Size = 15), @p19='?' (Size = 16), @p20='?' (DbType = Int64), @p21='?' (Size = 100), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 100), @p25='?' (Size = 15), @p26='?' (Size = 16), @p27='?' (DbType = Int64), @p28='?' (Size = 100), @p29='?' (Size = 4000), @p30='?' (Size = 4000), @p31='?' (Size = 100), @p32='?' (Size = 15), @p33='?' (Size = 16), @p34='?' (DbType = Int64), @p35='?' (Size = 100), @p36='?' (Size = 4000), @p37='?' (Size = 4000), @p38='?' (Size = 100), @p39='?' (Size = 15), @p40='?' (Size = 16), @p41='?' (DbType = Int64), @p42='?' (Size = 100), @p43='?' (DbType = DateTime), @p44='?' (DbType = Boolean), @p45='?' (DbType = Int64), @p46='?' (Size = 140), @p47='?' (Size = 140), @p48='?' (DbType = DateTime), @p49='?' (DbType = Int64), @p50='?' (Size = 140), @p51='?' (Size = 140), @p52='?' (DbType = DateTime), @p53='?' (DbType = Boolean), @p54='?' (DbType = Int64), @p55='?' (Size = 140), @p56='?' (Size = 140), @p57='?' (DbType = DateTime), @p58='?' (DbType = Boolean), @p59='?' (DbType = Int64), @p60='?' (Size = 140), @p61='?' (Size = 140), @p62='?' (DbType = DateTime), @p63='?' (DbType = Boolean), @p64='?' (DbType = Int64), @p65='?' (Size = 140), @p66='?' (Size = 140), @p67='?' (DbType = DateTime), @p68='?' (DbType = Int64), @p69='?' (Size = 140), @p70='?' (Size = 140), @p71='?' (DbType = Int32), @p72='?' (Size = 4000), @p73='?' (Size = 100), @p74='?' (Size = 40), @p75='?' (Size = 15), @p76='?' (Size = 16), @p77='?' (Size = 115), @p78='?' (DbType = Int64), @p79='?' (Size = 100), @p80='?' (DbType = Int32), @p81='?' (Size = 4000), @p82='?' (Size = 100), @p83='?' (Size = 40), @p84='?' (Size = 15), @p85='?' (Size = 16), @p86='?' (Size = 115), @p87='?' (DbType = Int64), @p88='?' (Size = 100), @p89='?' (DbType = Int32), @p90='?' (Size = 4000), @p91='?' (Size = 100), @p92='?' (Size = 40), @p93='?' (Size = 15), @p94='?' (Size = 16), @p95='?' (Size = 115), @p96='?' (DbType = Int64), @p97='?' (Size = 100), @p98='?' (DbType = Int32), @p99='?' (Size = 4000), @p100='?' (Size = 100), @p101='?' (Size = 40), @p102='?' (Size = 15), @p103='?' (Size = 16), @p104='?' (Size = 115), @p105='?' (DbType = Int64), @p106='?' (Size = 100), @p107='?' (DbType = Int32), @p108='?' (Size = 4000), @p109='?' (Size = 100), @p110='?' (Size = 40), @p111='?' (Size = 15), @p112='?' (Size = 16), @p113='?' (Size = 115), @p114='?' (DbType = Int64), @p115='?' (Size = 100), @p116='?' (DbType = Int32), @p117='?' (Size = 4000), @p118='?' (Size = 100), @p119='?' (Size = 40), @p120='?' (Size = 15), @p121='?' (Size = 16), @p122='?' (Size = 115), @p123='?' (DbType = Int64), @p124='?' (Size = 100), @p125='?' (DbType = Int32), @p126='?' (Size = 4000), @p127='?' (Size = 100), @p128='?' (Size = 40), @p129='?' (Size = 15), @p130='?' (Size = 16), @p131='?' (Size = 115), @p132='?' (DbType = Int64), @p133='?' (Size = 100), @p134='?' (DbType = Int32), @p135='?' (Size = 4000), @p136='?' (Size = 100), @p137='?' (Size = 40), @p138='?' (Size = 15), @p139='?' (Size = 16), @p140='?' (Size = 115), @p141='?' (DbType = Int64), @p142='?' (Size = 100), @p143='?' (DbType = Int32), @p144='?' (Size = 4000), @p145='?' (Size = 100), @p146='?' (Size = 40), @p147='?' (Size = 15), @p148='?' (Size = 16), @p149='?' (Size = 115), @p150='?' (DbType = Int64), @p151='?' (Size = 100), @p152='?' (DbType = Int32), @p153='?' (Size = 4000), @p154='?' (Size = 100), @p155='?' (Size = 40), @p156='?' (Size = 15), @p157='?' (Size = 16), @p158='?' (Size = 115), @p159='?' (DbType = Int64), @p160='?' (Size = 100), @p161='?' (DbType = Int32), @p162='?' (Size = 4000), @p163='?' (Size = 100), @p164='?' (Size = 40), @p165='?' (Size = 15), @p166='?' (Size = 16), @p167='?' (Size = 115), @p168='?' (DbType = Int64), @p169='?' (Size = 100), @p170='?' (DbType = Int32), @p171='?' (Size = 4000), @p172='?' (Size = 100), @p173='?' (Size = 40), @p174='?' (Size = 15), @p175='?' (Size = 16), @p176='?' (Size = 115), @p177='?' (DbType = Int64), @p178='?' (Size = 100), @p179='?' (DbType = Int32), @p180='?' (Size = 4000), @p181='?' (Size = 100), @p182='?' (Size = 40), @p183='?' (Size = 15), @p184='?' (Size = 16), @p185='?' (Size = 115), @p186='?' (DbType = Int64), @p187='?' (Size = 100), @p188='?' (DbType = Int32), @p189='?' (Size = 4000), @p190='?' (Size = 100), @p191='?' (Size = 40), @p192='?' (Size = 15), @p193='?' (Size = 16), @p194='?' (Size = 115), @p195='?' (DbType = Int64), @p196='?' (Size = 100), @p197='?' (DbType = Int32), @p198='?' (Size = 4000), @p199='?' (Size = 100), @p200='?' (Size = 40), @p201='?' (Size = 15), @p202='?' (Size = 16), @p203='?' (Size = 115), @p204='?' (DbType = Int64), @p205='?' (Size = 100), @p206='?' (Size = 4000), @p207='?' (Size = 120), @p208='?' (DbType = Int64), @p209='?' (DbType = DateTime), @p210='?' (Size = 4000), @p211='?' (Size = 120), @p212='?' (DbType = Int64), @p213='?' (DbType = DateTime), @p214='?' (Size = 4000), @p215='?' (Size = 120), @p216='?' (DbType = Int64), @p217='?' (DbType = DateTime), @p218='?' (Size = 4000), @p219='?' (Size = 120), @p220='?' (DbType = Int64), @p221='?' (DbType = DateTime), @p222='?' (Size = 4000), @p223='?' (Size = 120), @p224='?' (DbType = Int64), @p225='?' (DbType = DateTime), @p226='?' (Size = 4000), @p227='?' (Size = 120), @p228='?' (DbType = Int64), @p229='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] bigint, [_Position] [int]);
+MERGE [Sport].[Coach] USING (
+VALUES (@p8, @p9, @p10, @p11, @p12, @p13, @p14, 0),
+(@p15, @p16, @p17, @p18, @p19, @p20, @p21, 1),
+(@p22, @p23, @p24, @p25, @p26, @p27, @p28, 2),
+(@p29, @p30, @p31, @p32, @p33, @p34, @p35, 3),
+(@p36, @p37, @p38, @p39, @p40, @p41, @p42, 4)) AS i ([Cash], [EmailAddress], [Name], [Pesel], [PhoneNumber], [SportClubId], [Surname], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Cash], [EmailAddress], [Name], [Pesel], [PhoneNumber], [SportClubId], [Surname])
+VALUES (i.[Cash], i.[EmailAddress], i.[Name], i.[Pesel], i.[PhoneNumber], i.[SportClubId], i.[Surname])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Sport].[Coach] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+
+INSERT INTO [Sport].[Match] ([DateOfMatch], [InHouse], [SportClubId], [TeamOne], [TeamTwo])
+VALUES (@p43, @p44, @p45, @p46, @p47);
+SELECT [Id]
+FROM [Sport].[Match]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+
+INSERT INTO [Sport].[Match] ([DateOfMatch], [SportClubId], [TeamOne], [TeamTwo])
+VALUES (@p48, @p49, @p50, @p51);
+SELECT [Id], [InHouse]
+FROM [Sport].[Match]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+
+DECLARE @inserted7 TABLE ([Id] bigint, [_Position] [int]);
+MERGE [Sport].[Match] USING (
+VALUES (@p52, @p53, @p54, @p55, @p56, 0),
+(@p57, @p58, @p59, @p60, @p61, 1),
+(@p62, @p63, @p64, @p65, @p66, 2)) AS i ([DateOfMatch], [InHouse], [SportClubId], [TeamOne], [TeamTwo], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([DateOfMatch], [InHouse], [SportClubId], [TeamOne], [TeamTwo])
+VALUES (i.[DateOfMatch], i.[InHouse], i.[SportClubId], i.[TeamOne], i.[TeamTwo])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted7;
+
+SELECT [t].[Id] FROM [Sport].[Match] t
+INNER JOIN @inserted7 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+
+INSERT INTO [Sport].[Match] ([DateOfMatch], [SportClubId], [TeamOne], [TeamTwo])
+VALUES (@p67, @p68, @p69, @p70);
+SELECT [Id], [InHouse]
+FROM [Sport].[Match]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+
+DECLARE @inserted11 TABLE ([Id] bigint, [_Position] [int]);
+MERGE [Sport].[Player] USING (
+VALUES (@p71, @p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, 0),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, 1),
+(@p89, @p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, 2),
+(@p98, @p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, 3),
+(@p107, @p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, 4),
+(@p116, @p117, @p118, @p119, @p120, @p121, @p122, @p123, @p124, 5),
+(@p125, @p126, @p127, @p128, @p129, @p130, @p131, @p132, @p133, 6),
+(@p134, @p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142, 7),
+(@p143, @p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, 8),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159, @p160, 9),
+(@p161, @p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, 10),
+(@p170, @p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, 11),
+(@p179, @p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, 12),
+(@p188, @p189, @p190, @p191, @p192, @p193, @p194, @p195, @p196, 13),
+(@p197, @p198, @p199, @p200, @p201, @p202, @p203, @p204, @p205, 14)) AS i ([BetterFoot], [EmailAddress], [Name], [Nationality], [Pesel], [PhoneNumber], [Position], [SportClubId], [Surname], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([BetterFoot], [EmailAddress], [Name], [Nationality], [Pesel], [PhoneNumber], [Position], [SportClubId], [Surname])
+VALUES (i.[BetterFoot], i.[EmailAddress], i.[Name], i.[Nationality], i.[Pesel], i.[PhoneNumber], i.[Position], i.[SportClubId], i.[Surname])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted11;
+
+SELECT [t].[Id] FROM [Sport].[Player] t
+INNER JOIN @inserted11 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+
+DECLARE @inserted26 TABLE ([Id] bigint, [_Position] [int]);
+MERGE [Sport].[Training] USING (
+VALUES (@p206, @p207, @p208, @p209, 0),
+(@p210, @p211, @p212, @p213, 1),
+(@p214, @p215, @p216, @p217, 2),
+(@p218, @p219, @p220, @p221, 3),
+(@p222, @p223, @p224, @p225, 4),
+(@p226, @p227, @p228, @p229, 5)) AS i ([Description], [Name], [SportClubId], [TimeOfTraining], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Description], [Name], [SportClubId], [TimeOfTraining])
+VALUES (i.[Description], i.[Name], i.[SportClubId], i.[TimeOfTraining])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted26;
+
+SELECT [t].[Id] FROM [Sport].[Training] t
+INNER JOIN @inserted26 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position]; 
+2021-12-08 22:56:42.5646|10000|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'SportAPI.Sport.Data.SportDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Upłynął limit czasu operacji oczekiwania.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TrySetMetaData(_SqlMetaDataSet metaData, Boolean moreInfo)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:bc8810e6-c9e3-4b95-a476-557dded8e54d
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess) Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Upłynął limit czasu operacji oczekiwania.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TrySetMetaData(_SqlMetaDataSet metaData, Boolean moreInfo)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:bc8810e6-c9e3-4b95-a476-557dded8e54d
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2021-12-08 22:57:25.4373|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:57:25.5052|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:57:25.5174|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-08 22:57:29.0834||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-08 22:57:29.0880||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-08 22:57:29.1105||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
