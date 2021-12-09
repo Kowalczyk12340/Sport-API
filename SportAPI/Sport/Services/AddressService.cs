@@ -1,4 +1,12 @@
-﻿using SportAPI.Sport.Models.Dtos;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using SportAPI.Sport.Data;
+using SportAPI.Sport.Exceptions;
+using SportAPI.Sport.Models;
+using SportAPI.Sport.Models.Dtos;
+using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +17,89 @@ namespace SportAPI.Sport.Services
 {
   public class AddressService : IAddressService
   {
-    public Task<int> Create(AddressDto dto)
+    private readonly SportDbContext _dbContext;
+    private readonly IMapper _mapper;
+    private readonly ILogger<AddressService> _logger;
+
+    public AddressService(SportDbContext dbContext, IMapper mapper, ILogger<AddressService> logger)
     {
-      throw new NotImplementedException();
+      _dbContext = dbContext;
+      _mapper = mapper;
+      _logger = logger;
     }
 
-    public Task Delete(int id)
+
+    public async Task<long> Create(CreateAddressDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Create a new address");
+      var address = _mapper.Map<Address>(dto);
+      await _dbContext.Addresses.AddAsync(address);
+      await _dbContext.SaveChangesAsync();
+      return address.Id;
     }
 
-    public Task<IEnumerable<AddressDto>> GetAll()
+    public async Task Delete(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogWarning($"It will be deleted address with id: {id}");
+
+      var address = await _dbContext
+        .Addresses
+        .FirstOrDefaultAsync(x => x.Id == id);
+      
+      if(address is null)
+      {
+        throw new NotFoundException("Address not found");
+      }
+
+      _dbContext.Addresses.Remove(address);
+      await _dbContext.SaveChangesAsync();
     }
 
-    public Task<AddressDto> GetById(int id)
+    public async Task<IEnumerable<AddressDto>> GetAll()
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Display all the addresses");
+      var addresses = await _dbContext
+        .Addresses
+        .Include(x => x.City)
+        .ToListAsync();
+
+      var addressDtos = _mapper.Map<List<AddressDto>>(addresses);
+      return addressDtos;
     }
 
-    public Task Update(int id, AddressDto dto)
+    public async Task<AddressDto> GetById(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Display address with {id}");
+      var address = await _dbContext
+        .Addresses
+        .Include(x => x.City)
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(address is null)
+      {
+        throw new NotFoundException("Address not found");
+      }
+
+      var result = _mapper.Map<AddressDto>(address);
+      return result;
+    }
+
+    public async Task Update(long id, UpdateAddressDto dto)
+    {
+      _logger.LogInformation($"Edit address with {id}");
+      var address = await _dbContext
+        .Addresses
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(address is null)
+      {
+        throw new NotFoundException("Address not found");
+      }
+
+      address.City = dto.City;
+      address.PostalCode = dto.PostalCode;
+      address.Street = dto.Street;
+      await _dbContext.SaveChangesAsync();
     }
   }
 }

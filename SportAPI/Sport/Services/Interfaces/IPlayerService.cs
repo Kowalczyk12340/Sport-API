@@ -8,10 +8,10 @@ namespace SportAPI.Sport.Services.Interfaces
 {
   public interface IPlayerService
   {
-    Task<PlayerDto> GetById(int id);
+    Task<PlayerDto> GetById(long id);
     Task<IEnumerable<PlayerDto>> GetAll();
-    Task<int> Create(PlayerDto dto);
-    Task Delete(int id);
-    Task Update(int id, PlayerDto dto);
+    Task<long> Create(PlayerDto dto);
+    Task Delete(long id);
+    Task Update(long id, PlayerDto dto);
   }
 }

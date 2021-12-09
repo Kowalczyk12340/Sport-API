@@ -1,4 +1,6 @@
 ﻿using SportAPI.Sport.Models.Dtos;
+using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,10 @@ namespace SportAPI.Sport.Services.Interfaces
 {
   public interface IAddressService
   {
-    Task<AddressDto> GetById(int id);
+    Task<AddressDto> GetById(long id);
     Task<IEnumerable<AddressDto>> GetAll();
-    Task<int> Create(AddressDto dto);
-    Task Delete(int id);
-    Task Update(int id, AddressDto dto);
+    Task<long> Create(CreateAddressDto dto);
+    Task Delete(long id);
+    Task Update(long id, UpdateAddressDto dto);
   }
 }

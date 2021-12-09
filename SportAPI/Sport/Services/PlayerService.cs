@@ -10,12 +10,12 @@ namespace SportAPI.Sport.Services
 {
   public class PlayerService : IPlayerService
   {
-    public Task<int> Create(PlayerDto dto)
+    public Task<long> Create(PlayerDto dto)
     {
       throw new NotImplementedException();
     }
 
-    public Task Delete(int id)
+    public Task Delete(long id)
     {
       throw new NotImplementedException();
     }
@@ -25,12 +25,12 @@ namespace SportAPI.Sport.Services
       throw new NotImplementedException();
     }
 
-    public Task<PlayerDto> GetById(int id)
+    public Task<PlayerDto> GetById(long id)
     {
       throw new NotImplementedException();
     }
 
-    public Task Update(int id, PlayerDto dto)
+    public Task Update(long id, PlayerDto dto)
     {
       throw new NotImplementedException();
     }

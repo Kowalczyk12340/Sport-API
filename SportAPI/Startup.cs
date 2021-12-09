@@ -16,6 +16,7 @@ using SportAPI.Sport.Data;
 using SportAPI.Sport.Seeders;
 using SportAPI.Sport.Services;
 using SportAPI.Sport.Services.Interfaces;
+using SportAPI.Sport.UserMiddlewares;
 using SportAPI.Swashbucle;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,7 @@ namespace SportAPI
           Title = "Sport API",
           Description = "An API for managing and doing CRUD operations for Sport API"
         });
+        
         // Set the comments path for the Swagger JSON and UI.
         var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
@@ -80,7 +82,7 @@ namespace SportAPI
       services.AddSingleton<IClock, SystemClock>(x => SystemClock.Instance);
       services.AddSportDbContext(Configuration.GetConnectionString("Database"));
       services.AddMediatR(typeof(Startup));
-      services.AddAutoMapper(typeof(Startup));
+      //services.AddAutoMapper(typeof(Startup));
       services.AddScoped<SportClubSeeder>();
       services.AddAutoMapper(this.GetType().Assembly);
       services.AddScoped<IPlayerService, PlayerService>();
@@ -106,7 +108,8 @@ namespace SportAPI
       }
 
       app.UseCors(policy => policy.SetIsOriginAllowed(x => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials());
-
+      app.UseMiddleware<SportDbAuthMiddleware>();
+      app.UseMiddleware<SportTokenAuthMiddleware>();
       app.UseMiddleware<ErrorHandlingMiddleware>();
       app.UseMiddleware<RequestTimeMiddleware>();
       app.UseMiddleware<RequestResponseLoggingMiddleware>();

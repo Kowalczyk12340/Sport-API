@@ -8,10 +8,10 @@ namespace SportAPI.Sport.Services.Interfaces
 {
   public interface IMatchService
   {
-    Task<MatchDto> GetById(int id);
+    Task<MatchDto> GetById(long id);
     Task<IEnumerable<MatchDto>> GetAll();
-    Task<int> Create(MatchDto dto);
-    Task Delete(int id);
-    Task Update(int id, MatchDto dto);
+    Task<long> Create(MatchDto dto);
+    Task Delete(long id);
+    Task Update(long id, MatchDto dto);
   }
 }
