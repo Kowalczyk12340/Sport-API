@@ -1,4 +1,7 @@
-﻿using SportAPI.Sport.Models.Dtos;
+﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
+using SportAPI.Sport.Data;
+using SportAPI.Sport.Models.Dtos;
 using SportAPI.Sport.Models.Enums;
 using SportAPI.Sport.Services.Interfaces;
 using System;
@@ -10,6 +13,16 @@ namespace SportAPI.Sport.Services
 {
   public class PlayerService : IPlayerService
   {
+    private readonly SportDbContext _dbContext;
+    private readonly IMapper _mapper;
+    private readonly ILogger<PlayerService> _logger;
+
+    public PlayerService(SportDbContext dbContext, IMapper mapper, ILogger<PlayerService> logger)
+    {
+      _dbContext = dbContext;
+      _mapper = mapper;
+      _logger = logger;
+    }
     public Task<long> Create(PlayerDto dto)
     {
       throw new NotImplementedException();

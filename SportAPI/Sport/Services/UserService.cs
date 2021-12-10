@@ -1,4 +1,7 @@
-﻿using SportAPI.Sport.Models.Dtos;
+﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
+using SportAPI.Sport.Data;
+using SportAPI.Sport.Models.Dtos;
 using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,6 +12,16 @@ namespace SportAPI.Sport.Services
 {
   public class UserService : IUserService
   {
+    private readonly SportDbContext _dbContext;
+    private readonly IMapper _mapper;
+    private readonly ILogger<UserService> _logger;
+
+    public UserService(SportDbContext dbContext, IMapper mapper, ILogger<UserService> logger)
+    {
+      _dbContext = dbContext;
+      _mapper = mapper;
+      _logger = logger;
+    }
     public Task<long> Create(UserDto dto)
     {
       throw new NotImplementedException();

@@ -35,6 +35,8 @@ namespace SportAPI.Sport.Controllers
     /// <returns>List of addresses with basic information</returns>
     /// <response code="200">Query has been successfully executed</response>
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
+    [ProducesResponseType(typeof(IEnumerable<AddressDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<AddressDto>>> GetAll()
     {
@@ -56,6 +58,9 @@ namespace SportAPI.Sport.Controllers
     /// <response code="204">Address exists and has been successfully deletes</response>
     /// <response code="400">Address exists, but given parameters were invalid - refer to the error message</response>
     /// <response code="404">Address does not exist</response>
+    [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     [SportAPIAuth]
     [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete([FromRoute] long id)
@@ -109,7 +114,7 @@ namespace SportAPI.Sport.Controllers
     /// <response code="201">Address has been successfully created</response>
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
     [HttpPost]
-    [ProducesResponseType(typeof(CreateAddressDto), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(AddressDto), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<AddressDto>> CreateAddress([FromBody] CreateAddressDto dto)
     {

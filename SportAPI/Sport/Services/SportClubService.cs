@@ -30,7 +30,7 @@ namespace SportAPI.Sport.Services
 
     public async Task<long> Create(CreateSportClubDto dto)
     {
-      _logger.LogInformation("Create a new sport club");
+      _logger.LogInformation("Creating a new sport club in this database");
       var sportClub = _mapper.Map<SportClub>(dto);
       await _dbContext.Clubs.AddAsync(sportClub);
       await _dbContext.SaveChangesAsync();
@@ -55,7 +55,7 @@ namespace SportAPI.Sport.Services
 
     public async Task<IEnumerable<SportClubDto>> GetAll()
     {
-      _logger.LogInformation("Get All the Sport Clubs");
+      _logger.LogInformation("Getting All the Sport Clubs available in this database");
       var sportClubs = await _dbContext
         .Clubs
         .Include(x => x.Address)
@@ -72,7 +72,7 @@ namespace SportAPI.Sport.Services
 
     public async Task<SportClubDto> GetById(long id)
     {
-      _logger.LogInformation("Get the sport club by id");
+      _logger.LogInformation("Getting the sport club by id");
       var sportClub = await _dbContext
         .Clubs
         .Include(x => x.Address)
@@ -95,7 +95,7 @@ namespace SportAPI.Sport.Services
 
     public async Task Update(long id, UpdateSportClubDto dto)
     {
-      _logger.LogInformation("Update the Sport Club by Id");
+      _logger.LogInformation("Updating the Sport Club by Id");
       var sportClub = await _dbContext
         .Clubs
         .FirstOrDefaultAsync(x => x.Id == id);

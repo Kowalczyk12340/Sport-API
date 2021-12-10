@@ -34,6 +34,8 @@ namespace SportAPI.Sport.Controllers
     /// <returns>List of sport clubs with basic information</returns>
     /// <response code="200">Query has been successfully executed</response>
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
+    [ProducesResponseType(typeof(IEnumerable<SportClubDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<SportClubDto>>> GetAll()
     {
@@ -52,8 +54,8 @@ namespace SportAPI.Sport.Controllers
     /// </summary>
     /// <param name="id"></param>
     /// <returns>Sport Club with chosen id</returns>
-    /// <response code="200">SportClub exists and has been successfully retrieved</response>
-    /// <response code="404">SportClub does not exist</response>
+    /// <response code="200">Sport Club exists and has been successfully retrieved</response>
+    /// <response code="404">Sport Club does not exist</response>
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(SportClub), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
@@ -71,7 +73,7 @@ namespace SportAPI.Sport.Controllers
     /// <response code="201">Sport Club has been successfully created</response>
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
     [HttpPost]
-    [ProducesResponseType(typeof(CreateAddressDto), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(SportClubDto), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<SportClubDto>> Create([FromBody] CreateSportClubDto dto)
     {
@@ -97,6 +99,9 @@ namespace SportAPI.Sport.Controllers
     /// <response code="200">Sport Club exists and has been successfully modified</response>
     /// <response code="400">Sport Club exists, but given parameters were invalid - refer to the error message</response>
     /// <response code="404">Sport Club does not exist</response>
+    [ProducesResponseType(typeof(SportClubDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     [HttpPut("{id}")]
     public async Task<ActionResult<SportClubDto>> Update([FromBody] UpdateSportClubDto dto, [FromRoute] long id)
     {
@@ -113,8 +118,11 @@ namespace SportAPI.Sport.Controllers
     /// <response code="204">Sport Club exists and has been successfully deletes</response>
     /// <response code="400">Sport Club exists, but given parameters were invalid - refer to the error message</response>
     /// <response code="404">Sport Club does not exist</response>
+    [ProducesResponseType(typeof(bool), StatusCodes.Status204NoContent)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     [HttpDelete("{id}")]
-    public async Task<ActionResult<bool>> Delete([FromRoute] int id)
+    public async Task<ActionResult<bool>> Delete([FromRoute] long id)
     {
       await _sportClubService.Delete(id);
       return NoContent();
