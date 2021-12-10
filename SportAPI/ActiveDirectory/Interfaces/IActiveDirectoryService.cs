@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace SportAPI.ActiveDirectory.Interfaces
 {
-  interface IActiveDirectoryService
+  public interface IActiveDirectoryService
   {
+    string GetUserEmail(string userId);
   }
 }

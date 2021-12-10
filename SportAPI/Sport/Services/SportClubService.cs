@@ -61,6 +61,7 @@ namespace SportAPI.Sport.Services
         .Include(x => x.Address)
         .Include(x => x.User)
         .Include(x => x.Matches)
+        .Include(x => x.Coaches)
         .Include(x => x.Players)
         .Include(x => x.Trainings)
         .ToListAsync();
@@ -77,6 +78,7 @@ namespace SportAPI.Sport.Services
         .Include(x => x.Address)
         .Include(x => x.User)
         .Include(x => x.Matches)
+        .Include(x => x.Coaches)
         .Include(x => x.Players)
         .Include(x => x.Trainings)
         .FirstOrDefaultAsync(x => x.Id == id);

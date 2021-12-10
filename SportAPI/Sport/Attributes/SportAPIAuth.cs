@@ -18,13 +18,6 @@ namespace SportAPI.Sport.Attributes
         context.Result = new UnauthorizedResult();
         return;
       }
-
-      if (identity.AuthenticationType == "Token")
-      {
-        context.Result = new UnauthorizedResult();
-        return;
-      }
-
       await next();
     }
   }
