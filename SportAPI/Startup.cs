@@ -42,7 +42,8 @@ namespace SportAPI
         .AddFluentValidation(fv =>
         {
           fv.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-          fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
+          //fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
+          fv.DisableDataAnnotationsValidation = true;
         });
 
       services.AddLogging();

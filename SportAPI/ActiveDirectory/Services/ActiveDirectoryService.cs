@@ -30,7 +30,8 @@ namespace SportAPI.ActiveDirectory.Services
         }
         catch(LdapException ex)
         {
-          //TODO
+          var message = ex.Message;
+          return message;
         }
       }
       connection.Disconnect();

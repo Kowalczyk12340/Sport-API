@@ -17,11 +17,4 @@
     <PackageReference Include="Quartz.AspNetCore" Version="3.3.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ActiveDirectory\" />
-    <Folder Include="Common\" />
-    <Folder Include="UseCases\" />
-    <Folder Include="Sports\" />
-  </ItemGroup>
-
 </Project>
