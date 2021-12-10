@@ -1,7 +1,12 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SportAPI.Sport.Data;
+using SportAPI.Sport.Exceptions;
+using SportAPI.Sport.Models;
 using SportAPI.Sport.Models.Dtos;
+using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,29 +27,79 @@ namespace SportAPI.Sport.Services
       _mapper = mapper;
       _logger = logger;
     }
-    public Task<long> Create(MatchDto dto)
+
+    public async Task<long> Create(CreateMatchDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Creating a new match");
+      var match = _mapper.Map<Match>(dto);
+      await _dbContext.Matches.AddAsync(match);
+      await _dbContext.SaveChangesAsync();
+      return match.Id;
     }
 
-    public Task Delete(long id)
+    public async Task Delete(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogWarning($"It will be deleted match");
+      var match = await _dbContext
+        .Matches
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(match is null)
+      {
+        throw new NotFoundException("Match not found");
+      }
+
+      _dbContext.Matches.Remove(match);
+      await _dbContext.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<MatchDto>> GetAll()
+    public async Task<IEnumerable<MatchDto>> GetAll()
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Display all the matches");
+
+      var matches = await _dbContext
+        .Matches
+        .ToListAsync();
+
+      var matchDtos = _mapper.Map<List<MatchDto>>(matches);
+      return matchDtos;
     }
 
-    public Task<MatchDto> GetById(long id)
+    public async Task<MatchDto> GetById(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Display match with chosen {id}");
+
+      var match = await _dbContext
+        .Matches
+        .FirstOrDefaultAsync(x => x.Id == id);
+      
+      if(match is null)
+      {
+        throw new NotFoundException("Match not found");
+      }
+
+      var result = _mapper.Map<MatchDto>(match);
+      return result;
     }
 
-    public Task Update(long id, MatchDto dto)
+    public async Task Update(long id, UpdateMatchDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Edit match with {id}");
+      var match = await _dbContext
+        .Matches
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(match is null)
+      {
+        throw new NotFoundException("Match not found");
+      }
+
+      match.TeamOne = dto.TeamOne;
+      match.TeamTwo = dto.TeamTwo;
+      match.DateOfMatch = dto.DateOfMatch;
+      match.InHouse = dto.InHouse;
+
+      await _dbContext.SaveChangesAsync();
     }
   }
 }

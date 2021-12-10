@@ -32,7 +32,7 @@ namespace SportAPI.Sport.Services
     {
       _logger.LogInformation("Create new coach");
       var coach = _mapper.Map<Coach>(dto);
-      await _dbContext.Coaches.AddAsync(coach);
+      _dbContext.Coaches.Add(coach);
       await _dbContext.SaveChangesAsync();
       return coach.Id;
     }

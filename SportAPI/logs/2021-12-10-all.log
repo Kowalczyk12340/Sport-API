@@ -395,3 +395,192 @@ System.Object -> SportAPI.Sport.Models.SportClub
 2021-12-10 10:47:56.2272||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2021-12-10 10:47:56.2272||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2021-12-10 10:47:56.2400||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-10 18:35:46.5257|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-10 18:35:46.6289|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-10 18:35:46.6289|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-10 18:35:47.9627||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-10 18:35:47.9627||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-10 18:35:47.9730||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-10 18:41:37.7620||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): GET https://localhost:44377/api/Address <no request body> 
+2021-12-10 18:41:38.2164||INFO|SportAPI.Sport.Services.AddressService|Display all the addresses 
+2021-12-10 18:41:38.5599||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 778 ms with response 200: [{"id":7,"city":"Poznań","street":"Bułgarska 13","postalCode":"63-091","sportClubName":null,"name":null},{"id":8,"city":"Warszawa","street":"Łazienkowska 3","postalCode":"11-321","sportClubName":null,"name":null},{"id":9,"city":"Poznań","street":"Bułgarska 13","postalCode":"60-200","sportClubName":null,"name":null},{"id":10,"city":"Warszawa","street":"Łazienkowska 3","postalCode":"11-321","sportClubName":null,"name":null}] 
+2021-12-10 18:42:21.9628||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): PUT https://localhost:44377/api/Address/9 {"city":"Łódź","street":"Aleja Piłsudkiego","postalCode":"44"} 
+2021-12-10 18:42:22.0650||INFO|SportAPI.Sport.Services.AddressService|Edit address with 9 
+2021-12-10 18:42:22.3816||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 414 ms with response 200: <no response body> 
+2021-12-10 18:43:03.7239||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): PUT https://localhost:44377/api/Address/10 {"city":"Wrocław","street":"Jacka Murańskiego","postalCode":"4"} 
+2021-12-10 18:43:03.7239||INFO|SportAPI.Sport.Services.AddressService|Edit address with 10 
+2021-12-10 18:43:03.7632||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 35 ms with response 200: <no response body> 
+2021-12-10 18:43:19.5070||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): GET https://localhost:44377/api/Address/10 <no request body> 
+2021-12-10 18:43:19.5254||INFO|SportAPI.Sport.Services.AddressService|Display address with 10 
+2021-12-10 18:43:19.5446||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 31 ms with response 200: {"id":10,"city":"Wrocław","street":"Jacka Murańskiego","postalCode":"4","sportClubName":null,"name":null} 
+2021-12-10 18:43:55.5260||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): GET https://localhost:44377/api/Coach <no request body> 
+2021-12-10 18:43:55.5389||INFO|SportAPI.Sport.Services.CoachService|Display all the available coaches int this database 
+2021-12-10 18:43:55.5932||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 59 ms with response 200: [{"id":16,"name":"Maciej","surname":"Skorża","pesel":"67081234590","phoneNumber":"+48 607 801 212","emailAddress":"maciej.skorża@wp.pl","cash":"50 000 PLN","sportClubName":null},{"id":17,"name":"Dariusz","surname":"Dudka","pesel":"78010841029","phoneNumber":"+48 500 278 999","emailAddress":"dariusz.dudka@interia.pl","cash":"23 000 PLN","sportClubName":null},{"id":18,"name":"Piotr","surname":"Reiss","pesel":"72052309173","phoneNumber":"+48 782 233 980","emailAddress":"maciej.skorża@wp.pl","cash":"20 000 PLN","sportClubName":null},{"id":19,"name":"Wojciech","surname":"Łazarek","pesel":"51010541029","phoneNumber":"+48 500 278 999","emailAddress":"dariusz.dudka@interia.pl","cash":"43 000 PLN","sportClubName":null},{"id":20,"name":"Czesław","surname":"Michniewicz","pesel":"63090934590","phoneNumber":"+48 511 902 439","emailAddress":"czeslaw.michniewicz@wp.pl","cash":"60 000 PLN","sportClubName":null}] 
+2021-12-10 18:44:45.0215||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): DELETE https://localhost:44377/api/Address/10 <no request body> 
+2021-12-10 18:44:45.1095||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 84 ms with response 401: {"type":"https://tools.ietf.org/html/rfc7235#section-3.1","title":"Unauthorized","status":401,"traceId":"00-5c70bbeed967bf44a9f89a29d3a3f27e-69dd7924928ac94a-00"} 
+2021-12-10 18:45:28.0922||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): DELETE https://localhost:44377/api/Address/10 <no request body> 
+2021-12-10 18:45:28.1049||WARN|SportAPI.Sport.Services.AddressService|It will be deleted address with id: 10 
+2021-12-10 18:45:28.1609||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 62 ms with response 204: <no response body> 
+2021-12-10 18:45:39.5089||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): GET https://localhost:44377/api/Address <no request body> 
+2021-12-10 18:45:39.5089||INFO|SportAPI.Sport.Services.AddressService|Display all the addresses 
+2021-12-10 18:45:39.5267||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 13 ms with response 200: [{"id":7,"city":"Poznań","street":"Bułgarska 13","postalCode":"63-091","sportClubName":null,"name":null},{"id":8,"city":"Warszawa","street":"Łazienkowska 3","postalCode":"11-321","sportClubName":null,"name":null},{"id":9,"city":"Łódź","street":"Aleja Piłsudkiego","postalCode":"44","sportClubName":null,"name":null}] 
+2021-12-10 18:46:13.4291||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): POST https://localhost:44377/api/Address {"city":"Białystok","street":"Sinickiego 56","postalCode":"56-098"} 
+2021-12-10 18:46:13.4455||INFO|SportAPI.Sport.Services.AddressService|Create a new address 
+2021-12-10 18:46:14.0404||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|Error mapping types.
+
+Mapping types:
+CreateAddressDto -> Address
+SportAPI.Sport.Models.Dtos.Create.CreateAddressDto -> SportAPI.Sport.Models.Address
+
+Type Map configuration:
+CreateAddressDto -> Address
+SportAPI.Sport.Models.Dtos.Create.CreateAddressDto -> SportAPI.Sport.Models.Address
+
+Destination Member:
+SportClub
+ AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+CreateAddressDto -> Address
+SportAPI.Sport.Models.Dtos.Create.CreateAddressDto -> SportAPI.Sport.Models.Address
+
+Type Map configuration:
+CreateAddressDto -> Address
+SportAPI.Sport.Models.Dtos.Create.CreateAddressDto -> SportAPI.Sport.Models.Address
+
+Destination Member:
+SportClub
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Address -> SportClub
+SportAPI.Sport.Models.Address -> SportAPI.Sport.Models.SportClub
+   at lambda_method183(Closure , Address , SportClub , ResolutionContext )
+   at lambda_method182(Closure , Object , Address , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method182(Closure , Object , Address , ResolutionContext )
+   at SportAPI.Sport.Services.AddressService.Create(CreateAddressDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\AddressService.cs:line 35
+   at SportAPI.Sport.Controllers.AddressController.CreateAddress(CreateAddressDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\AddressController.cs:line 123
+   at lambda_method177(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-10 18:46:14.2010|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-10 18:46:14.2170|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-10 18:46:14.2355|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18230571297501347905", Request ID "80000042-0001-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-10 19:42:32.5140|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-10 19:42:32.5932|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-10 19:42:32.6060|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-10 19:42:34.4434||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-10 19:42:34.4553||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-10 19:42:34.4770||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-10 19:43:54.6857||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from 127.0.0.1(kubernetes.docker.internal): POST https://localhost:44377/api/Coach {"name":"Adam","surname":"Nawałka","pesel":"59090912495","phoneNumber":"+48 782 991 993","emailAddress":"adam.nawalka@gmail.com","cash":"25 000 PLN"} 
+2021-12-10 19:43:55.1525||INFO|SportAPI.Sport.Services.CoachService|Create new coach 
+2021-12-10 19:43:55.6693||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Coach
+System.Object -> SportAPI.Sport.Models.Coach AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Coach
+System.Object -> SportAPI.Sport.Models.Coach
+   at lambda_method21(Closure , Object , Coach , ResolutionContext )
+   at SportAPI.Sport.Services.CoachService.Create(CreateCoachDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\CoachService.cs:line 34
+   at SportAPI.Sport.Controllers.CoachController.Create(CreateCoachDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\CoachController.cs:line 123
+   at lambda_method16(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-10 19:43:55.8674|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-10 19:43:55.8819|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-10 19:43:55.8819|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18374686481282236451", Request ID "80000024-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
