@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SportAPI.Sport.Profiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Models.Dtos.Update
 {
-  public class UpdateSportClubDto
+  public class UpdateSportClubDto : IMapFrom<SportClub>
   {
     public string SportClubName { get; set; }
     public string Description { get; set; }

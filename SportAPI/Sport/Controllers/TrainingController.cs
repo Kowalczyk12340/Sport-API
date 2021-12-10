@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,13 @@ namespace SportAPI.Sport.Controllers
   [ApiController]
   public class TrainingController : ControllerBase
   {
+    private readonly ITrainingService _trainingService;
+
+    public TrainingController(ITrainingService trainingService)
+    {
+      _trainingService = trainingService;
+    }
+
+
   }
 }
