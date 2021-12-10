@@ -1,7 +1,12 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SportAPI.Sport.Data;
+using SportAPI.Sport.Exceptions;
+using SportAPI.Sport.Models;
 using SportAPI.Sport.Models.Dtos;
+using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,29 +27,77 @@ namespace SportAPI.Sport.Services
       _mapper = mapper;
       _logger = logger;
     }
-    public Task<long> Create(UserDto dto)
+    public async Task<long> Create(CreateUserDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Create new user");
+      var user = _mapper.Map<User>(dto);
+      await _dbContext.Users.AddAsync(user);
+      await _dbContext.SaveChangesAsync();
+      return user.Id;
     }
 
-    public Task Delete(long id)
+    public async Task Delete(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogWarning($"It will be deleted user with id: {id}");
+
+      var user = await _dbContext
+        .Users
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(user is null)
+      {
+        throw new NotFoundException("User not found");
+      }
+
+      _dbContext.Users.Remove(user);
+      await _dbContext.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<UserDto>> GetAll()
+    public async Task<IEnumerable<UserDto>> GetAll()
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Display all the users availbale in the database");
+      var users = await _dbContext
+        .Users
+        .ToListAsync();
+
+      var userDtos = _mapper.Map<List<UserDto>>(users);
+      return userDtos;
     }
 
-    public Task<UserDto> GetById(long id)
+    public async Task<UserDto> GetById(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Display user with id: {id}");
+      var user = await _dbContext
+        .Users
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(user is null)
+      {
+        throw new NotFoundException("User not found");
+      }
+
+      var result = _mapper.Map<UserDto>(user);
+      return result;
     }
 
-    public Task Update(long id, UserDto dto)
+    public async Task Update(long id, UpdateUserDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Edit user with id: {id}");
+      var user = await _dbContext
+        .Users
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(user is null)
+      {
+        throw new NotFoundException("User not found");
+      }
+
+      user.FirstName = dto.FirstName;
+      user.LastName = dto.LastName;
+      user.Login = dto.Login;
+      user.Password = dto.Password;
+      user.IsActive = dto.IsActive;
+      await _dbContext.SaveChangesAsync();
     }
   }
 }

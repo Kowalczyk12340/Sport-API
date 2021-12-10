@@ -72,7 +72,7 @@ namespace SportAPI.Sport.Services
 
     public async Task<SportClubDto> GetById(long id)
     {
-      _logger.LogInformation("Getting the sport club by id");
+      _logger.LogInformation($"Getting the sport club by {id}");
       var sportClub = await _dbContext
         .Clubs
         .Include(x => x.Address)
@@ -95,7 +95,7 @@ namespace SportAPI.Sport.Services
 
     public async Task Update(long id, UpdateSportClubDto dto)
     {
-      _logger.LogInformation("Updating the Sport Club by Id");
+      _logger.LogInformation($"Updating the Sport Club by {id}");
       var sportClub = await _dbContext
         .Clubs
         .FirstOrDefaultAsync(x => x.Id == id);

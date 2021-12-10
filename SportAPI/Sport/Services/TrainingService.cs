@@ -1,7 +1,12 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SportAPI.Sport.Data;
+using SportAPI.Sport.Exceptions;
+using SportAPI.Sport.Models;
 using SportAPI.Sport.Models.Dtos;
+using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,29 +27,75 @@ namespace SportAPI.Sport.Services
       _mapper = mapper;
       _logger = logger;
     }
-    public Task<long> Create(TrainingDto dto)
+    public async Task<long> Create(CreateTrainingDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Create a new training");
+      var training = _mapper.Map<Training>(dto);
+      await _dbContext.Trainings.AddAsync(training);
+      await _dbContext.SaveChangesAsync();
+      return training.Id;
     }
 
-    public Task Delete(long id)
+    public async Task Delete(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogWarning($"It will be deleted training with id: {id}");
+
+      var training = await _dbContext
+        .Trainings
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(training is null)
+      {
+        throw new NotFoundException("Training not found");
+      }
+
+      _dbContext.Trainings.Remove(training);
+      await _dbContext.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<TrainingDto>> GetAll()
+    public async Task<IEnumerable<TrainingDto>> GetAll()
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Displaying all the trainings");
+      var trainings = await _dbContext
+        .Trainings
+        .ToListAsync();
+
+      var trainingDtos = _mapper.Map<List<TrainingDto>>(trainings);
+      return trainingDtos;
     }
 
-    public Task<TrainingDto> GetById(long id)
+    public async Task<TrainingDto> GetById(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Editing training with {id}");
+      var training = await _dbContext
+        .Trainings
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(training is null)
+      {
+        throw new NotFoundException("Training not found");
+      }
+
+      var result = _mapper.Map<TrainingDto>(training);
+      return result;
     }
 
-    public Task Update(long id, TrainingDto dto)
+    public async Task Update(long id, UpdateTrainingDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Edit training with {id}");
+      var training = await _dbContext
+        .Trainings
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(training is null)
+      {
+        throw new NotFoundException("Training not found");
+      }
+
+      training.Name = dto.Name;
+      training.TimeOfTraining = dto.TimeOfTraining;
+      training.Description = dto.Description;
+      await _dbContext.SaveChangesAsync();
     }
   }
 }

@@ -91,10 +91,10 @@ namespace SportAPI.Sport.Controllers
     }
 
     /// <summary>
-    /// Method to get address with chosen ID
+    /// Method to get match with chosen ID
     /// </summary>
     /// <param name="id"></param>
-    /// <returns>Address with chosen id</returns>
+    /// <returns>Match with chosen id</returns>
     /// <response code="200">Match exists and has been successfully retrieved</response>
     /// <response code="404">Match does not exist</response>
     [HttpGet("{id}")]

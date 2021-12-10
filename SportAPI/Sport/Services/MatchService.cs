@@ -39,7 +39,7 @@ namespace SportAPI.Sport.Services
 
     public async Task Delete(long id)
     {
-      _logger.LogWarning($"It will be deleted match");
+      _logger.LogWarning($"It will be deleted match with {id}");
       var match = await _dbContext
         .Matches
         .FirstOrDefaultAsync(x => x.Id == id);
