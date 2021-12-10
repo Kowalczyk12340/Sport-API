@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Models.Dtos
 {
-  public class PlayerDto : IMapFrom<Address>
+  public class PlayerDto : IMapFrom<Player>
   {
     public long Id { get; set; }
     public string Name { get; set; }

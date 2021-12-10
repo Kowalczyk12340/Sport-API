@@ -11,7 +11,7 @@ namespace SportAPI.Swashbucle
   {
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
-      var authAttribute = context.MethodInfo.GetCustomAttributes(true).OfType<SportAPIAuthAttribute>().FirstOrDefault();
+      var authAttribute = context.MethodInfo.GetCustomAttributes(true).OfType<SportAPIAuth>().FirstOrDefault();
 
       if (!(authAttribute is null))
       {
@@ -27,43 +27,12 @@ namespace SportAPI.Swashbucle
                 Reference = new OpenApiReference
                 {
                   Type = ReferenceType.SecurityScheme,
-                  Id = "DBHash"
-                }
-              }, Array.Empty<string>()
-            }
-          },
-          new OpenApiSecurityRequirement
-          {
-            {
-              new OpenApiSecurityScheme
-              {
-                Reference = new OpenApiReference
-                {
-                  Type = ReferenceType.SecurityScheme,
                   Id = "Token"
                 }
               }, Array.Empty<string>()
             }
           }
         };
-
-        if (authAttribute.AllowIfs)
-        {
-          operation.Security.Add(
-            new OpenApiSecurityRequirement
-            {
-              {
-                new OpenApiSecurityScheme
-                {
-                  Reference = new OpenApiReference
-                  {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "IFS"
-                  }
-                }, Array.Empty<string>()
-              }
-            });
-        }
       }
     }
   }

@@ -60,7 +60,6 @@ namespace SportAPI.Sport.Services
       _logger.LogInformation("Display all the addresses");
       var addresses = await _dbContext
         .Addresses
-        .Include(x => x.City)
         .ToListAsync();
 
       var addressDtos = _mapper.Map<List<AddressDto>>(addresses);
@@ -72,7 +71,6 @@ namespace SportAPI.Sport.Services
       _logger.LogInformation($"Display address with {id}");
       var address = await _dbContext
         .Addresses
-        .Include(x => x.City)
         .FirstOrDefaultAsync(x => x.Id == id);
 
       if(address is null)

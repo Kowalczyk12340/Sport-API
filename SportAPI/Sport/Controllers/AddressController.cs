@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using SportAPI.Sport.Attributes;
+using SportAPI.Sport.Exceptions;
 using SportAPI.Sport.Models;
 using SportAPI.Sport.Models.Dtos;
 using SportAPI.Sport.Models.Dtos.Create;
@@ -29,7 +32,9 @@ namespace SportAPI.Sport.Controllers
     /// <summary>
     /// Method to display all addresses available in the database
     /// </summary>
-    /// <returns></returns>
+    /// <returns>List of addresses with basic information</returns>
+    /// <response code="200">Query has been successfully executed</response>
+    /// <response code="400">Given parameters were invalid - refer to the error message</response>
     [HttpGet]
     public async Task<ActionResult<IEnumerable<AddressDto>>> GetAll()
     {
@@ -47,7 +52,11 @@ namespace SportAPI.Sport.Controllers
     /// Method to delete chosen address with the database
     /// </summary>
     /// <param name="id"></param>
-    /// <returns></returns>
+    /// <returns>No content</returns>
+    /// <response code="204">Address exists and has been successfully deletes</response>
+    /// <response code="400">Address exists, but given parameters were invalid - refer to the error message</response>
+    /// <response code="404">Address does not exist</response>
+    [SportAPIAuth]
     [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete([FromRoute] long id)
     {
@@ -61,8 +70,14 @@ namespace SportAPI.Sport.Controllers
     /// </summary>
     /// <param name="dto"></param>
     /// <param name="id"></param>
-    /// <returns></returns>
+    /// <returns>Full address</returns>
+    /// <response code="200">Address exists and has been successfully modified</response>
+    /// <response code="400">Address exists, but given parameters were invalid - refer to the error message</response>
+    /// <response code="404">Address does not exist</response>
     [HttpPut("{id}")]
+    [ProducesResponseType(typeof(AddressDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     public async Task<ActionResult<AddressDto>> Update([FromBody] UpdateAddressDto dto, [FromRoute] long id)
     {
       await _addressService.Update(id,dto);
@@ -73,8 +88,12 @@ namespace SportAPI.Sport.Controllers
     /// Method to get address with chosen ID
     /// </summary>
     /// <param name="id"></param>
-    /// <returns></returns>
+    /// <returns>Address with chosen id</returns>
+    /// <response code="200">Address exists and has been successfully retrieved</response>
+    /// <response code="404">Address does not exist</response>
     [HttpGet("{id}")]
+    [ProducesResponseType(typeof(Address), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Address>> Get([FromRoute] long id)
     {
       var address = await _addressService.GetById(id);
@@ -86,12 +105,24 @@ namespace SportAPI.Sport.Controllers
     /// Method to add address to the database
     /// </summary>
     /// <param name="dto"></param>
-    /// <returns></returns>
+    /// <returns>The newly created address</returns>
+    /// <response code="201">Address has been successfully created</response>
+    /// <response code="400">Given parameters were invalid - refer to the error message</response>
     [HttpPost]
+    [ProducesResponseType(typeof(CreateAddressDto), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<AddressDto>> CreateAddress([FromBody] CreateAddressDto dto)
     {
-      var id = await _addressService.Create(dto);
-      return Created($"/api/address/{id}", null);
+      try
+      {
+        var id = await _addressService.Create(dto);
+        return Created($"/api/address/{id}", null);
+      }
+      catch (BadRequestException ex)
+      {
+        var message = ex.Message;
+        return BadRequest(message);
+      }
     }
   }
 }

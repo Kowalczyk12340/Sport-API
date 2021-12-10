@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Attributes
 {
-  public class SportAPIAuthAttribute : Attribute, IAsyncActionFilter
+  public class SportAPIAuth : Attribute, IAsyncActionFilter
   {
-    public bool AllowIfs { get; set; } = false;
-
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
-      var identity = context.HttpContext.User.Identities.FirstOrDefault(x => x.AuthenticationType == "DBHash" || x.AuthenticationType == "Token");
+      var identity = context.HttpContext.User.Identities.FirstOrDefault(x => x.AuthenticationType == "Token");
 
       if (identity is null)
       {
@@ -21,7 +19,7 @@ namespace SportAPI.Sport.Attributes
         return;
       }
 
-      if (identity.AuthenticationType == "IFS" && !AllowIfs)
+      if (identity.AuthenticationType == "Token")
       {
         context.Result = new UnauthorizedResult();
         return;

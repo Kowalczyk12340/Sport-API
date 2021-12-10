@@ -1,4 +1,12 @@
-﻿using SportAPI.Sport.Models.Dtos;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using SportAPI.Sport.Data;
+using SportAPI.Sport.Exceptions;
+using SportAPI.Sport.Models;
+using SportAPI.Sport.Models.Dtos;
+using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +17,98 @@ namespace SportAPI.Sport.Services
 {
   public class SportClubService : ISportClubService
   {
-    public Task<long> Create(SportClubDto dto)
+    private readonly SportDbContext _dbContext;
+    private readonly IMapper _mapper;
+    private readonly ILogger<SportClubService> _logger;
+
+    public SportClubService(SportDbContext dbContext, IMapper mapper, ILogger<SportClubService> logger)
     {
-      throw new NotImplementedException();
+      _dbContext = dbContext;
+      _mapper = mapper;
+      _logger = logger;
     }
 
-    public Task Delete(long id)
+    public async Task<long> Create(CreateSportClubDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Create a new sport club");
+      var sportClub = _mapper.Map<SportClub>(dto);
+      await _dbContext.Clubs.AddAsync(sportClub);
+      await _dbContext.SaveChangesAsync();
+      return sportClub.Id;
     }
 
-    public Task<IEnumerable<SportClubDto>> GetAll()
+    public async Task Delete(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogWarning($"Sport Club with id: {id} DELETE action invoked");
+
+      var sportClub = await _dbContext
+        .Clubs
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(sportClub is null)
+      {
+        throw new NotFoundException("Sport Club not found");
+      }
+      _dbContext.Clubs.Remove(sportClub);
+      await _dbContext.SaveChangesAsync();
     }
 
-    public Task<SportClubDto> GetById(long id)
+    public async Task<IEnumerable<SportClubDto>> GetAll()
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Get All the Sport Clubs");
+      var sportClubs = await _dbContext
+        .Clubs
+        .Include(x => x.Address)
+        .Include(x => x.User)
+        .Include(x => x.Matches)
+        .Include(x => x.Players)
+        .Include(x => x.Trainings)
+        .ToListAsync();
+
+      var sportClubDtos = _mapper.Map<List<SportClubDto>>(sportClubs);
+      return sportClubDtos;
     }
 
-    public Task Update(long id, SportClubDto dto)
+    public async Task<SportClubDto> GetById(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Get the sport club by id");
+      var sportClub = await _dbContext
+        .Clubs
+        .Include(x => x.Address)
+        .Include(x => x.User)
+        .Include(x => x.Matches)
+        .Include(x => x.Players)
+        .Include(x => x.Trainings)
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(sportClub is null)
+      {
+        throw new NotFoundException("Sport Club Not Found");
+      }
+
+      var result = _mapper.Map<SportClubDto>(sportClub);
+      return result;
+
+    }
+
+    public async Task Update(long id, UpdateSportClubDto dto)
+    {
+      _logger.LogInformation("Update the Sport Club by Id");
+      var sportClub = await _dbContext
+        .Clubs
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(sportClub is null)
+      {
+        throw new NotFoundException("Sport Club not found");
+      }
+
+      sportClub.SportClubName = dto.SportClubName;
+      sportClub.Description = dto.Description;
+      sportClub.HasOwnStadium = dto.HasOwnStadium;
+      sportClub.Category = dto.Category;
+      sportClub.ContactEmail = dto.ContactEmail;
+      sportClub.ContactNumber = dto.ContactNumber;
     }
   }
 }

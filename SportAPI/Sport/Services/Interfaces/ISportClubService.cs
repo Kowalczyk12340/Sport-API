@@ -1,4 +1,6 @@
 ﻿using SportAPI.Sport.Models.Dtos;
+using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +12,8 @@ namespace SportAPI.Sport.Services.Interfaces
   {
     Task<SportClubDto> GetById(long id);
     Task<IEnumerable<SportClubDto>> GetAll();
-    Task<long> Create(SportClubDto dto);
+    Task<long> Create(CreateSportClubDto dto);
     Task Delete(long id);
-    Task Update(long id, SportClubDto dto);
+    Task Update(long id, UpdateSportClubDto dto);
   }
 }

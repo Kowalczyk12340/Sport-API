@@ -5,6 +5,7 @@ using System.Linq;
 using SportAPI.Sport.Models;
 using SportAPI.Sport.Models.Dtos;
 using SportAPI.Sport.Models.Dtos.Create;
+using SportAPI.Sport.Models.Dtos.Update;
 
 namespace SportAPI.Sport.Profiles
 {
@@ -12,21 +13,37 @@ namespace SportAPI.Sport.Profiles
   {
     public MappingProfile()
     {
-      ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
-
       CreateMap<SportClub, SportClubDto>()
       .ForMember(m => m.City, c => c.MapFrom(s => s.Address.City))
       .ForMember(m => m.Street, c => c.MapFrom(s => s.Address.Street))
       .ForMember(m => m.PostalCode, c => c.MapFrom(s => s.Address.PostalCode))
-      .ForMember(m => m.Login, c => c.MapFrom(s => s.User.Login));
+      .ForMember(m => m.FirstName, c => c.MapFrom(s => s.User.FirstName))
+      .ForMember(m => m.LastName, c => c.MapFrom(s => s.User.LastName))
+      .ForMember(m => m.Login, c => c.MapFrom(s => s.User.Login))
+      .ForMember(m => m.Password, c => c.MapFrom(s => s.User.Password));
 
-        CreateMap<Match, MatchDto>();
-        CreateMap<Player, PlayerDto>();
-        CreateMap<Training, TrainingDto>();
-        CreateMap<Coach, CoachDto>();
+      CreateMap<Match, MatchDto>()
+        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+      CreateMap<Player, PlayerDto>()
+        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+      CreateMap<Training, TrainingDto>()
+        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+      CreateMap<Coach, CoachDto>()
+        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
 
-        CreateMap<CreateAddressDto, Address>()
+      CreateMap<User, UserDto>()
+        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+      
+      CreateMap<Address,AddressDto>()
+        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+
+      CreateMap<CreateAddressDto, Address>()
           .ForMember(r => r.SportClub, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }));
+
+      CreateMap<UpdateAddressDto, Address>()
+          .ForMember(r => r.SportClub, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }));
+      
+      ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
     public MappingProfile(Assembly assembly)
