@@ -40,11 +40,7 @@ namespace SportAPI.Sport.Profiles
 
       CreateMap<CreateSportClubDto, SportClub>()
           .ForMember(r => r.Address, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }))
-          .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password }))
-          .ForMember(r => r.Trainings, c => c.MapFrom(dto => new List<Training>()))
-          .ForMember(r => r.Coaches, c => c.MapFrom(dto => new List<Coach>()))
-          .ForMember(r => r.Matches, c => c.MapFrom(dto => new List<Match>()))
-          .ForMember(r => r.Players, c => c.MapFrom(dto => new List<Player>()));
+          .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password }));
 
       CreateMap<CreateAddressDto, Address>();
       CreateMap<CreateUserDto, User>();
