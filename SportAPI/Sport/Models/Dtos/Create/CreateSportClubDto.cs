@@ -1,4 +1,5 @@
-﻿using SportAPI.Sport.Profiles;
+﻿using SportAPI.Sport.Models.Enums;
+using SportAPI.Sport.Profiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
