@@ -79,7 +79,8 @@ namespace SportAPI.Sport.Services
         new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
         new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
         new Claim(ClaimTypes.Role, $"{user.Role.RoleName}"),
-        new Claim("DateOfBirth", user.DateOfBirth.Value.ToString("yyyy-MM-dd HH:mm")),
+        new Claim("DateOfBirth", user.DateOfBirth.Value.ToString("yyyy-MM-dd")),
+        new Claim("Nationality", $"{user.Nationality}")
       };
 
       var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authenticationSettings.JwtKey));
@@ -99,7 +100,7 @@ namespace SportAPI.Sport.Services
 
     public async Task<IEnumerable<UserDto>> GetAll()
     {
-      _logger.LogInformation("Display all the users availbale in the database");
+      _logger.LogInformation("Display all the users available in the database");
       var users = await _dbContext
         .Users
         .ToListAsync();
@@ -133,6 +134,7 @@ namespace SportAPI.Sport.Services
         DateOfBirth = dto.DateOfBirth,
         FirstName = dto.FirstName,
         LastName = dto.LastName,
+        Nationality = dto.Nationality,
         RoleId = dto.RoleId,
         IsActive = dto.IsActive
       };
@@ -163,6 +165,7 @@ namespace SportAPI.Sport.Services
       var hashedPassword = _passwordHasher.HashPassword(user, dto.Password);
       user.Password = hashedPassword;
       user.DateOfBirth = dto?.DateOfBirth;
+      user.Nationality = dto.Nationality;
       user.IsActive = dto.IsActive;
       await _dbContext.SaveChangesAsync();
     }

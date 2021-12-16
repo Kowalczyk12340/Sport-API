@@ -17,6 +17,7 @@ namespace SportAPI.Sport.Models.Dtos
     public string RoleName { get; set; }
     public string Password { get; set; }
     public string SportClubName { get; set; }
+    public string Nationality { get; set; }
     public string Name { get; set; }
   }
 }

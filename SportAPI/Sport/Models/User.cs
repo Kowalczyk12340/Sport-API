@@ -15,6 +15,7 @@ namespace SportAPI.Sport.Models
     public long RoleId { get; set; }
     public virtual Role Role { get; set; }
     public string Password { get; set; }
+    public string Nationality { get; set; }
     public virtual SportClub SportClub { get; set; }
   }
 }
