@@ -110,10 +110,26 @@ namespace SportAPI.Sport.Controllers
     [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [HttpPost("register")]
-    public async Task<ActionResult> RegisterUser(RegisterUserDto dto)
+    public async Task<ActionResult> RegisterUser([FromBody]RegisterUserDto dto)
     {
       await _userService.RegisterUser(dto);
       return Ok();
+    }
+
+    /// <summary>
+    /// Method to login as user
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <returns>The user is login / not login</returns>
+    /// <response code="200">User has been successfully logged in</response>
+    /// <response code="400">Given parameters were invalid - refer to the error message</response>
+    [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [HttpPost("login")]
+    public async Task<ActionResult<string>> Login([FromBody] LoginDto dto)
+    {
+      string token = await _userService.GenerateJwt(dto);
+      return Ok(token);
     }
   }
 }

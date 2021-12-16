@@ -5,16 +5,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Globalization;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace SportAPI.Sport.Seeders
 {
   public class SportClubSeeder
   {
     private readonly SportDbContext _dbContext;
+    private readonly IPasswordHasher<User> _passwordHasher;
 
-    public SportClubSeeder(SportDbContext dbContext)
+    public SportClubSeeder(SportDbContext dbContext, IPasswordHasher<User> passwordHasher)
     {
       _dbContext = dbContext;
+      _passwordHasher = passwordHasher;
     }
 
     public void Seed()

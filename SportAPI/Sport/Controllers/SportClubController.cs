@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SportAPI.Sport.Attributes;
 using SportAPI.Sport.Exceptions;
 using SportAPI.Sport.Models;
 using SportAPI.Sport.Models.Dtos;
@@ -121,6 +122,7 @@ namespace SportAPI.Sport.Controllers
     [ProducesResponseType(typeof(bool), StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    [SportAPIAuth]
     [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete([FromRoute] long id)
     {

@@ -15,5 +15,6 @@ namespace SportAPI.Sport.Services.Interfaces
     Task Delete(long id);
     Task Update(long id, UpdateUserDto dto);
     Task RegisterUser(RegisterUserDto dto);
+    Task<string> GenerateJwt(LoginDto dto);
   }
 }
