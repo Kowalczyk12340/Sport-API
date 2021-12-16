@@ -101,34 +101,19 @@ namespace SportAPI.Sport.Controllers
     }
 
     /// <summary>
-    /// Method to add user to the database
+    /// Method to register new user
     /// </summary>
     /// <param name="dto"></param>
-    /// <returns>The newly created user</returns>
-    /// <response code="201">User has been successfully created</response>
+    /// <returns>The newly registered user</returns>
+    /// <response code="200">User has been successfully created</response>
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
-    [HttpPost]
-    [ProducesResponseType(typeof(UserDto), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<UserDto>> Create([FromBody] CreateUserDto dto)
-    {
-      try
-      {
-        var id = await _userService.Create(dto);
-        return Created($"/api/user/{id}", null);
-      }
-      catch (BadRequestException ex)
-      {
-        var message = ex.Message;
-        return BadRequest(message);
-      }
-    }
-
     [HttpPost("register")]
     public async Task<ActionResult> RegisterUser(RegisterUserDto dto)
     {
       await _userService.RegisterUser(dto);
-      return NoContent();
+      return Ok();
     }
   }
 }

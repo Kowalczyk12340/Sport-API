@@ -47,7 +47,7 @@ namespace SportAPI.Sport.Profiles
           .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password }));
 
       CreateMap<CreateAddressDto, Address>();
-      CreateMap<CreateUserDto, User>();
+      CreateMap<RegisterUserDto, User>();
       CreateMap<CreateRoleDto, Role>();
       CreateMap<CreateTrainingDto, Training>();
       CreateMap<CreatePlayerDto, Player>();

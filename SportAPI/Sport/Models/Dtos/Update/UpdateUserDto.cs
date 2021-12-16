@@ -14,5 +14,6 @@ namespace SportAPI.Sport.Models.Dtos.Update
     public DateTime? DateOfBirth { get; set; }
     public string Login { get; set; }
     public string Password { get; set; }
+    public string ConfirmPassword { get; set; }
   }
 }

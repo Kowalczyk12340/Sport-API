@@ -12,7 +12,6 @@ namespace SportAPI.Sport.Services.Interfaces
   {
     Task<UserDto> GetById(long id);
     Task<IEnumerable<UserDto>> GetAll();
-    Task<long> Create(CreateUserDto dto);
     Task Delete(long id);
     Task Update(long id, UpdateUserDto dto);
     Task RegisterUser(RegisterUserDto dto);

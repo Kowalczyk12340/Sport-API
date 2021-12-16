@@ -8,11 +8,9 @@ namespace SportAPI.Sport.Models.Dtos
 {
   public class RegisterUserDto
   {
-    [Required]
     public string Login { get; set; }
-    [Required]
-    [MinLength(8)]
     public string Password { get; set; }
+    public string ConfirmPassword { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public bool IsActive { get; set; }

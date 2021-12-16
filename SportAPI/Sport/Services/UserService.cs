@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SportAPI.Sport.Data;
@@ -20,20 +21,14 @@ namespace SportAPI.Sport.Services
     private readonly SportDbContext _dbContext;
     private readonly IMapper _mapper;
     private readonly ILogger<UserService> _logger;
+    private readonly IPasswordHasher<User> _passwordHasher;
 
-    public UserService(SportDbContext dbContext, IMapper mapper, ILogger<UserService> logger)
+    public UserService(SportDbContext dbContext, IMapper mapper, ILogger<UserService> logger, IPasswordHasher<User> passwordHasher)
     {
       _dbContext = dbContext;
       _mapper = mapper;
       _logger = logger;
-    }
-    public async Task<long> Create(CreateUserDto dto)
-    {
-      _logger.LogInformation("Create new user");
-      var user = _mapper.Map<User>(dto);
-      await _dbContext.Users.AddAsync(user);
-      await _dbContext.SaveChangesAsync();
-      return user.Id;
+      _passwordHasher = passwordHasher;
     }
 
     public async Task Delete(long id)
@@ -82,16 +77,20 @@ namespace SportAPI.Sport.Services
 
     public async Task RegisterUser(RegisterUserDto dto)
     {
+      
       var newUser = new User()
       {
         Login = dto.Login,
-        Password = BCrypt.Net.BCrypt.HashPassword(dto.Password),
         DateOfBirth = dto.DateOfBirth,
         FirstName = dto.FirstName,
         LastName = dto.LastName,
         RoleId = dto.RoleId,
         IsActive = dto.IsActive
       };
+
+      var hashedPassword = _passwordHasher.HashPassword(newUser, dto.Password);
+
+      newUser.Password = hashedPassword;
 
       await _dbContext.Users.AddAsync(newUser);
       await _dbContext.SaveChangesAsync();
@@ -112,7 +111,8 @@ namespace SportAPI.Sport.Services
       user.FirstName = dto.FirstName;
       user.LastName = dto.LastName;
       user.Login = dto.Login;
-      user.Password = dto.Password;
+      var hashedPassword = _passwordHasher.HashPassword(user, dto.Password);
+      user.Password = hashedPassword;
       user.DateOfBirth = dto?.DateOfBirth;
       user.IsActive = dto.IsActive;
       await _dbContext.SaveChangesAsync();

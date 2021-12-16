@@ -1,9 +1,11 @@
 using AutoMapper;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,11 +15,14 @@ using Microsoft.OpenApi.Models;
 using NodaTime;
 using SportAPI.Middlewares;
 using SportAPI.Sport.Data;
+using SportAPI.Sport.Models;
+using SportAPI.Sport.Models.Dtos;
 using SportAPI.Sport.Seeders;
 using SportAPI.Sport.Services;
 using SportAPI.Sport.Services.Interfaces;
 using SportAPI.Sport.UserMiddlewares;
 using SportAPI.Swashbucle;
+using SportAPI.Validators;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -86,6 +91,8 @@ namespace SportAPI
       services.AddScoped<IRoleService, RoleService>();
       services.AddScoped<IMatchService, MatchService>();
       services.AddScoped<ICoachService, CoachService>();
+      services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
+      services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
       services.AddScoped<ErrorHandlingMiddleware>();
       services.AddScoped<RequestTimeMiddleware>();
     }
