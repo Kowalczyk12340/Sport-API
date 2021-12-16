@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Services.Interfaces
 {
-  public interface IUserService
+  public interface IRoleService
   {
-    Task<UserDto> GetById(long id);
-    Task<IEnumerable<UserDto>> GetAll();
-    Task<long> Create(CreateUserDto dto);
+    Task<RoleDto> GetById(long id);
+    Task<IEnumerable<RoleDto>> GetAll();
+    Task<long> Create(CreateRoleDto dto);
     Task Delete(long id);
-    Task Update(long id, UpdateUserDto dto);
-    Task RegisterUser(RegisterUserDto dto);
+    Task Update(long id, UpdateRoleDto dto);
   }
 }

@@ -21,6 +21,13 @@ namespace SportAPI.Sport.Seeders
     {
       if(_dbContext.Database.CanConnect())
       {
+        if(!_dbContext.Roles.Any())
+        {
+          var roles = GetRoles();
+          _dbContext.Roles.AddRange(roles);
+          _dbContext.SaveChanges();
+        }
+
         if(!_dbContext.Clubs.Any())
         {
           var clubs = GetClubs();
@@ -28,6 +35,27 @@ namespace SportAPI.Sport.Seeders
           _dbContext.SaveChanges();
         }
       }
+    }
+
+    private IEnumerable<Role> GetRoles()
+    {
+      var roles = new List<Role>()
+      {
+        new Role()
+        {
+          RoleName = "User"
+        },
+        new Role()
+        {
+          RoleName = "Admin"
+        },
+        new Role()
+        {
+          RoleName = "Manager"
+        }
+      };
+
+      return roles;
     }
 
     private IEnumerable<SportClub> GetClubs()
@@ -52,6 +80,8 @@ namespace SportAPI.Sport.Seeders
           {
             FirstName = "Marcin",
             LastName = "Kowalczyk",
+            DateOfBirth = DateTime.ParseExact("1999-06-10 16:10", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
+            Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
             IsActive = true,
             Login = "marcinkowalczyk24.7",
             Password = BCrypt.Net.BCrypt.HashPassword("Marcingrafik1#"),
@@ -253,6 +283,8 @@ namespace SportAPI.Sport.Seeders
             FirstName = "Karol",
             LastName = "Strasburger",
             IsActive = true,
+            DateOfBirth = DateTime.ParseExact("1991-11-12 08:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
+            Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
             Login = "karol.strasburger12",
             Password = BCrypt.Net.BCrypt.HashPassword("Marcingrafik1#"),
           },

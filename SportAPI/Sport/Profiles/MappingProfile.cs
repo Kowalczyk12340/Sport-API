@@ -33,8 +33,12 @@ namespace SportAPI.Sport.Profiles
         .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
 
       CreateMap<User, UserDto>()
-        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
-      
+        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName))
+        .ForMember(m => m.RoleName, c => c.MapFrom(s => s.Role.RoleName));
+
+      CreateMap<Role, RoleDto>()
+        .ForMember(m => m.RoleName, c => c.MapFrom(s => s.RoleName));
+
       CreateMap<Address,AddressDto>()
         .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
 
@@ -44,6 +48,7 @@ namespace SportAPI.Sport.Profiles
 
       CreateMap<CreateAddressDto, Address>();
       CreateMap<CreateUserDto, User>();
+      CreateMap<CreateRoleDto, Role>();
       CreateMap<CreateTrainingDto, Training>();
       CreateMap<CreatePlayerDto, Player>();
       CreateMap<CreateMatchDto, Match>();

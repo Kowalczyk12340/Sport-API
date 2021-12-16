@@ -56,6 +56,7 @@ namespace SportAPI.Sport.Data
     public DbSet<Coach> Coaches { get; set; }
     public DbSet<Address> Addresses { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<Role> Roles { get; set; }
     public DbSet<SportClub> Clubs { get; set; }
   }
 

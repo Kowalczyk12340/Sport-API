@@ -11,6 +11,7 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public bool IsActive { get; set; }
+    public DateTime? DateOfBirth { get; set; }
     public string Login { get; set; }
     public string Password { get; set; }
   }

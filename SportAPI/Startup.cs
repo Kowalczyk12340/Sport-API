@@ -83,6 +83,7 @@ namespace SportAPI
       services.AddScoped<ISportClubService, SportClubService>();
       services.AddScoped<ITrainingService, TrainingService>();
       services.AddScoped<IUserService, UserService>();
+      services.AddScoped<IRoleService, RoleService>();
       services.AddScoped<IMatchService, MatchService>();
       services.AddScoped<ICoachService, CoachService>();
       services.AddScoped<ErrorHandlingMiddleware>();

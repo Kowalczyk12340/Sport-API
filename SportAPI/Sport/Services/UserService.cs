@@ -80,6 +80,23 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
+    public async Task RegisterUser(RegisterUserDto dto)
+    {
+      var newUser = new User()
+      {
+        Login = dto.Login,
+        Password = BCrypt.Net.BCrypt.HashPassword(dto.Password),
+        DateOfBirth = dto.DateOfBirth,
+        FirstName = dto.FirstName,
+        LastName = dto.LastName,
+        RoleId = dto.RoleId,
+        IsActive = dto.IsActive
+      };
+
+      await _dbContext.Users.AddAsync(newUser);
+      await _dbContext.SaveChangesAsync();
+    }
+
     public async Task Update(long id, UpdateUserDto dto)
     {
       _logger.LogInformation($"Edit user with id: {id}");
@@ -96,6 +113,7 @@ namespace SportAPI.Sport.Services
       user.LastName = dto.LastName;
       user.Login = dto.Login;
       user.Password = dto.Password;
+      user.DateOfBirth = dto?.DateOfBirth;
       user.IsActive = dto.IsActive;
       await _dbContext.SaveChangesAsync();
     }

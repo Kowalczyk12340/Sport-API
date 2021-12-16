@@ -123,5 +123,12 @@ namespace SportAPI.Sport.Controllers
         return BadRequest(message);
       }
     }
+
+    [HttpPost("register")]
+    public async Task<ActionResult> RegisterUser(RegisterUserDto dto)
+    {
+      await _userService.RegisterUser(dto);
+      return NoContent();
+    }
   }
 }
