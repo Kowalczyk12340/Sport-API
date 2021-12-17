@@ -32,6 +32,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using Microsoft.Extensions.FileProviders;
 
 namespace SportAPI
 {
@@ -170,6 +171,13 @@ namespace SportAPI
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllers();
+      });
+
+      app.UseStaticFiles(new StaticFileOptions
+      { 
+        FileProvider = new PhysicalFileProvider(
+          Path.Combine(Directory.GetCurrentDirectory(),"Photos")),
+        RequestPath="/Photos"
       });
     }
   }
