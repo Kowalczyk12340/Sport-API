@@ -102,6 +102,15 @@ namespace SportAPI
         options.SchemaFilter<EnumTypesSchemaFilter>(xmlPath);
         options.OperationFilter<SecurityRequirementsOperationFilter>();
       });
+
+      services.AddCors(options => options.AddPolicy("Cors", builder =>
+      {
+          builder.AllowAnyOrigin().
+          AllowAnyMethod().
+          AllowAnyHeader();
+      }
+      ));
+
       services.AddSingleton<IClock, SystemClock>(x => SystemClock.Instance);
       services.AddSportDbContext(Configuration.GetConnectionString("Database"));
       services.AddMediatR(typeof(Startup));

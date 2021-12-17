@@ -24,11 +24,13 @@ namespace SportAPI.Middlewares
       }
       catch (BadRequestException ex)
       {
+        _logger.LogError(ex, ex.Message);
         context.Response.StatusCode = 400;
         await context.Response.WriteAsync(ex.Message);
       }
       catch (NotFoundException ex)
       {
+        _logger.LogError(ex, ex.Message);
         context.Response.StatusCode = 404;
         await context.Response.WriteAsync(ex.Message);
       }
