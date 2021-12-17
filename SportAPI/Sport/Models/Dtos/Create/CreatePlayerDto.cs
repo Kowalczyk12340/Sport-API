@@ -17,5 +17,6 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string EmailAddress { get; set; }
     public BetterFoot BetterFoot { get; set; }
     public string Position { get; set; }
+    public long SportClubId { get; set; }
   }
 }

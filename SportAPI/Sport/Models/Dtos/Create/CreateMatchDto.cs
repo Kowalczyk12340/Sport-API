@@ -12,5 +12,6 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string TeamTwo { get; set; }
     public bool InHouse { get; set; }
     public DateTime DateOfMatch { get; set; }
+    public long SportClubId { get; set; }
   }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SportAPI.Sport.Attributes;
 using SportAPI.Sport.Exceptions;
@@ -37,6 +38,7 @@ namespace SportAPI.Sport.Controllers
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
     [ProducesResponseType(typeof(IEnumerable<SportClubDto>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [AllowAnonymous]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<SportClubDto>>> GetAll()
     {

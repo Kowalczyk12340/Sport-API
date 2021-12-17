@@ -14,5 +14,6 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string PhoneNumber { get; set; }
     public string EmailAddress { get; set; }
     public string Cash { get; set; }
+    public long SportClubId { get; set; }
   }
 }

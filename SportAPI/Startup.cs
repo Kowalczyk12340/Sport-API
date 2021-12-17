@@ -15,6 +15,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NodaTime;
 using SportAPI.Authentication;
+using Newtonsoft.Json.Serialization;
 using SportAPI.Middlewares;
 using SportAPI.Sport.Data;
 using SportAPI.Sport.Models;
@@ -68,6 +69,17 @@ namespace SportAPI
         };
       });
 
+      services.AddAuthorization(options => {
+        options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality"));
+        options.AddPolicy("HasDateOfBirth", builder => builder.RequireClaim("DateOfBirth"));
+      });
+
+      services.AddControllersWithViews()
+        .AddNewtonsoftJson(options =>
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft
+        .Json.ReferenceLoopHandling.Ignore).AddNewtonsoftJson(options => options
+        .SerializerSettings.ContractResolver = new DefaultContractResolver());
+
       services.AddControllers()
         .AddFluentValidation(fv =>
         {
@@ -103,13 +115,14 @@ namespace SportAPI
         options.OperationFilter<SecurityRequirementsOperationFilter>();
       });
 
-      services.AddCors(options => options.AddPolicy("Cors", builder =>
+      //Enable CORS
+      services.AddCors(options =>
       {
-          builder.AllowAnyOrigin().
+        options.AddPolicy("AllowOrigin", builder =>
+        builder.AllowAnyOrigin().
           AllowAnyMethod().
-          AllowAnyHeader();
-      }
-      ));
+          AllowAnyHeader());
+      });
 
       services.AddSingleton<IClock, SystemClock>(x => SystemClock.Instance);
       services.AddSportDbContext(Configuration.GetConnectionString("Database"));
@@ -142,7 +155,7 @@ namespace SportAPI
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SportAPI v1"));
       }
 
-      app.UseCors(policy => policy.SetIsOriginAllowed(x => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+      app.UseCors(options => options.SetIsOriginAllowed(x => true).AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()/*.AllowCredentials()*/);
       app.UseMiddleware<SportTokenAuthMiddleware>();
       app.UseMiddleware<ErrorHandlingMiddleware>();
       app.UseMiddleware<RequestTimeMiddleware>();
