@@ -1,0 +1,373 @@
+﻿<MudExpansionPanels DisableBorders="true" Elevation="0">
+  <MudExpansionPanel Dense="true" Class="m-n3 ml-n3">
+    <TitleContent>
+      <MudTextField @bind-Value="Quantity" FullWidth="true" Label="Quantity" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </TitleContent>
+    <ChildContent>
+      <MudPaper Class="d-inline-block px-1 py-1">
+        <MudGrid Class="d-inline-block pb-3">
+          <MudItem xs="12" Class="d-flex pb-0">
+            <MudGrid Spacing="2" Justify="Justify.SpaceBetween">
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="MemoryClear" Style="width: 16px; height: 16px; font-size:12px">
+                  MC
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="MemoryRestore" Style="width: 16px; height: 16px; font-size:12px">
+                  MR
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="Backspace" Style="width: 16px; height: 16px; font-size:12px">
+                  🠔
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="RemoveAll" Style="width: 16px; height: 16px; font-size:12px">
+                  CE
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="Remove" Style="width: 16px; height: 16px; font-size:12px">
+                  C
+                </MudButton>
+              </MudItem>
+            </MudGrid>
+          </MudItem>
+          <MudItem xs="12" Class="d-flex pb-0">
+            <MudGrid Spacing="2" Justify="Justify.SpaceBetween">
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="MemoryStore" Style="width: 16px; height: 16px; font-size:12px">
+                  MS
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="MemoryAdd" Style="width: 16px; height: 16px; font-size:12px">
+                  M+
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="MemorySubtract" Style="width: 16px; height: 16px; font-size:12px">
+                  M-
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="ReversalNumber" Style="width: 16px; height: 16px; font-size:12px">
+                  +
+                  -
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="Sqrt" Style="width: 16px; height: 16px; font-size:12px">
+                  √
+                </MudButton>
+              </MudItem>
+            </MudGrid>
+          </MudItem>
+          <MudItem xs="12" Class="d-flex pb-0">
+            <MudGrid Spacing="2" Justify="Justify.SpaceBetween">
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(7)" Style="width: 16px; height: 16px; font-size:12px">
+                  7
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(8)" Style="width: 16px; height: 16px; font-size:12px">
+                  8
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(9)" Style="width: 16px; height: 16px; font-size:12px">
+                  9
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => MakeOperation(Operation.division)" Style="width: 16px; height: 16px; font-size:12px">
+                  /
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" Style="width: 16px; height: 16px; font-size:12px" Disabled="true">
+                  %
+                </MudButton>
+              </MudItem>
+            </MudGrid>
+          </MudItem>
+          <MudItem xs="12" Class="d-flex pb-0">
+            <MudGrid Spacing="2" Justify="Justify.SpaceBetween">
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(4)" Style="width: 16px; height: 16px; font-size:12px">
+                  4
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(5)" Style="width: 16px; height: 16px; font-size:12px">
+                  5
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() =>  ButtonNumber(6)" Style="width: 16px; height: 16px; font-size:12px">
+                  6
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => MakeOperation(Operation.multiplication)" Style="width: 16px; height: 16px; font-size:12px">
+                  *
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => Fraction()" Style="width: 16px; height: 16px; font-size:12px" Disabled="true">
+                  1/x
+                </MudButton>
+              </MudItem>
+            </MudGrid>
+          </MudItem>
+          <MudItem xs="12" Class="d-flex pb-0">
+            <MudGrid Spacing="2" Justify="Justify.SpaceBetween">
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(1)" Style="width: 16px; height: 16px; font-size:12px">
+                  1
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(2)" Style="width: 16px; height: 16px; font-size:12px">
+                  2
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(3)" Style="width: 16px; height: 16px; font-size:12px">
+                  3
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => MakeOperation(Operation.minus)" Style="width: 16px; height: 16px; font-size:12px">
+                  -
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="Pow" Style="width: 16px; height: 16px; font-size:12px">
+                  x²
+                </MudButton>
+              </MudItem>
+            </MudGrid>
+          </MudItem>
+          <MudItem xs="12" Class="d-flex pb-0">
+            <MudGrid Spacing="2" Justify="Justify.SpaceBetween">
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => ButtonNumber(0)" Style="width: 16px; height: 16px; font-size:12px">
+                  0
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" Style="width: 16px; height: 16px; font-size:12px" Disabled="true">
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" Style="width: 16px; height: 16px; font-size:12px" Disabled="true">
+                  ,
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="() => MakeOperation(Operation.plus)" Style="width: 16px; height: 16px; font-size:12px">
+                  +
+                </MudButton>
+              </MudItem>
+              <MudItem>
+                <MudButton Class="px-1 py-1" OnClick="Equals" Style="width: 16px; height: 16px; font-size:12px">
+                  =
+                </MudButton>
+              </MudItem>
+            </MudGrid>
+          </MudItem>
+        </MudGrid>
+      </MudPaper>
+    </ChildContent>
+  </MudExpansionPanel>
+</MudExpansionPanels>
+
+@code {
+  public enum Operation
+  {
+    plus,
+    minus,
+    division,
+    multiplication,
+    memory,
+    none
+  };
+
+  public int OldQuantity { get; set; }
+  public int NewQuantity { get; set; }
+
+  [Parameter]
+  public EventCallback<int> QuantityChanged { get; set; }
+  private int _value;
+  [Parameter]
+  public int Quantity
+  {
+    get => _value;
+    set
+    {
+      if (_value == value) return;
+      _value = value;
+      QuantityChanged.InvokeAsync(Quantity);
+      NewQuantity = value;
+    }
+  }
+  public int Memory { get; set; }
+
+  public Operation CurrentOperation { get; set; } = Operation.none;
+
+  public void MemoryStore()
+  {
+    Memory = NewQuantity;
+    NewQuantity = 0;
+  }
+
+  public void MemoryAdd()
+  {
+    Memory += NewQuantity;
+    NewQuantity = 0;
+  }
+
+  public void MemorySubtract()
+  {
+    Memory -= NewQuantity;
+    NewQuantity = 0;
+  }
+
+  public void MemoryRestore()
+  {
+    Quantity = Memory;
+    NewQuantity = Memory;
+    CurrentOperation = Operation.memory;
+
+  }
+
+  public void MemoryClear()
+  {
+    Memory = 0;
+  }
+
+  public void ButtonNumber(int number)
+  {
+    NewQuantity = NewQuantity * 10 + number;
+    Quantity = NewQuantity;
+
+
+  }
+
+  public void Backspace()
+  {
+    NewQuantity = (NewQuantity - (NewQuantity % 10)) / 10;
+    Quantity = NewQuantity;
+
+
+  }
+
+  public void Remove()
+  {
+    NewQuantity = 0;
+    Quantity = NewQuantity;
+
+
+  }
+
+  public void RemoveAll()
+  {
+    OldQuantity = 0;
+    NewQuantity = 0;
+    CurrentOperation = Operation.none;
+    Quantity = NewQuantity;
+
+
+  }
+
+  public void ReversalNumber()
+  {
+    NewQuantity *= -1;
+    Quantity = NewQuantity;
+
+
+  }
+
+  public void Sqrt()
+  {
+    NewQuantity = (int)Math.Truncate(Math.Sqrt(NewQuantity));
+    Quantity = NewQuantity;
+
+
+  }
+
+  public void Pow()
+  {
+    NewQuantity = (int)Math.Truncate(Math.Pow(NewQuantity, 2));
+    Quantity = NewQuantity;
+
+
+  }
+
+  public void Fraction()
+  {
+    NewQuantity = 1 / NewQuantity;
+    Quantity = NewQuantity;
+  }
+
+  public void Equals()
+  {
+    switch (CurrentOperation)
+    {
+      case Operation.plus:
+        OldQuantity += NewQuantity;
+        CurrentOperation = Operation.none;
+        break;
+      case Operation.minus:
+        OldQuantity -= NewQuantity;
+        CurrentOperation = Operation.none;
+        break;
+      case Operation.division:
+        if (NewQuantity != 0)
+        {
+          OldQuantity /= NewQuantity;
+        }
+        else
+        {
+          Console.WriteLine("It is not possible to divide by 0!");
+        }
+        CurrentOperation = Operation.none;
+        break;
+      case Operation.multiplication:
+        OldQuantity *= NewQuantity;
+        CurrentOperation = Operation.none;
+        break;
+      case Operation.memory:
+        OldQuantity = NewQuantity;
+        CurrentOperation = Operation.none;
+        break;
+      default:
+        OldQuantity = 0;
+        CurrentOperation = Operation.none;
+        break;
+    }
+    Quantity = OldQuantity;
+    NewQuantity = 0;
+
+  }
+
+  public void MakeOperation(Operation operation)
+  {
+    if (CurrentOperation != Operation.none)
+    {
+      Equals();
+
+    }
+    else
+    {
+      OldQuantity = NewQuantity;
+      Quantity = NewQuantity;
+    }
+    NewQuantity = 0;
+    CurrentOperation = operation;
+  }
+}

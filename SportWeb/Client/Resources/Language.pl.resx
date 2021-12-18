@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AfterSplit" xml:space="preserve">
+    <value>po podziale</value>
+  </data>
+  <data name="Avg" xml:space="preserve">
+    <value>Średnia</value>
+  </data>
+  <data name="BoardInfo" xml:space="preserve">
+    <value>Board Info to widok, w którym możliwe jest sprawdzenie listy komponentów poprzez wpisanie odpowiedniego Numeru Części lub Numeru Zamówienia. Lista komponentów pobiera dane z naszego systemu IFS i pozwala sprawnie wyszukiwać informacje i zapisywać je w pliku z rozszerzeniem „.csv”.</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategoria</value>
+  </data>
+  <data name="Changeovers" xml:space="preserve">
+    <value>Przezbrojenia</value>
+  </data>
+  <data name="ChangeoversModel" xml:space="preserve">
+    <value>Changeover Model to widok, w którym możliwe jest sprawdzenie listy przezbrojeń poprzez wprowadzenie wybranego zakresu daty, odpowiedniej lokalizacji dla firmy oraz linii produkcyjnej, na której przetwarzane są przezbrojenia. Następnie możliwe jest pobranie listy przezbrojeń, która pobiera dane z bazy danych i pozwala na sprawne wyszukiwanie informacji oraz wykonywanie operacji na komponentach. W końcu istnieje możliwość zapisania wszystkiego w pliku z rozszerzeniem „.csv”.</value>
+  </data>
+  <data name="Command" xml:space="preserve">
+    <value>Polecenie</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="ComponentInformation" xml:space="preserve">
+    <value>Informacja o komponencie</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Wszelkie Prawa Zastrzeżone</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Ilość</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Dział</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>Czas zakończenia</value>
+  </data>
+  <data name="ExportExcel" xml:space="preserve">
+    <value>Eksportuj do Excela</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>rozszerzenie</value>
+  </data>
+  <data name="Filtering" xml:space="preserve">
+    <value>Filtrowanie</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Znajdź</value>
+  </data>
+  <data name="FindDatasheet" xml:space="preserve">
+    <value>Znajdź arkusz</value>
+  </data>
+  <data name="FindImage" xml:space="preserve">
+    <value>Znajdź zdjęcie</value>
+  </data>
+  <data name="FindInSharepoint" xml:space="preserve">
+    <value>Znajdź w Sharepoint</value>
+  </data>
+  <data name="FoundChangeovers" xml:space="preserve">
+    <value>Znalezione przezbrojenia</value>
+  </data>
+  <data name="FromTime" xml:space="preserve">
+    <value>Od</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Cześć</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Strona Główna</value>
+  </data>
+  <data name="IgnoreProto" xml:space="preserve">
+    <value>Zignoruj PROTO i WDR</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>zdjęcie</value>
+  </data>
+  <data name="IsApproved" xml:space="preserve">
+    <value>Jest zaakcetowany</value>
+  </data>
+  <data name="JobDescription" xml:space="preserve">
+    <value>Opis stanowiska pracy</value>
+  </data>
+  <data name="JobNumber" xml:space="preserve">
+    <value>Numer Zlecenia</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Linia</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Ładowanie</value>
+  </data>
+  <data name="LocationNo" xml:space="preserve">
+    <value>Numer Lokalizacji</value>
+  </data>
+  <data name="ManufacturerPartNo" xml:space="preserve">
+    <value>Numer Producenta</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>Maksymalna</value>
+  </data>
+  <data name="Min" xml:space="preserve">
+    <value>Minimalna</value>
+  </data>
+  <data name="NoDataIsAvailable" xml:space="preserve">
+    <value>Dane są niedostępne</value>
+  </data>
+  <data name="NoMatching" xml:space="preserve">
+    <value>Nie znaleziono pasującego wyniku</value>
+  </data>
+  <data name="NumberOfItems" xml:space="preserve">
+    <value>Ilość produktów</value>
+  </data>
+  <data name="OnHand" xml:space="preserve">
+    <value>Pod ręką</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>Operacja</value>
+  </data>
+  <data name="OperationCalculator" xml:space="preserve">
+    <value>Operation Calculator to widok, w którym po wpisaniu odpowiedniego Numeru Zamówienia można przeliczyć dane, korzystając z kalkulatora utworzonego obok pola Ilość dla komponentów pobranych z bazy wraz z ich opisem. Możliwe jest również wykonanie obliczeń dla tych składowych, takich jak: czas pracy, czas przygotowania czy czas całkowity, wszystko odbywa się dla odpowiedniej ilości sztuk wcześniej wprowadzonej przez użytkownika.</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Numer zamówienia</value>
+  </data>
+  <data name="PartNo" xml:space="preserve">
+    <value>Numer seryjny</value>
+  </data>
+  <data name="PartNumber" xml:space="preserve">
+    <value>Numer seryjny</value>
+  </data>
+  <data name="PCBName" xml:space="preserve">
+    <value>Nazwa PCB</value>
+  </data>
+  <data name="PhaseIn" xml:space="preserve">
+    <value>Wszedł</value>
+  </data>
+  <data name="PhaseOut" xml:space="preserve">
+    <value>Wyszedł</value>
+  </data>
+  <data name="PieceTime" xml:space="preserve">
+    <value>Czas na sztukę</value>
+  </data>
+  <data name="Possible" xml:space="preserve">
+    <value>Niemożliwe jest pobranie danych w tej chwili!</value>
+  </data>
+  <data name="ProductAfter" xml:space="preserve">
+    <value>Product po</value>
+  </data>
+  <data name="ProductBefore" xml:space="preserve">
+    <value>Produkt przed</value>
+  </data>
+  <data name="ProductionApp" xml:space="preserve">
+    <value>Aplikacja produkcyjna</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Ilość</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Powód</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Referencja</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>Referencje</value>
+  </data>
+  <data name="RefreshFuji" xml:space="preserve">
+    <value>Odśwież bazę Fuji</value>
+  </data>
+  <data name="Reserved" xml:space="preserve">
+    <value>Zarezerwowany</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Powtórzenie</value>
+  </data>
+  <data name="SaveCsvOriginalBom" xml:space="preserve">
+    <value>Zapisz plik CSV z danymi z BOM</value>
+  </data>
+  <data name="ScanfilDevelopers" xml:space="preserve">
+    <value>Deweloperzy</value>
+  </data>
+  <data name="ScanfilWebsite" xml:space="preserve">
+    <value>Stronę Internetową</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Szukaj</value>
+  </data>
+  <data name="SearchBy" xml:space="preserve">
+    <value>Szukaj według</value>
+  </data>
+  <data name="SearchInIFS" xml:space="preserve">
+    <value>Szukaj w IFS</value>
+  </data>
+  <data name="SearchValue" xml:space="preserve">
+    <value>Szukana wartość</value>
+  </data>
+  <data name="SelectDepartment" xml:space="preserve">
+    <value>Wybierz dział</value>
+  </data>
+  <data name="SelectLine" xml:space="preserve">
+    <value>Wybierz linię</value>
+  </data>
+  <data name="SetupTime" xml:space="preserve">
+    <value>Czas setup</value>
+  </data>
+  <data name="ShowDeleted" xml:space="preserve">
+    <value>Pokaż usunięte przezbrojenia</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Czas rozpoczęcia</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>Suma</value>
+  </data>
+  <data name="SumOfHours" xml:space="preserve">
+    <value>Suma godzin</value>
+  </data>
+  <data name="SumOfHoursAfterSplit" xml:space="preserve">
+    <value>Suma godzin po podziale</value>
+  </data>
+  <data name="SumOfQuantity" xml:space="preserve">
+    <value>Suma ilości</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Czas</value>
+  </data>
+  <data name="TimeDifference" xml:space="preserve">
+    <value>Różnica czasu</value>
+  </data>
+  <data name="TimePerArt" xml:space="preserve">
+    <value>Czas/szt</value>
+  </data>
+  <data name="TotalTime" xml:space="preserve">
+    <value>Czas całkowity</value>
+  </data>
+  <data name="TotalTimeAfterSplit" xml:space="preserve">
+    <value>Czas całkowity po podziale</value>
+  </data>
+  <data name="ToTime" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Widok</value>
+  </data>
+  <data name="VisitOur" xml:space="preserve">
+    <value>Odwiedź naszą</value>
+  </data>
+  <data name="WebApplication" xml:space="preserve">
+    <value>Jest to aplikacja internetowa, w której można korzystać z informacji o widokach Board Info, Changeovers i Operation Calculator.</value>
+  </data>
+  <data name="Workstation" xml:space="preserve">
+    <value>Stanowisko robocze</value>
+  </data>
+  <data name="WorkstationDescription" xml:space="preserve">
+    <value>Opis stanowiska pracy</value>
+  </data>
+</root>

@@ -34,6 +34,10 @@
     <Folder Include="Photos\" />
   </ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\SportWeb\Client\SportWeb.Client.csproj" />
+	</ItemGroup>
+    
   <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

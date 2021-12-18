@@ -1,0 +1,46 @@
+﻿@inject ILocalStorageService _localStorage
+@inject IStringLocalizer<Resources.Language> _l;
+@page "/"
+
+<MudGrid Spacing="0" Class="pa-3 ml-n6" Justify="Justify.Center">
+  <MudContainer>
+    <MudText Class="my-2" Typo="Typo.h2" Align="Align.Center">@_l["ProductionApp"]</MudText>
+    <MudText Class="my-2" Typo="Typo.h6" Align="Align.Center">@_l["WebApplication"]</MudText>
+    <MudGrid>
+      <MudItem xs="12">
+        <MudText Class="my-2" Typo="Typo.body2" Align="Align.Justify">
+          @_l["BoardInfo"]
+        </MudText>
+      </MudItem>
+    </MudGrid>
+    <MudGrid>
+      <MudItem xs="12">
+        <MudText Class="my-2" Typo="Typo.body2" Align="Align.Justify">
+          @_l["ChangeoversModel"]
+        </MudText>
+      </MudItem>
+    </MudGrid>
+    <MudGrid>
+      <MudItem xs="12">
+        <MudText Class="my-2" Typo="Typo.body2" Align="Align.Justify">
+          @_l["OperationCalculator"]
+        </MudText>
+      </MudItem>
+    </MudGrid>
+    <MudGrid Class="my-3">
+      <MudItem xs="12">
+        <MudText Typo="Typo.h6" Align="Align.Center">
+          @_l["VisitOur"]
+          <MudElement HtmlTag="a"
+                      Class="ma-0"
+                      Style="color: #004260; font-weight: bold;"
+                      href="https://www.akademiakaliska.com/"
+                      target="blank"
+                      rel="noopener noreferrer">
+            @_l["ScanfilWebsite"]
+          </MudElement>
+        </MudText>
+      </MudItem>
+    </MudGrid>
+  </MudContainer>
+</MudGrid>

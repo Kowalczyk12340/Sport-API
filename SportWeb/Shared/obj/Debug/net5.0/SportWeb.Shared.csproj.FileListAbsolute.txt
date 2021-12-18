@@ -1,0 +1,12 @@
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\bin\Debug\net5.0\SportWeb.Shared.deps.json
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\bin\Debug\net5.0\SportWeb.Shared.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\bin\Debug\net5.0\ref\SportWeb.Shared.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\bin\Debug\net5.0\SportWeb.Shared.pdb
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\SportWeb.Shared.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\SportWeb.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\SportWeb.Shared.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\SportWeb.Shared.AssemblyInfo.cs
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\SportWeb.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\SportWeb.Shared.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\ref\SportWeb.Shared.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Shared\obj\Debug\net5.0\SportWeb.Shared.pdb

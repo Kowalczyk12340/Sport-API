@@ -1,0 +1,36 @@
+﻿@using System.Globalization
+@using Blazored.LocalStorage;
+@using System.Threading;
+@inject ILocalStorageService _localStorage
+@inject NavigationManager _nav
+
+<MudPaper>
+    <MudMenu Dense="true" StartIcon="@Icons.Filled.Language" EndIcon="@Icons.Filled.KeyboardArrowDown" Label="@Culture.DisplayName">
+        @foreach (var culture in _supportedCultures.Where(c => !Equals(c, Culture)))
+        {
+            <MudMenuItem OnClick="() => Culture = culture">@culture.DisplayName</MudMenuItem>
+        }
+    </MudMenu>
+</MudPaper>
+
+@code
+{
+    private CultureInfo[] _supportedCultures = new[]
+    {
+    new CultureInfo("pl-PL"),
+    new CultureInfo("en-US"),
+  };
+
+    private CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (!Equals(CultureInfo.CurrentCulture, value))
+            {
+                _localStorage.SetItemAsync("Culture", value.Name);
+                _nav.NavigateTo(_nav.Uri, forceLoad: true);
+            }
+        }
+    }
+}
