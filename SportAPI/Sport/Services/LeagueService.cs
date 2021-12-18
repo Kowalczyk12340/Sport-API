@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SportAPI.Sport.Data;
+using SportAPI.Sport.Exceptions;
+using SportAPI.Sport.Models;
 using SportAPI.Sport.Models.Dtos;
 using SportAPI.Sport.Models.Dtos.Create;
 using SportAPI.Sport.Models.Dtos.Update;
@@ -24,29 +27,81 @@ namespace SportAPI.Sport.Services
       _mapper = mapper;
       _logger = logger;
     }
-    public Task<long> Create(CreateLeagueDto dto)
+    public async Task<long> Create(CreateLeagueDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Creating a new league");
+      var league = _mapper.Map<League>(dto);
+      await _dbContext.Leagues.AddAsync(league);
+      await _dbContext.SaveChangesAsync();
+      return league.Id;
     }
 
-    public Task Delete(long id)
+    public async Task Delete(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogWarning($"League with id: {id} DELETE ACTION INVOKED");
+
+      var league = await _dbContext
+        .Leagues
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(league is null)
+      {
+        throw new NotFoundException("League not found");
+      }
+
+      _dbContext.Leagues.Remove(league);
+      await _dbContext.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<LeagueDto>> GetAll()
+    public async Task<IEnumerable<LeagueDto>> GetAll()
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Get all the leagues with the database");
+      var leagues = await _dbContext
+        .Leagues
+        .Include(x => x.SportClubs)
+        .ToListAsync();
+
+      var leagueDtos = _mapper.Map<List<LeagueDto>>(leagues);
+      return leagueDtos;
     }
 
-    public Task<LeagueDto> GetById(long id)
+    public async Task<LeagueDto> GetById(long id)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation("Getting the league by chosen id");
+      var league = await _dbContext
+        .Leagues
+        .Include(x => x.SportClubs)
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(league is null)
+      {
+        throw new NotFoundException("League not found");
+      }
+
+      var result = _mapper.Map<LeagueDto>(league);
+      return result;
     }
 
-    public Task Update(long id, UpdateLeagueDto dto)
+    public async Task Update(long id, UpdateLeagueDto dto)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation($"Updating the league by {id}");
+
+      var league = await _dbContext
+        .Leagues
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+      if(league is null)
+      {
+        throw new NotFoundException("League not found");
+      }
+
+      league.Name = dto.Name;
+      league.IsHigh = dto.IsHigh;
+      league.Nationality = dto.Nationality;
+      league.CountForChampionsLeague = dto.CountForChampionsLeague;
+      league.CountForEuropeLeague = dto.CountForEuropeLeague;
+      league.CountForConferenceLeague = dto.CountForConferenceLeague;
+      league.CountForDownLeague = dto.CountForDownLeague;
     }
   }
 }
