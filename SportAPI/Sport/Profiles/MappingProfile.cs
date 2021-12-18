@@ -42,17 +42,23 @@ namespace SportAPI.Sport.Profiles
       CreateMap<Address,AddressDto>()
         .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
 
+      CreateMap<League, LeagueDto>();
+
       CreateMap<CreateSportClubDto, SportClub>()
           .ForMember(r => r.Address, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }))
           .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password }));
 
       CreateMap<CreateAddressDto, Address>();
       CreateMap<RegisterUserDto, User>();
+      CreateMap<LoginDto, User>()
+        .ForMember(m => m.Login, c => c.MapFrom(s => s.Login))
+        .ForMember(m => m.Password, c => c.MapFrom(s => s.Password));
       CreateMap<CreateRoleDto, Role>();
       CreateMap<CreateTrainingDto, Training>();
       CreateMap<CreatePlayerDto, Player>();
       CreateMap<CreateMatchDto, Match>();
       CreateMap<CreateCoachDto, Coach>();
+      CreateMap<CreateLeagueDto, League>();
 
       ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
     }

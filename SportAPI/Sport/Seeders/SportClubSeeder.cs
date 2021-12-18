@@ -37,7 +37,118 @@ namespace SportAPI.Sport.Seeders
           _dbContext.Clubs.AddRange(clubs);
           _dbContext.SaveChanges();
         }
+
+        if(!_dbContext.Leagues.Any())
+        {
+          var leagues = GetLeagues();
+          _dbContext.Leagues.AddRange(leagues);
+          _dbContext.SaveChanges();
+        }
       }
+    }
+
+    private IEnumerable<League> GetLeagues()
+    {
+      var leagues = new List<League>
+      {
+        new League()
+        {
+          Name = "PKO BP Ekstraklasa",
+          CountForChampionsLeague = 1,
+          CountForEuropeLeague = 1,
+          CountForConferenceLeague = 3,
+          CountForDownLeague = 3,
+          SportClubs = GetClubs().ToList(),
+          IsHigh = true,
+          Nationality = "Polska"
+        },
+        new League()
+        {
+          Name = "Barclays Premier League",
+          CountForChampionsLeague = 4,
+          CountForEuropeLeague = 4,
+          CountForConferenceLeague = 3,
+          CountForDownLeague = 4,
+          SportClubs = new List<SportClub>()
+          {
+            new SportClub()
+            {
+              Address = new Address()
+              {
+                City = "Manchester",
+                PostalCode = "70-999",
+                Street = "Wolf Street Centre 563"
+              },
+              User = new User()
+              {
+                FirstName = "Alex",
+                LastName = "Fergusson",
+                Nationality = "Scotland",
+                IsActive = true,
+                Login = "alex.fergusson@wp.pl",
+                Password = BCrypt.Net.BCrypt.HashPassword("Marcingrafik1#"),
+                DateOfBirth = DateTime.ParseExact("1951-02-23 11:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
+                Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
+              },
+              Category = "Klub Piłki Nożnej",
+              ContactEmail = "manchester.united@manu.com",
+              ContactNumber = "+42 94 98 98 123",
+              Description = "Klub Piłkarski założony przez brytyjskich żeglarzy w roku 1888, w celu popularyzacji nowego sportu, jakim jest piłka nożna wtedy, na całym świecie",
+              HasOwnStadium = true,
+              SportClubName = "Manchester United",
+              Coaches = new List<Coach>()
+              {
+                new Coach()
+                {
+                  Name = "Ralf",
+                  Surname = "Rangnick",
+                  Cash = "300 000 PLN",
+                  EmailAddress = "ralf.rangnick@wp.pl",
+                  Pesel = "66092192837",
+                  PhoneNumber = "+42 506 903 990",
+                }
+              },
+              Trainings = new List<Training>()
+              {
+                new Training()
+                {
+                  Name = "Trening Sprawnościowy",
+                  Description = "Ćwiczenia ogólnorozjowe, rozciąganie mięsni i tkanek miękkich",
+                  TimeOfTraining = DateTime.ParseExact("2021-12-29 11:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
+                }
+              },
+              Matches = new List<Match>()
+              {
+                new Match()
+                {
+                  DateOfMatch = DateTime.ParseExact("2022-01-04 20:45", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
+                  InHouse = true,
+                  TeamOne = "Manchester United",
+                  TeamTwo = "Manchester City",
+                }
+              },
+              Players = new List<Player>()
+              {
+                new Player()
+                {
+                  Name = "Cristiano",
+                  Surname = "Ronaldo",
+                  BetterFoot = Models.Enums.BetterFoot.RIGHT,
+                  EmailAddress = "cristiano.ronaldo@ronaldo.com",
+                  Nationality = "Portugalia",
+                  Pesel = "85020582935",
+                  PhoneNumber = "+42 560 283 912",
+                  Position = "Napastnik",
+                }
+              }
+            }
+          },
+          IsHigh = true,
+          Nationality = "Polska"
+        },
+      };
+
+      return leagues;
     }
 
     private IEnumerable<Role> GetRoles()
@@ -61,7 +172,7 @@ namespace SportAPI.Sport.Seeders
       return roles;
     }
 
-    private IEnumerable<SportClub> GetClubs()
+    protected IEnumerable<SportClub> GetClubs()
     {
       var clubs = new List<SportClub>()
       {

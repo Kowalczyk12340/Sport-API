@@ -165,3 +165,7 @@ C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\obj\Debug\net5.0\Spo
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\obj\Debug\net5.0\ref\SportAPI.IntegrationTests.dll
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\obj\Debug\net5.0\SportAPI.IntegrationTests.pdb
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\obj\Debug\net5.0\SportAPI.IntegrationTests.genruntimeconfig.cache
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

@@ -29,16 +29,14 @@ namespace SportAPI.Sport.Services
     private readonly ILogger<UserService> _logger;
     private readonly IPasswordHasher<User> _passwordHasher;
     private readonly AuthenticationSettings _authenticationSettings;
-    private readonly IWebHostEnvironment _webHostEnvironment;
 
-    public UserService(SportDbContext dbContext, IMapper mapper, ILogger<UserService> logger, IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, IWebHostEnvironment webHostEnvironment)
+    public UserService(SportDbContext dbContext, IMapper mapper, ILogger<UserService> logger, IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings)
     {
       _dbContext = dbContext;
       _mapper = mapper;
       _logger = logger;
       _passwordHasher = passwordHasher;
       _authenticationSettings = authenticationSettings;
-      _webHostEnvironment = webHostEnvironment;
     }
 
     public async Task Delete(long id)

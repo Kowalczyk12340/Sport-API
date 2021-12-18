@@ -33,6 +33,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SportAPI
 {
@@ -73,8 +74,10 @@ namespace SportAPI
       services.AddAuthorization(options => {
         options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality"));
         options.AddPolicy("HasDateOfBirth", builder => builder.RequireClaim("DateOfBirth"));
+        options.AddPolicy("AtLeast18", builder => builder.AddRequirements(new MinimumAgeRequirement(18)));
       });
 
+      services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
       services.AddControllersWithViews()
         .AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft
@@ -135,6 +138,7 @@ namespace SportAPI
       services.AddScoped<IAddressService, AddressService>();
       services.AddScoped<ISportClubService, SportClubService>();
       services.AddScoped<ITrainingService, TrainingService>();
+      services.AddScoped<ILeagueService, LeagueService>();
       services.AddScoped<IUserService, UserService>();
       services.AddScoped<IRoleService, RoleService>();
       services.AddScoped<IMatchService, MatchService>();
@@ -156,6 +160,7 @@ namespace SportAPI
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SportAPI v1"));
       }
 
+      //USE CORS
       app.UseCors(options => options.SetIsOriginAllowed(x => true).AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()/*.AllowCredentials()*/);
       app.UseMiddleware<SportTokenAuthMiddleware>();
       app.UseMiddleware<ErrorHandlingMiddleware>();

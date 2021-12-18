@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using System.Collections.Generic;
+using System.Net.Http;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NUnit.Framework;
-using SportAPI.Sport.Data;
-using SportAPI.Sport.Seeders;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 
 namespace SportAPI.IntegrationTests.ControllerTests
 {
@@ -16,7 +13,7 @@ namespace SportAPI.IntegrationTests.ControllerTests
   {
     private readonly IHostBuilder _hostBuilder;
     protected IHost Application;
-    protected HttpClient Client;
+    public HttpClient Client;
 
     protected BaseControllerTest()
     {
@@ -24,10 +21,11 @@ namespace SportAPI.IntegrationTests.ControllerTests
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(config =>
         {
-          config.AddInMemoryCollection(new Dictionary<string, string>() { ["ConnectionStrings:Database"] = "Data Source=DESKTOP-VPKE3ES\\SQLEXPRESS;Initial Catalog=SportAPI;Integrated Security=True" });
+          config.AddInMemoryCollection(new Dictionary<string, string>() { ["ConnectionStrings:Database"] = @"Data Source=10.10.10.70\localifs; Initial Catalog=LWH10_SIERADZ; uid=siesdev; pwd=8pBVgbBdHsb5yQKQ" });
           config.AddEnvironmentVariables();
         })
-        .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+        .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); })
+        .ConfigureWebHost(webHost => { webHost.UseIISIntegration(); });
     }
 
 
@@ -35,6 +33,7 @@ namespace SportAPI.IntegrationTests.ControllerTests
     public void StartApplication()
     {
       Application = _hostBuilder.Start();
+      Client = Application.GetTestClient();
     }
 
     [OneTimeTearDown]
@@ -43,14 +42,14 @@ namespace SportAPI.IntegrationTests.ControllerTests
       Application.Dispose();
     }
 
-    [SetUp]
+    /*[SetUp]
     public void EnsureSeedData()
     {
       using var scope = Application.Services.CreateScope();
       var context = scope.ServiceProvider.GetRequiredService<SportDbContext>();
-      var seeder = new SportClubSeeder(context);
+      var seeder = new SportClubSeeder(context,_passwordHasher);
 
       seeder.Seed();
-    }
+    }*/
   }
 }

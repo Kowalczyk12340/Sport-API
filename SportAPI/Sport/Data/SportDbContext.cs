@@ -58,6 +58,7 @@ namespace SportAPI.Sport.Data
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<SportClub> Clubs { get; set; }
+    public DbSet<League> Leagues { get; set; }
   }
 
   public static class SportDbContextExtensions

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using SportAPI.IntegrationTests.Infrastructure;
 using SportAPI.Sport.Controllers;
 using SportAPI.Sport.Data;
 using SportAPI.Sport.Models;
@@ -24,11 +25,14 @@ namespace SportAPI.IntegrationTests.ControllerTests
       var scope = Application.Services.CreateScope();
       var context = scope.ServiceProvider.GetService<SportDbContext>();
 
-      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/address/7");
+      //var userToAuth = await context.Users.FirstOrDefaultAsync(x => x.Login == "marcinkowalczyk24.7@gmail.com");
+
+      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/address/3");
+        //.WithAuthHeader(userToAuth);
 
       var response = await Client.SendAsync(requestMessage);
       var content = await response.Content.ReadAsStringAsync();
-      var component = JsonConvert.DeserializeObject<Address>(content);
+      var component = JsonConvert.DeserializeObject<AddressDto>(content);
 
       var expected = component.City;
 
