@@ -1,7 +1,0 @@
-﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="/" Path="C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\wwwroot\" />
-  <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\Dell\.nuget\packages\mudblazor\5.1.5\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/MudBlazor.ThemeManager" Path="C:\Users\Dell\.nuget\packages\mudblazor.thememanager\1.0.5\build\..\staticwebassets\" />
-</StaticWebAssets>
