@@ -11,7 +11,6 @@
 <MudLayout>
     <MudAppBar Elevation="3">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        <img class="scanfil-logo ml-3" height="28" src="~/logo.png" alt="Marcin Kowalczyk" />
         <MudText Typo="Typo.h4" Class="ml-3">@ChooseTitle()</MudText>
         <MudSpacer />
         <CultureSelector />
@@ -24,7 +23,7 @@
             @Body
         </MudContainer>
         <MudPaper Class="mud-theme-primary">
-            <MudText Align="Align.Center" Typo="Typo.h6">@_l["Copyright"] Copyright Marcin Kowalczyk 2022 &copy;</MudText>
+            <MudText Align="Align.Center" Typo="Typo.h6">@_l["Copyright"] Marcin Kowalczyk 2022 &copy;</MudText>
         </MudPaper>
     </MudMainContent>
 </MudLayout>

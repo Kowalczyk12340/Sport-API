@@ -13,7 +13,7 @@
       "url": "_content\/MudBlazor.ThemeManager\/MudBlazorThemeManager.css"
     },
     {
-      "hash": "sha256-es\/FFW+KsVBZTSU\/VrL\/sXe2LQxLS9Ygd986syyIMnM=",
+      "hash": "sha256-6L4zGrDodcDmkTPmwf9+KI5YNvfhU\/G\/59tGGQAR1D0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -825,15 +825,15 @@
       "url": "_framework\/SportWeb.Shared.pdb"
     },
     {
-      "hash": "sha256-FoBNtYBB2L8CssMIT+91qgyqxgPPhklfAzYw45ZzlgE=",
+      "hash": "sha256-ISipTH4z\/6UQEw5IN\/nPTUmiI124Veqw0RVY6jAw8ew=",
       "url": "_framework\/pl\/SportWeb.Client.resources.dll"
     },
     {
-      "hash": "sha256-AWU1TkovDBMunPqKuOPoMBTbbjwEBTR6WTERcVqKSEw=",
+      "hash": "sha256-NzBqfm66qz4S8ro6R2SHlnGAJSp5is9hC9OmFuTBATE=",
       "url": "_framework\/SportWeb.Client.dll"
     },
     {
-      "hash": "sha256-bRSAh7E3O3bcL90O6ytjZq5rvzeVZIgtLEbjK76nkoY=",
+      "hash": "sha256-862lRIlznO0q3P\/d1VgsEFMvxy2lWXnfImCDrkEVbYo=",
       "url": "_framework\/SportWeb.Client.pdb"
     },
     {
@@ -1705,11 +1705,11 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-+EUhU4M5NBb1X7x0A9cTYySPH+uBCtQ8RdY4Vh2CBJU=",
+      "hash": "sha256-NgJWNLVcgJZbScZ\/dhEcH4r2I3t3ZRcU9Y8eVUm4PMo=",
       "url": "logo.png"
     },
     {
-      "hash": "sha256-slIpLx0tNNHwwUWPo8CwHrQMSS0z1FAAj5\/WtrfYHfY=",
+      "hash": "sha256-T1ncD0gz1N1\/szFHfT\/kgcSE\/FEbCaffcBI10ytY9HI=",
       "url": "manifest.json"
     },
     {
@@ -1721,5 +1721,5 @@
       "url": "SportWeb.Client.bundle.scp.css"
     }
   ],
-  "version": "boYf3aRi"
+  "version": "iKfI\/BlX"
 };

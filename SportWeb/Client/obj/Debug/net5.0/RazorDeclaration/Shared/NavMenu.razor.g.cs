@@ -110,21 +110,7 @@ using Blazored.LocalStorage;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 28 "C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-
-#line default
-#line hidden
-#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IStringLocalizer<Resources.Language> _l { get; set; }
     }
 }
 #pragma warning restore 1591

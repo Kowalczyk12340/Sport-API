@@ -103,6 +103,13 @@ using Blazored.LocalStorage;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\Pages\Addresses.razor"
+using SportAPI.Sport.Models.Dtos;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/addresses")]
     public partial class Addresses : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -111,6 +118,38 @@ using Blazored.LocalStorage;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 24 "C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\Pages\Addresses.razor"
+       
+    private AddressDto selectedItem = null;
+    [Parameter]
+    public IEnumerable<AddressDto> Elements { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Elements = new List<AddressDto>();
+        selectedItem = new AddressDto();
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        selectedItem = await Elements.FirstOrDefaultAsync();
+    }
+
+    private string SelectedRow(ComponentLocationDto localizationComponent, int index)
+    {
+        if (localizationComponent == selectedItem)
+        {
+            return "mud-theme-info";
+        }
+        else
+        {
+            return "";
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient _http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navigationManager { get; set; }
     }

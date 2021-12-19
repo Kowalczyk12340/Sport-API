@@ -201,12 +201,12 @@
       "netstandard.dll": "sha256-mbIVAluJ7cAx0vUQshB\/c1zEIK5JcYwIYxo\/BQ\/meRU=",
       "System.Private.CoreLib.dll": "sha256-FrZbEyy47f3RDuj77R5oHUGxSGEDgRRxykTjImrLqfM=",
       "SportWeb.Shared.dll": "sha256-oSqmU9gXHj3ghvTHGZXi95g11PBI7J5QjaFcVbZsOLg=",
-      "SportWeb.Client.dll": "sha256-AWU1TkovDBMunPqKuOPoMBTbbjwEBTR6WTERcVqKSEw="
+      "SportWeb.Client.dll": "sha256-NzBqfm66qz4S8ro6R2SHlnGAJSp5is9hC9OmFuTBATE="
     },
     "lazyAssembly": null,
     "pdb": {
       "SportWeb.Shared.pdb": "sha256-SGPydJkueG7Nrqe59sO70njYTZvHN+4X56xmuHoFX+o=",
-      "SportWeb.Client.pdb": "sha256-bRSAh7E3O3bcL90O6ytjZq5rvzeVZIgtLEbjK76nkoY="
+      "SportWeb.Client.pdb": "sha256-862lRIlznO0q3P\/d1VgsEFMvxy2lWXnfImCDrkEVbYo="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-5ttRwTa4Rar530elwLdfGDeH9I9NX9MPyDl6zLi9uug=",
@@ -219,7 +219,7 @@
     },
     "satelliteResources": {
       "pl": {
-        "pl\/SportWeb.Client.resources.dll": "sha256-FoBNtYBB2L8CssMIT+91qgyqxgPPhklfAzYw45ZzlgE="
+        "pl\/SportWeb.Client.resources.dll": "sha256-ISipTH4z\/6UQEw5IN\/nPTUmiI124Veqw0RVY6jAw8ew="
       }
     }
   }

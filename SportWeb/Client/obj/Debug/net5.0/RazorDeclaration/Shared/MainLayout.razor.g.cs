@@ -118,7 +118,7 @@ using Microsoft.Extensions.Localization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\Shared\MainLayout.razor"
+#line 30 "C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\Shared\MainLayout.razor"
        
   readonly MudTheme _theme = new()
   {

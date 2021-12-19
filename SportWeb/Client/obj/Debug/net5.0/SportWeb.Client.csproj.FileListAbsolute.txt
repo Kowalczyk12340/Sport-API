@@ -675,3 +675,4 @@ C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\obj\Debug\net5.0\ref\SportWeb.
 C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\obj\Debug\net5.0\SportWeb.Client.pdb
 C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\obj\Debug\net5.0\serviceworkers\wwwroot\service-worker.js
 C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\obj\Debug\net5.0\service-worker-assets.js
+C:\Users\Dell\Desktop\c#\SportAPI\SportWeb\Client\obj\Debug\net5.0\pl\SportWeb.Client.resources.cs
