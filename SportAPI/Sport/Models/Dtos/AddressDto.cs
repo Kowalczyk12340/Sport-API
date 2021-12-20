@@ -13,6 +13,5 @@ namespace SportAPI.Sport.Models.Dtos
     public string Street { get; set; }
     public string PostalCode { get; set; }
     public string SportClubName { get; set; }
-    public string Name { get; set; }
   }
 }

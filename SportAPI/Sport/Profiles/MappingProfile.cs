@@ -20,6 +20,7 @@ namespace SportAPI.Sport.Profiles
       .ForMember(m => m.PostalCode, c => c.MapFrom(s => s.Address.PostalCode))
       .ForMember(m => m.FirstName, c => c.MapFrom(s => s.User.FirstName))
       .ForMember(m => m.LastName, c => c.MapFrom(s => s.User.LastName))
+      .ForMember(m => m.Nationality, c => c.MapFrom(s => s.User.Nationality))
       .ForMember(m => m.Login, c => c.MapFrom(s => s.User.Login))
       .ForMember(m => m.Password, c => c.MapFrom(s => s.User.Password));
 

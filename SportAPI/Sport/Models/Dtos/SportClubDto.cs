@@ -22,6 +22,9 @@ namespace SportAPI.Sport.Models.Dtos
     public string LastName { get; set; }
     public string Login { get; set; }
     public string Password { get; set; }
+    public string Nationality { get; set; }
+    public Address Address { get; set; }
+    public User User { get; set; }
     public List<PlayerDto> Players { get; set; }
     public List<TrainingDto> Trainings { get; set; }
     public List<MatchDto> Matches { get; set; }
