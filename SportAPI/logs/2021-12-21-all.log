@@ -1,0 +1,981 @@
+2021-12-21 00:06:42.9507|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:06:43.0539|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:06:43.1027|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:06:43.1027|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:06:45.6794||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 00:06:45.6931||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 00:06:45.6994||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 00:07:39.9730||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/register {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#","confirmPassword":"Marcingrafik1#","firstName":"Marcin","lastName":"Kowalczyk","isActive":true,"nationality":"Polska","dateOfBirth":"1999-12-20T23:06:56.002Z","roleId":2} 
+2021-12-21 00:21:03.6201|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:21:03.7149|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:21:03.7149|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:21:03.7366|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:21:06.5339||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 00:21:06.5493||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 00:21:06.5567||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 00:22:25.3352||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/register {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#","confirmPassword":"Marcingrafik1","firstName":"Marcin","lastName":"Kowalczyk","isActive":true,"nationality":"Polska","dateOfBirth":"1999-06-10T16:10:31.566Z","roleId":2} 
+2021-12-21 00:25:24.3677|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:25:24.4704|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:25:24.5252|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:25:24.5322|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:25:26.8116||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 00:25:26.8226||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 00:25:26.8226||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 00:26:49.1445||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/register {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#","confirmPassword":"Marcingrafik1","firstName":"Marcin","lastName":"Kowalczyk","isActive":true,"nationality":"Polska","dateOfBirth":"1999-06-10T16:10:00.215Z","roleId":2} 
+2021-12-21 00:26:49.3427||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 189 ms with response 401: <no response body> 
+2021-12-21 00:27:53.3733||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/register {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#","confirmPassword":"Marcingrafik1","firstName":"Marcin","lastName":"Kowalczyk","isActive":true,"nationality":"Polska","dateOfBirth":"1999-06-10T16:10:00.215Z","roleId":2} 
+2021-12-21 00:27:53.4253||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 48 ms with response 401: <no response body> 
+2021-12-21 00:28:29.5281|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:28:29.6183|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:28:29.6330|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:28:29.6370|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:28:31.9967||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 00:28:32.0135||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 00:28:32.0135||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 00:30:08.9533||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/register {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#","confirmPassword":"Marcingrafik1#","firstName":"Marcin","lastName":"Kowalczyk","isActive":true,"nationality":"Polska","dateOfBirth":"1999-06-10T16:10:05.109Z","roleId":2} 
+2021-12-21 00:30:16.1917||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 7230 ms with response 200: <no response body> 
+2021-12-21 00:30:16.1917||INFO|SportAPI.Middlewares.RequestTimeMiddleware|Request [POST] at /api/User/register took 7263 ms 
+2021-12-21 00:30:44.2637||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 00:30:46.4664||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 108
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method152(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 00:30:46.9493|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 00:30:46.9781|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 00:30:46.9970|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "15060037168422453321", Request ID "8000004a-0003-d100-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 00:33:11.8104||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 00:33:12.9362||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 108
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method152(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 00:33:13.4088|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 00:33:13.4173|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 00:33:13.4173|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "14051230839006560305", Request ID "80000032-0000-c300-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 00:45:35.9885|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:45:36.1133|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:45:36.1448|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:45:36.1448|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:45:38.0623||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 00:45:38.0623||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 00:45:38.0771||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 00:47:30.1897||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/register {"login":"marcinkowalczyk24.5@wp.p","password":"Marcingrafik1#","confirmPassword":"Marcingrafik1#","firstName":"Marcin","lastName":"Kowalczyk","isActive":true,"nationality":"Polska","dateOfBirth":"1999-06-10T23:46:35.545Z","roleId":2} 
+2021-12-21 00:48:30.5199|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:48:30.6116|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:48:30.6232|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:48:30.6232|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:48:32.9863||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 00:48:33.0222||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 00:48:33.0222||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 00:49:12.5207||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 00:49:24.1880||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 110
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 00:49:25.0672|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 00:49:25.1060|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 00:49:25.1314|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "15060037168422453326", Request ID "8000004f-0003-d100-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 00:57:07.3644|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:57:07.4840|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:57:07.5059|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:57:07.5191|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 00:57:10.5103||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 00:57:10.5175||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 00:57:10.5440||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 00:57:57.0382||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:00:05.7697||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 110
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 01:00:06.3742|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:00:06.4113|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:00:06.4281|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "12970366932732608558", Request ID "8000002f-0001-b400-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 01:02:29.2725|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:02:29.3733|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:02:29.3889|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:02:29.3889|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:02:31.5807||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:02:31.6113||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:02:31.6113||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:03:19.6185||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:03:37.6322||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 110
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 01:03:38.2434|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:03:38.2729|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:03:38.3017|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "12538021368505041005", Request ID "8000006e-0001-ae00-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 01:04:49.0459|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:04:49.1224|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:04:49.1328|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:04:49.1405|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:04:50.8638||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:04:50.8758||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:04:50.8758||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:05:33.8326||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:08:04.8454||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 110
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 01:08:05.5003|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:08:05.5681|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:08:05.6032|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "15204152356498309166", Request ID "8000002f-0003-d300-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 01:08:22.8113|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:08:22.8884|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:08:22.9084|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:08:22.9084|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:08:24.9704||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:08:24.9704||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:08:24.9849||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:09:13.7934||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:10:59.3096||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 110
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 01:10:59.9161|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:10:59.9474|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:10:59.9696|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "12538021368505041009", Request ID "80000072-0001-ae00-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 01:11:31.0208|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:11:31.1174|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:11:31.1327|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:11:31.1327|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:11:33.1053||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:11:33.1111||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:11:33.1111||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:30:21.9069|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:30:22.1694|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:30:22.2467|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:30:22.2655|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:30:26.3323||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:30:26.5638||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:30:26.6435||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:30:59.6294||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:31:21.9626||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 96
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 01:31:22.6202|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:31:22.6707|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:31:22.6999|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "14843864373423767630", Request ID "8000004f-0000-ce00-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 01:40:12.3810|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:40:12.4982|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:40:12.5032|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:40:12.5032|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:40:15.0583||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:40:15.0679||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:40:15.0909||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:41:02.0361||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:41:46.3727|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:41:46.4374|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:41:46.4426|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:41:46.4426|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:41:49.3288||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:41:49.3477||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:41:49.3477||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:42:31.4732||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:44:20.4386|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:44:20.6049|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:44:20.6950|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:44:20.7110|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:44:24.8507||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:44:25.0817||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:44:25.6653||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:46:29.7596||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:50:34.6322|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:50:34.7666|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:50:34.7809|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:50:34.7860|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 01:50:37.1417||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 01:50:37.1524||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 01:50:37.1524||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 01:51:05.0061||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:51:45.8959||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 97
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 01:51:46.7873|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:51:46.8183|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:51:46.8353|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "15060037168422453341", Request ID "8000005e-0003-d100-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 01:52:11.8629||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 01:52:27.2424||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 97
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 01:52:27.7950|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:52:27.8077|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 01:52:27.8168|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "14267403625415311415", Request ID "80000038-0001-c600-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 01:52:33.0558||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 02:02:19.5418|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:02:19.6662|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:02:19.6816|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:02:19.6989|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:02:22.5333||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 02:02:22.6002||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 02:02:22.6002||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 02:02:58.7919||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 02:09:03.8218||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 100
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 02:23:48.6621|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:23:48.8145|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:23:48.8332|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:23:48.8393|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:23:52.0935||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 02:23:52.1977||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 02:23:52.2679||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 02:24:21.1870||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): POST https://localhost:44377/api/User/login {"login":"marcinkowalczyk24.5@wp.pl","password":"Marcingrafik1#"} 
+2021-12-21 02:25:45.5886||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key') System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'System.String' requires a key size of at least 'System.Int32' bits. Key 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', is of size: 'System.Int32'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SportAPI.Sport.Services.UserService.GenerateJwt(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\UserService.cs:line 100
+   at SportAPI.Sport.Controllers.UserController.Login(LoginDto dto) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\UserController.cs:line 143
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 02:27:02.3246||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): GET https://localhost:44377/api/Coach <no request body> 
+2021-12-21 02:27:02.3707||INFO|SportAPI.Sport.Services.CoachService|Display all the available coaches int this database 
+2021-12-21 02:27:02.3840|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 02:27:02.4263|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 02:27:02.4427|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "16789419421037756523", Request ID "8000006c-0002-e900-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 02:27:02.6967||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 358 ms with response 200: [{"Id":1,"Name":"Maciej","Surname":"Skorża","Pesel":"67081234590","PhoneNumber":"+48 607 801 212","EmailAddress":"maciej.skorża@wp.pl","Cash":"50 000 PLN","SportClubName":null},{"Id":2,"Name":"Dariusz","Surname":"Dudka","Pesel":"78010841029","PhoneNumber":"+48 500 278 999","EmailAddress":"dariusz.dudka@interia.pl","Cash":"23 000 PLN","SportClubName":null},{"Id":3,"Name":"Piotr","Surname":"Reiss","Pesel":"72052309173","PhoneNumber":"+48 782 233 980","EmailAddress":"maciej.skorża@wp.pl","Cash":"20 000 PLN","SportClubName":null},{"Id":4,"Name":"Wojciech","Surname":"Łazarek","Pesel":"51010541029","PhoneNumber":"+48 500 278 999","EmailAddress":"dariusz.dudka@interia.pl","Cash":"43 000 PLN","SportClubName":null},{"Id":5,"Name":"Czesław","Surname":"Michniewicz","Pesel":"63090934590","PhoneNumber":"+48 511 902 439","EmailAddress":"czeslaw.michniewicz@wp.pl","Cash":"60 000 PLN","SportClubName":null},{"Id":10002,"Name":"Jan","Surname":"Urban","Pesel":"62090198201","PhoneNumber":"+48 502 459 003","EmailAddress":"jan.urban@gmail.com","Cash":"53 000 PLN","SportClubName":null},{"Id":20002,"Name":"Maciej","Surname":"Skorża","Pesel":"67081234590","PhoneNumber":"+48 607 801 212","EmailAddress":"maciej.skorża@wp.pl","Cash":"50 000 PLN","SportClubName":null},{"Id":20003,"Name":"Wojciech","Surname":"Łazarek","Pesel":"51010541029","PhoneNumber":"+48 500 278 999","EmailAddress":"dariusz.dudka@interia.pl","Cash":"43 000 PLN","SportClubName":null},{"Id":20004,"Name":"Ralf","Surname":"Rangnick","Pesel":"66092192837","PhoneNumber":"+42 506 903 990","EmailAddress":"ralf.rangnick@wp.pl","Cash":"300 000 PLN","SportClubName":null},{"Id":20005,"Name":"Czesław","Surname":"Michniewicz","Pesel":"63090934590","PhoneNumber":"+48 511 902 439","EmailAddress":"czeslaw.michniewicz@wp.pl","Cash":"60 000 PLN","SportClubName":null},{"Id":20006,"Name":"Piotr","Surname":"Reiss","Pesel":"72052309173","PhoneNumber":"+48 782 233 980","EmailAddress":"maciej.skorża@wp.pl","Cash":"20 000 PLN","SportClubName":null},{"Id":20007,"Name":"Dariusz","Surname":"Dudka","Pesel":"78010841029","PhoneNumber":"+48 500 278 999","EmailAddress":"dariusz.dudka@interia.pl","Cash":"23 000 PLN","SportClubName":null}] 
+2021-12-21 02:27:36.1711||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): GET https://localhost:44377/api/SportClub <no request body> 
+2021-12-21 02:27:36.1888||INFO|SportAPI.Sport.Services.SportClubService|Getting All the Sport Clubs available in this database 
+2021-12-21 02:27:36.6359||ERROR|SportAPI.Middlewares.ErrorHandlingMiddleware|The expression 'x.Address.City' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393. System.InvalidOperationException: The expression 'x.Address.City' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.PopulateIncludeTree(IncludeTreeNode includeTreeNode, Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SportAPI.Sport.Services.SportClubService.GetAll() in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Services\SportClubService.cs:line 59
+   at SportAPI.Sport.Controllers.SportClubController.GetAll() in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\Controllers\SportClubController.cs:line 45
+   at lambda_method177(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 36
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestResponseLoggingMiddleware.cs:line 42
+   at SportAPI.Middlewares.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\RequestTimeMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 23
+2021-12-21 02:27:36.7676|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 02:27:36.7785|3|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An exception was thrown attempting to display the error page. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-21 02:27:36.7919|2|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "12970366932732608561", Request ID "80000032-0001-b400-b63f-84710c7967bb": An unhandled exception was thrown by the application. System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, CancellationToken cancellationToken)
+   at SportAPI.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Middlewares\ErrorHanglindMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at SportAPI.Sport.UserMiddlewares.SportTokenAuthMiddleware.Invoke(HttpContext context) in C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\Sport\UserMiddlewares\SportTokenAuthMiddleware.cs:line 50
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-12-21 02:35:59.0469|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:35:59.1301|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:35:59.1362|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:35:59.1362|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:36:01.6859||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 02:36:01.7074||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 02:36:01.7131||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 02:36:25.1394||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): GET https://localhost:44377/api/SportClub <no request body> 
+2021-12-21 02:37:17.8739|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsHigh' on entity type 'League' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:37:17.9552|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'InHouse' on entity type 'Match' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:37:17.9712|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'HasOwnStadium' on entity type 'SportClub' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:37:17.9712|20601|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The 'bool' property 'IsActive' on entity type 'User' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. 
+2021-12-21 02:37:19.8688||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-21 02:37:19.9093||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-21 02:37:19.9529||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Dell\Desktop\c#\SportAPI\SportAPI 
+2021-12-21 02:37:40.3768||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request from ::1(DESKTOP-VPKE3ES): GET https://localhost:44377/api/SportClub <no request body> 
+2021-12-21 02:37:40.9684||INFO|SportAPI.Sport.Services.SportClubService|Getting All the Sport Clubs available in this database 
+2021-12-21 02:37:41.2201|20504|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 
+2021-12-21 02:37:42.3269||INFO|SportAPI.Middlewares.RequestResponseLoggingMiddleware|Request handled in 1933 ms with response 200: <response body is longer than 10000 characters> 

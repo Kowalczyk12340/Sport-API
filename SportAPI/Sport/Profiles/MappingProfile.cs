@@ -15,9 +15,11 @@ namespace SportAPI.Sport.Profiles
     public MappingProfile()
     {
       CreateMap<SportClub, SportClubDto>()
+      .ForMember(m => m.AddressId, c => c.MapFrom(s => s.Address.Id))
       .ForMember(m => m.City, c => c.MapFrom(s => s.Address.City))
       .ForMember(m => m.Street, c => c.MapFrom(s => s.Address.Street))
       .ForMember(m => m.PostalCode, c => c.MapFrom(s => s.Address.PostalCode))
+      .ForMember(m => m.UserId, c => c.MapFrom(s => s.User.Id))
       .ForMember(m => m.FirstName, c => c.MapFrom(s => s.User.FirstName))
       .ForMember(m => m.LastName, c => c.MapFrom(s => s.User.LastName))
       .ForMember(m => m.Nationality, c => c.MapFrom(s => s.User.Nationality))
@@ -25,23 +27,23 @@ namespace SportAPI.Sport.Profiles
       .ForMember(m => m.Password, c => c.MapFrom(s => s.User.Password));
 
       CreateMap<Match, MatchDto>()
-        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClub.Id));
       CreateMap<Player, PlayerDto>()
-        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClub.Id));
       CreateMap<Training, TrainingDto>()
-        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClub.Id));
       CreateMap<Coach, CoachDto>()
-        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClub.Id));
 
       CreateMap<User, UserDto>()
-        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName))
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClub.Id))
         .ForMember(m => m.RoleName, c => c.MapFrom(s => s.Role.RoleName));
 
       CreateMap<Role, RoleDto>()
         .ForMember(m => m.RoleName, c => c.MapFrom(s => s.RoleName));
 
       CreateMap<Address,AddressDto>()
-        .ForMember(m => m.SportClubName, c => c.MapFrom(s => s.SportClub.SportClubName));
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClub.Id));
 
       CreateMap<League, LeagueDto>();
 
@@ -49,16 +51,19 @@ namespace SportAPI.Sport.Profiles
           .ForMember(r => r.Address, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }))
           .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password }));
 
-      CreateMap<CreateAddressDto, Address>();
       CreateMap<RegisterUserDto, User>();
       CreateMap<LoginDto, User>()
         .ForMember(m => m.Login, c => c.MapFrom(s => s.Login))
         .ForMember(m => m.Password, c => c.MapFrom(s => s.Password));
       CreateMap<CreateRoleDto, Role>();
-      CreateMap<CreateTrainingDto, Training>();
-      CreateMap<CreatePlayerDto, Player>();
-      CreateMap<CreateMatchDto, Match>();
-      CreateMap<CreateCoachDto, Coach>();
+      CreateMap<CreateTrainingDto, Training>()
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClubId));
+      CreateMap<CreatePlayerDto, Player>()
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClubId));
+      CreateMap<CreateMatchDto, Match>()
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClubId));
+      CreateMap<CreateCoachDto, Coach>()
+        .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClubId));
       CreateMap<CreateLeagueDto, League>();
 
       ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());

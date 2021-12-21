@@ -11,5 +11,6 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string City { get; set; }
     public string Street { get; set; }
     public string PostalCode { get; set; }
+    public long SportClubId { get; set; }
   }
 }

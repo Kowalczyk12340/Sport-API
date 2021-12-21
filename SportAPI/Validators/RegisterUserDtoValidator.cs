@@ -18,6 +18,8 @@ namespace SportAPI.Validators
 
       RuleFor(x => x.ConfirmPassword).Equal(e => e.Password);
 
+      RuleFor(x => x.DateOfBirth.Value.Year).GreaterThan(17);
+
       RuleFor(x => x.Login)
         .Custom((value, context) =>
         {

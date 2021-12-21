@@ -13,6 +13,6 @@ namespace SportAPI.Sport.Models.Dtos
     public string TeamTwo { get; set; }
     public bool InHouse { get; set; }
     public DateTime DateOfMatch { get; set; }
-    public string SportClubName { get; set; }
+    public long SportClubId { get; set; }
   }
 }

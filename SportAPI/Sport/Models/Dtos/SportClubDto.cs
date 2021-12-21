@@ -15,13 +15,16 @@ namespace SportAPI.Sport.Models.Dtos
     public bool HasOwnStadium { get; set; }
     public string ContactEmail { get; set; }
     public string ContactNumber { get; set; }
+    public long AddressId { get; set; }
     public string City { get; set; }
     public string Street { get; set; }
     public string PostalCode { get; set; }
+    public long UserId { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Login { get; set; }
     public string Password { get; set; }
+    public DateTime? DateOfBirth { get; set; }
     public string Nationality { get; set; }
     public Address Address { get; set; }
     public User User { get; set; }

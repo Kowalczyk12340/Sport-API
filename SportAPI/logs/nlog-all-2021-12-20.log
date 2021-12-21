@@ -1,1 +1,2 @@
 2021-12-20 01:11:05.8381{$event-properties:item=EventId_Id}{$uppercase:Info}SportAPI.Middlewares.RequestTimeMiddlewareRequest [GET] at /api/SportClub took 76788 ms  
+2021-12-20 23:50:24.3590{$event-properties:item=EventId_Id}{$uppercase:Info}SportAPI.Middlewares.RequestTimeMiddlewareRequest [GET] at /api/Address took 8996 ms  

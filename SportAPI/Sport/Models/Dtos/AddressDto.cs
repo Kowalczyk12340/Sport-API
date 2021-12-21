@@ -12,6 +12,6 @@ namespace SportAPI.Sport.Models.Dtos
     public string City { get; set; }
     public string Street { get; set; }
     public string PostalCode { get; set; }
-    public string SportClubName { get; set; }
+    public long SportClubId { get; set; }
   }
 }
