@@ -1,1 +1,2 @@
 2021-12-21 00:30:16.1917{$event-properties:item=EventId_Id}{$uppercase:Info}SportAPI.Middlewares.RequestTimeMiddlewareRequest [POST] at /api/User/register took 7263 ms  
+2021-12-21 11:24:17.9771{$event-properties:item=EventId_Id}{$uppercase:Info}SportAPI.Middlewares.RequestTimeMiddlewareRequest [POST] at /api/User/login took 43209 ms  

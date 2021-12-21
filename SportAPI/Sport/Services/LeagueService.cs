@@ -42,6 +42,7 @@ namespace SportAPI.Sport.Services
 
       var league = await _dbContext
         .Leagues
+        .Include(u => u.SportClubs)
         .FirstOrDefaultAsync(x => x.Id == id);
 
       if(league is null)
@@ -88,6 +89,7 @@ namespace SportAPI.Sport.Services
 
       var league = await _dbContext
         .Leagues
+        .Include(u => u.SportClubs)
         .FirstOrDefaultAsync(x => x.Id == id);
 
       if(league is null)

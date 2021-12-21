@@ -45,6 +45,7 @@ namespace SportAPI.Sport.Services
 
       var user = await _dbContext
         .Users
+        .Include(u => u.Role)
         .FirstOrDefaultAsync(x => x.Id == id);
 
       if(user is null)
@@ -106,6 +107,7 @@ namespace SportAPI.Sport.Services
       _logger.LogInformation("Display all the users available in the database");
       var users = await _dbContext
         .Users
+        .Include(u => u.Role)
         .ToListAsync();
 
       var userDtos = _mapper.Map<List<UserDto>>(users);
@@ -117,6 +119,7 @@ namespace SportAPI.Sport.Services
       _logger.LogInformation($"Display user with id: {id}");
       var user = await _dbContext
         .Users
+        .Include(u => u.Role)
         .FirstOrDefaultAsync(x => x.Id == id);
 
       if(user is null)
@@ -155,6 +158,7 @@ namespace SportAPI.Sport.Services
       _logger.LogInformation($"Edit user with id: {id}");
       var user = await _dbContext
         .Users
+        .Include(u => u.Role)
         .FirstOrDefaultAsync(x => x.Id == id);
 
       if(user is null)
