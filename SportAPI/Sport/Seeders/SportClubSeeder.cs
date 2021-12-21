@@ -31,13 +31,6 @@ namespace SportAPI.Sport.Seeders
           _dbContext.SaveChanges();
         }
 
-        if(!_dbContext.Clubs.Any())
-        {
-          var clubs = GetClubs();
-          _dbContext.Clubs.AddRange(clubs);
-          _dbContext.SaveChanges();
-        }
-
         if(!_dbContext.Leagues.Any())
         {
           var leagues = GetLeagues();
@@ -60,7 +53,7 @@ namespace SportAPI.Sport.Seeders
           CountForDownLeague = 3,
           SportClubs = GetClubs().ToList(),
           IsHigh = true,
-          Nationality = "Polska"
+          Nationality = "Polska",
         },
         new League()
         {
@@ -86,7 +79,7 @@ namespace SportAPI.Sport.Seeders
                 Nationality = "Scotland",
                 IsActive = true,
                 Login = "alex.fergusson@wp.pl",
-                Password = BCrypt.Net.BCrypt.HashPassword("Marcingrafik1#"),
+                Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Alex" && x.LastName == "Fergusson"),"Marcingrafik1#"),
                 DateOfBirth = DateTime.ParseExact("1951-02-23 11:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
                 Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
               },
@@ -106,6 +99,7 @@ namespace SportAPI.Sport.Seeders
                   EmailAddress = "ralf.rangnick@wp.pl",
                   Pesel = "66092192837",
                   PhoneNumber = "+42 506 903 990",
+                  SportClubId = 3
                 }
               },
               Trainings = new List<Training>()
@@ -115,6 +109,7 @@ namespace SportAPI.Sport.Seeders
                   Name = "Trening Sprawnościowy",
                   Description = "Ćwiczenia ogólnorozjowe, rozciąganie mięsni i tkanek miękkich",
                   TimeOfTraining = DateTime.ParseExact("2021-12-29 11:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
+                  SportClubId = 1
                 }
               },
               Matches = new List<Match>()
@@ -125,6 +120,7 @@ namespace SportAPI.Sport.Seeders
                   InHouse = true,
                   TeamOne = "Manchester United",
                   TeamTwo = "Manchester City",
+                  SportClubId = 1
                 }
               },
               Players = new List<Player>()
@@ -139,12 +135,13 @@ namespace SportAPI.Sport.Seeders
                   Pesel = "85020582935",
                   PhoneNumber = "+42 560 283 912",
                   Position = "Napastnik",
+                  SportClubId = 1
                 }
               }
             }
           },
           IsHigh = true,
-          Nationality = "Polska"
+          Nationality = "Anglia"
         },
       };
 
@@ -198,8 +195,8 @@ namespace SportAPI.Sport.Seeders
             Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
             IsActive = true,
             Nationality = "Polska",
-            Login = "marcinkowalczyk24.7",
-            Password = BCrypt.Net.BCrypt.HashPassword("Marcingrafik1#"),
+            Login = "marcinkowalczyk24.7@gmail.com",
+            Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Marcin" && x.LastName == "Kowalczyk"),"Marcingrafik1#"),
           },
           Coaches = new List<Coach>()
           {
@@ -211,6 +208,7 @@ namespace SportAPI.Sport.Seeders
               Cash = "50 000 PLN",
               PhoneNumber = "+48 607 801 212",
               EmailAddress = "maciej.skorża@wp.pl",
+              SportClubId = 1
             },
             new Coach()
             {
@@ -220,6 +218,7 @@ namespace SportAPI.Sport.Seeders
               Cash = "23 000 PLN",
               PhoneNumber = "+48 500 278 999",
               EmailAddress = "dariusz.dudka@interia.pl",
+              SportClubId = 1
             },
             new Coach()
             {
@@ -229,6 +228,7 @@ namespace SportAPI.Sport.Seeders
               Cash = "20 000 PLN",
               PhoneNumber = "+48 782 233 980",
               EmailAddress = "maciej.skorża@wp.pl",
+              SportClubId = 1
             },
           },
           Matches = new List<Match>
@@ -238,7 +238,8 @@ namespace SportAPI.Sport.Seeders
               TeamOne = "Lech Poznań",
               TeamTwo = "Legia Warszawa",
               InHouse = true,
-              DateOfMatch = DateTime.UtcNow
+              DateOfMatch = DateTime.UtcNow,
+              SportClubId = 1
             },
             new Match()
             {
@@ -246,6 +247,7 @@ namespace SportAPI.Sport.Seeders
               TeamTwo = "Lech Poznań",
               InHouse = false,
               DateOfMatch = new DateTime(2021,11,30,20,45,0),
+              SportClubId = 1
             },
             new Match()
             {
@@ -253,6 +255,7 @@ namespace SportAPI.Sport.Seeders
               TeamTwo = "Śląsk Wrocław",
               InHouse = true,
               DateOfMatch = new DateTime(2021,11,21,18,45,0),
+              SportClubId = 1
             },
           },
           Trainings = new List<Training>()
@@ -262,18 +265,21 @@ namespace SportAPI.Sport.Seeders
               Name = "Trening Siłowy",
               Description = "Trening, który odbywa się na hali sportowej, w którym zawodnicy wykonują ćwiczenia siłowe",
               TimeOfTraining = new DateTime(2021,11,24,8,45,0),
+              SportClubId = 1
             },
             new Training()
             {
               Name = "Trening Biegowy",
               Description = "Trening, który odbywa się w terenie, lub na bieżni, w którym zawodnicy wykonują biegi na różnych dystansach",
               TimeOfTraining = new DateTime(2021,11,25,9,20,0),
+              SportClubId = 1
             },
             new Training()
             {
               Name = "Trening Strzelecki",
               Description = "Trening, który odbywa się na boisku treningowym, w którym zawodnicy grający w polu strzelają bramkarzom z różnych pozycji na boisku",
               TimeOfTraining = new DateTime(2021,11,24,8,45,0),
+              SportClubId = 1
             },
           },
           Players = new List<Player>()
@@ -288,6 +294,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "03121298467",
               EmailAddress = "jakub.kaminski@wp.pl",
               PhoneNumber = "+48 506 666 712",
+              SportClubId = 1
             },
             new Player()
             {
@@ -299,6 +306,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "00019283701",
               EmailAddress = "michal.skoras@gmail.com",
               PhoneNumber = "+48 790 981 003",
+              SportClubId = 1
             },
             new Player()
             {
@@ -310,6 +318,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "95111198478",
               EmailAddress = "adrien.baloua@gmail.com",
               PhoneNumber = "+48 606 183 301",
+              SportClubId = 1
             },
             new Player()
             {
@@ -321,6 +330,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "91081992834",
               EmailAddress = "filip.bednarek@onet.pl",
               PhoneNumber = "+48 609 777 432",
+              SportClubId = 1
             },
             new Player()
             {
@@ -332,6 +342,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "92020285734",
               EmailAddress = "antonio.milic@gmail.com",
               PhoneNumber = "+48 504 657 435",
+              SportClubId = 1
             },
             new Player()
             {
@@ -343,6 +354,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "89060783746",
               EmailAddress = "barry.douglas@onet.pl",
               PhoneNumber = "+48 771 321 222",
+              SportClubId = 1
             },
             new Player()
             {
@@ -354,6 +366,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "90040590839",
               EmailAddress = "mikael.ishak@gmail.com",
               PhoneNumber = "+48 783 321 666",
+              SportClubId = 1
             },
             new Player()
             {
@@ -365,6 +378,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "93111209483",
               EmailAddress = "alan.czerwinski@wp.pl",
               PhoneNumber = "+48 903 432 810",
+              SportClubId = 1
             },
             new Player()
             {
@@ -376,6 +390,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "87061049034",
               EmailAddress = "pedro.tiba@wp.pl",
               PhoneNumber = "+48 707 400 481",
+              SportClubId = 1
             },
           }
         },
@@ -391,7 +406,7 @@ namespace SportAPI.Sport.Seeders
           {
             City = "Warszawa",
             PostalCode = "11-321",
-            Street = "Łazienkowska 3"
+            Street = "Łazienkowska 3",
           },
           User = new User()
           {
@@ -401,8 +416,8 @@ namespace SportAPI.Sport.Seeders
             DateOfBirth = DateTime.ParseExact("1991-11-12 08:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
             Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
             Nationality = "Niemcy",
-            Login = "karol.strasburger12",
-            Password = BCrypt.Net.BCrypt.HashPassword("Marcingrafik1#"),
+            Login = "karol.strasburger@wp.pl",
+            Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Karol" && x.LastName == "Strasburger"),"Marcingrafik1#"),
           },
           Coaches = new List<Coach>()
           {
@@ -414,6 +429,7 @@ namespace SportAPI.Sport.Seeders
               Cash = "60 000 PLN",
               PhoneNumber = "+48 511 902 439",
               EmailAddress = "czeslaw.michniewicz@wp.pl",
+              SportClubId = 2
             },
             new Coach()
             {
@@ -422,7 +438,8 @@ namespace SportAPI.Sport.Seeders
               Pesel = "51010541029",
               Cash = "43 000 PLN",
               PhoneNumber = "+48 500 278 999",
-              EmailAddress = "dariusz.dudka@interia.pl",
+              EmailAddress = "wojciech.lazarek@interia.pl",
+              SportClubId = 2
             },
           },
           Matches = new List<Match>
@@ -432,7 +449,8 @@ namespace SportAPI.Sport.Seeders
               TeamOne = "Zawisza Bydgoszcz",
               TeamTwo = "Legia Warszawa",
               InHouse = false,
-              DateOfMatch = DateTime.UtcNow
+              DateOfMatch = DateTime.UtcNow,
+              SportClubId = 2
             },
             new Match()
             {
@@ -440,6 +458,7 @@ namespace SportAPI.Sport.Seeders
               TeamTwo = "Lech Poznań",
               InHouse = true,
               DateOfMatch = new DateTime(2021,10,23,20,45,0),
+              SportClubId = 2
             },
             new Match()
             {
@@ -447,6 +466,7 @@ namespace SportAPI.Sport.Seeders
               TeamTwo = "Jagiellonia Białystok",
               InHouse = true,
               DateOfMatch = new DateTime(2021,12,14,17,50,0),
+              SportClubId = 2
             },
           },
           Trainings = new List<Training>()
@@ -456,18 +476,21 @@ namespace SportAPI.Sport.Seeders
               Name = "Trening Techniczny",
               Description = "Trening, który odbywa się na hali sportowej, w którym zawodnicy wykonują ćwiczenia szkolące technikę użytkową",
               TimeOfTraining = new DateTime(2021,11,28,10,45,0),
+              SportClubId = 2
             },
             new Training()
             {
               Name = "Trening Taktyczny",
               Description = "Trening, który odbywa się na boisku treningowym, w którym zawodnicy wykonują treningi taktyczne zgodne z ich pozycją na boisku",
               TimeOfTraining = new DateTime(2021,11,30,10,35,0),
+              SportClubId = 2
             },
             new Training()
             {
               Name = "Trening Meczowy",
               Description = "Trening, który odbywa się na boisku treningowym, w którym zawodnicy podzieleni na dwie grupy grają mecz 11x11",
               TimeOfTraining = new DateTime(2021,12,4,13,0,0),
+              SportClubId = 2,
             },
           },
           Players = new List<Player>()
@@ -482,6 +505,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "86011298467",
               EmailAddress = "artur.jedrzejczyk@wp.pl",
               PhoneNumber = "+48 806 111 231",
+              SportClubId = 2
             },
             new Player()
             {
@@ -493,6 +517,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "80044982703",
               EmailAddress = "artur.boruc@gmail.com",
               PhoneNumber = "+48 501 407 623",
+              SportClubId = 2
             },
             new Player()
             {
@@ -515,6 +540,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "95029085590",
               EmailAddress = "josue.vide@gmail.com",
               PhoneNumber = "+48 780 790 541",
+              SportClubId = 2
             },
             new Player()
             {
@@ -526,6 +552,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "96062283005",
               EmailAddress = "bartosz.kapustka@onet.pl",
               PhoneNumber = "+48 555 324 501",
+              SportClubId = 2
             },
             new Player()
             {
@@ -537,6 +564,7 @@ namespace SportAPI.Sport.Seeders
               Pesel = "92032445324",
               EmailAddress = "thomas.pekhart@gmail.com",
               PhoneNumber = "+48 567 050 546",
+              SportClubId = 2
             },
           }
         }

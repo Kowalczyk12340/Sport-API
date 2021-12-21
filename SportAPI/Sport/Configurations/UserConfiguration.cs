@@ -15,6 +15,7 @@ namespace SportAPI.Sport.Configurations
       builder.ToTable("User","Sport");
 
       builder.HasKey(e => e.Id);
+      builder.Property(e => e.Id).ValueGeneratedOnAdd();
 
       builder.Property(e => e.Login)
               .HasMaxLength(32)

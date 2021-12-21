@@ -14,6 +14,7 @@ namespace SportAPI.Sport.Configurations
     {
       builder.ToTable("SportClub", "Sport");
       builder.HasKey(e => e.Id);
+      builder.Property(e => e.Id).ValueGeneratedOnAdd();
 
       builder.Property(e => e.SportClubName)
         .IsRequired()

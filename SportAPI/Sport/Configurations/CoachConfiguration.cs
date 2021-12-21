@@ -14,6 +14,7 @@ namespace SportAPI.Sport.Configurations
     {
       builder.ToTable("Coach", "Sport");
       builder.HasKey(e => e.Id);
+      builder.Property(e => e.Id).ValueGeneratedOnAdd();
 
       builder.Property(e => e.Name).IsRequired().HasMaxLength(100);
 
