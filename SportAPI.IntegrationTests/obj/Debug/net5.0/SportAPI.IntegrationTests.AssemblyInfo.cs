@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("SportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Dell\\Desktop\\c#\\SportAPI\\SportAPI", "SportAPI.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SportAPI.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

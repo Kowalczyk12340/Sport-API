@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.12" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
     <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="17.0.0" />
@@ -21,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Photos\" />
+    <Folder Include="ControllerTests\Photos\" />
   </ItemGroup>
 
 </Project>

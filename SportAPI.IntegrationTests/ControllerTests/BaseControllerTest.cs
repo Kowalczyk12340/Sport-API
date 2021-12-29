@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,7 +34,9 @@ namespace SportAPI.IntegrationTests.ControllerTests
     public void StartApplication()
     {
       Application = _hostBuilder.Start();
-      Client = Application.GetTestServer().CreateClient();
+      var factory = new WebApplicationFactory<Program>();
+      TestServer testServer = factory.Server;
+      Client = testServer.CreateClient();
     }
 
     [OneTimeTearDown]
