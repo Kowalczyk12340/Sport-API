@@ -20,4 +20,8 @@
     <ProjectReference Include="..\SportAPI\SportAPI.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Photos\" />
+  </ItemGroup>
+
 </Project>

@@ -17,4 +17,8 @@
     <PackageReference Include="Quartz.AspNetCore" Version="3.3.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SportAPI\SportAPI.csproj" />
+  </ItemGroup>
+
 </Project>

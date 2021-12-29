@@ -21,7 +21,7 @@ namespace SportAPI.IntegrationTests.ControllerTests
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(config =>
         {
-          config.AddInMemoryCollection(new Dictionary<string, string>() { ["ConnectionStrings:Database"] = @"Data Source=10.10.10.70\localifs; Initial Catalog=LWH10_SIERADZ; uid=siesdev; pwd=8pBVgbBdHsb5yQKQ" });
+          config.AddInMemoryCollection(new Dictionary<string, string>() { ["ConnectionStrings:Database"] = @"Data Source=DESKTOP-VPKE3ES\\SQLEXPRESS;Initial Catalog=SportAPI;Integrated Security=True" });
           config.AddEnvironmentVariables();
         })
         .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); })
@@ -33,7 +33,7 @@ namespace SportAPI.IntegrationTests.ControllerTests
     public void StartApplication()
     {
       Application = _hostBuilder.Start();
-      Client = Application.GetTestClient();
+      Client = Application.GetTestServer().CreateClient();
     }
 
     [OneTimeTearDown]
@@ -41,15 +41,5 @@ namespace SportAPI.IntegrationTests.ControllerTests
     {
       Application.Dispose();
     }
-
-    /*[SetUp]
-    public void EnsureSeedData()
-    {
-      using var scope = Application.Services.CreateScope();
-      var context = scope.ServiceProvider.GetRequiredService<SportDbContext>();
-      var seeder = new SportClubSeeder(context,_passwordHasher);
-
-      seeder.Seed();
-    }*/
   }
 }

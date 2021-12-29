@@ -31,7 +31,7 @@ namespace SportAPI.IntegrationTests.ControllerTests
       var content = await response.Content.ReadAsStringAsync();
       var component = JsonConvert.DeserializeObject<AddressDto>(content);
       var expected = component.City;
-      Assert.That(expected != null);
+      Assert.That(expected != null && expected.Equals("Ziemięcin"));
     }
   }
 }
