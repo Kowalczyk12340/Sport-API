@@ -1990,3 +1990,342 @@
 2021-12-29 15:14:24.6912 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
 2021-12-29 15:14:27.4318 Info AppDomain Shutting down. Logger closing...
 2021-12-29 15:14:27.4593 Info Logger has been shut down.
+2022-01-03 15:55:17.5107 Info Message Template Auto Format enabled
+2022-01-03 15:55:17.5322 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 15:55:17.6082 Info Adding target FileTarget(Name=allfile)
+2022-01-03 15:55:17.6082 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 15:55:17.6082 Info Adding target FileTarget(Name=request-time)
+2022-01-03 15:55:17.6082 Info Adding target FileTarget(Name=allfile)
+2022-01-03 15:55:17.6158 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 15:55:17.6538 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 15:55:17.6736 Info Configuration initialized.
+2022-01-03 15:55:17.6736 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 15:55:18.4903 Info AppDomain Shutting down. Logger closing...
+2022-01-03 15:55:18.5049 Info Logger has been shut down.
+2022-01-03 15:58:37.3543 Info Message Template Auto Format enabled
+2022-01-03 15:58:37.3651 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 15:58:37.4305 Info Adding target FileTarget(Name=allfile)
+2022-01-03 15:58:37.4305 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 15:58:37.4305 Info Adding target FileTarget(Name=request-time)
+2022-01-03 15:58:37.4305 Info Adding target FileTarget(Name=allfile)
+2022-01-03 15:58:37.4305 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 15:58:37.4792 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 15:58:37.5070 Info Configuration initialized.
+2022-01-03 15:58:37.5070 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:00:53.4844 Info Message Template Auto Format enabled
+2022-01-03 16:00:53.4927 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:00:53.5915 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:00:53.5915 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:00:53.5915 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:00:53.5915 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:00:53.5989 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:00:53.6421 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:00:53.6762 Info Configuration initialized.
+2022-01-03 16:00:53.6777 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:00:59.7204 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:00:59.7479 Info Logger has been shut down.
+2022-01-03 16:02:26.0757 Info Message Template Auto Format enabled
+2022-01-03 16:02:26.0841 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:02:26.1875 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:02:26.1875 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:02:26.1875 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:02:26.1932 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:02:26.1932 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:02:26.2614 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:02:26.2999 Info Configuration initialized.
+2022-01-03 16:02:26.2999 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:02:32.1386 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:02:32.1658 Info Logger has been shut down.
+2022-01-03 16:05:58.8478 Info Message Template Auto Format enabled
+2022-01-03 16:05:58.8550 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:05:58.9436 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:05:58.9436 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:05:58.9592 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:05:58.9592 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:05:58.9592 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:05:59.0024 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:05:59.0334 Info Configuration initialized.
+2022-01-03 16:05:59.0334 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:07:47.3781 Info Message Template Auto Format enabled
+2022-01-03 16:07:47.3876 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:07:47.4767 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:07:47.4767 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:07:47.4767 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:07:47.4767 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:07:47.4767 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:07:47.5276 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:07:47.5531 Info Configuration initialized.
+2022-01-03 16:07:47.5531 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:09:08.9496 Info Message Template Auto Format enabled
+2022-01-03 16:09:08.9638 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:09:09.0450 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:09:09.0450 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:09:09.0450 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:09:09.0533 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:09:09.0533 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:09:09.1032 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:09:09.1310 Info Configuration initialized.
+2022-01-03 16:09:09.1310 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:09:12.2376 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:09:12.2634 Info Logger has been shut down.
+2022-01-03 16:09:59.6072 Info Message Template Auto Format enabled
+2022-01-03 16:09:59.6187 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:09:59.7253 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:09:59.7253 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:09:59.7253 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:09:59.7253 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:09:59.7253 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:09:59.7799 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:09:59.8015 Info Configuration initialized.
+2022-01-03 16:09:59.8028 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:11:12.1491 Info Message Template Auto Format enabled
+2022-01-03 16:11:12.1491 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:11:12.2426 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:11:12.2426 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:11:12.2426 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:11:12.2426 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:11:12.2426 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:11:12.3097 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:11:12.3511 Info Configuration initialized.
+2022-01-03 16:11:12.3511 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:11:15.5136 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:11:15.5421 Info Logger has been shut down.
+2022-01-03 16:35:04.9860 Info Message Template Auto Format enabled
+2022-01-03 16:35:04.9964 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:35:05.0842 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:35:05.0842 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:35:05.0842 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:35:05.0842 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:35:05.0842 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:35:05.1397 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:35:05.1852 Info Configuration initialized.
+2022-01-03 16:35:05.1852 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:35:10.3174 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:36:32.7375 Info Message Template Auto Format enabled
+2022-01-03 16:36:32.7456 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:36:32.8214 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:36:32.8214 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:36:32.8214 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:36:32.8214 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:36:32.8214 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:36:32.8584 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:36:32.8767 Info Configuration initialized.
+2022-01-03 16:36:32.8767 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:37:48.5804 Info Message Template Auto Format enabled
+2022-01-03 16:37:48.5924 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:37:48.7042 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:37:48.7042 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:37:48.7092 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:37:48.7092 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:37:48.7092 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:37:48.7605 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:37:48.7934 Info Configuration initialized.
+2022-01-03 16:37:48.7934 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:37:53.6733 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:37:53.6961 Info Logger has been shut down.
+2022-01-03 16:47:35.9645 Info Message Template Auto Format enabled
+2022-01-03 16:47:35.9749 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:47:36.0742 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:47:36.0742 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:47:36.0742 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:47:36.0742 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:47:36.1090 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:47:36.1455 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:47:36.1658 Info Configuration initialized.
+2022-01-03 16:47:36.1658 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:48:29.0660 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:48:29.0957 Info Logger has been shut down.
+2022-01-03 16:48:44.0056 Info Message Template Auto Format enabled
+2022-01-03 16:48:44.0056 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:48:44.1030 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:48:44.1030 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:48:44.1030 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:48:44.1030 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:48:44.1030 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:48:44.1706 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:48:44.1989 Info Configuration initialized.
+2022-01-03 16:48:44.1989 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:48:46.1099 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:48:46.1336 Info Logger has been shut down.
+2022-01-03 16:49:18.4455 Info Message Template Auto Format enabled
+2022-01-03 16:49:18.4455 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:49:18.5435 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:49:18.5435 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:49:18.5435 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:49:18.5435 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:49:18.5435 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:49:18.6026 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:49:18.6354 Info Configuration initialized.
+2022-01-03 16:49:18.6354 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:50:27.9163 Info Message Template Auto Format enabled
+2022-01-03 16:50:27.9294 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:50:28.0131 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:50:28.0131 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:50:28.0131 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:50:28.0131 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:50:28.0210 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:50:28.0716 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:50:28.1041 Info Configuration initialized.
+2022-01-03 16:50:28.1041 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:50:30.1453 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:50:30.1723 Info Logger has been shut down.
+2022-01-03 16:51:19.1688 Info Message Template Auto Format enabled
+2022-01-03 16:51:19.1819 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:51:19.2779 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:51:19.2779 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:51:19.2779 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:51:19.2779 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:51:19.2779 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:51:19.3210 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:51:19.3479 Info Configuration initialized.
+2022-01-03 16:51:19.3479 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:52:31.2219 Info Message Template Auto Format enabled
+2022-01-03 16:52:31.2397 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 16:52:31.3179 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:52:31.3179 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 16:52:31.3179 Info Adding target FileTarget(Name=request-time)
+2022-01-03 16:52:31.3179 Info Adding target FileTarget(Name=allfile)
+2022-01-03 16:52:31.3179 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 16:52:31.3831 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 16:52:31.4177 Info Configuration initialized.
+2022-01-03 16:52:31.4177 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 16:52:33.7309 Info AppDomain Shutting down. Logger closing...
+2022-01-03 16:52:33.7600 Info Logger has been shut down.
+2022-01-03 17:01:32.7309 Info Message Template Auto Format enabled
+2022-01-03 17:01:32.7445 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:01:32.8336 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:01:32.8336 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:01:32.8336 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:01:32.8336 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:01:32.8336 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:01:32.9008 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:01:32.9286 Info Configuration initialized.
+2022-01-03 17:01:32.9286 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:01:35.1527 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:01:35.1831 Info Logger has been shut down.
+2022-01-03 17:02:26.3762 Info Message Template Auto Format enabled
+2022-01-03 17:02:26.3843 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:02:26.4833 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:02:26.4833 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:02:26.4873 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:02:26.4873 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:02:26.4873 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:02:26.5386 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:02:26.5814 Info Configuration initialized.
+2022-01-03 17:02:26.5814 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:02:28.6619 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:02:28.6866 Info Logger has been shut down.
+2022-01-03 17:02:58.9695 Info Message Template Auto Format enabled
+2022-01-03 17:02:58.9811 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:02:59.0463 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:02:59.0463 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:02:59.0499 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:02:59.0499 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:02:59.0499 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:02:59.0828 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:02:59.1031 Info Configuration initialized.
+2022-01-03 17:02:59.1031 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:03:17.6662 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:03:17.6957 Info Logger has been shut down.
+2022-01-03 17:04:30.1952 Info Message Template Auto Format enabled
+2022-01-03 17:04:30.2235 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:04:30.2850 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:04:30.2850 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:04:30.2850 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:04:30.2850 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:04:30.2850 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:04:30.3235 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:04:30.3442 Info Configuration initialized.
+2022-01-03 17:04:30.3442 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:04:59.9663 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:04:59.9932 Info Logger has been shut down.
+2022-01-03 17:05:29.3416 Info Message Template Auto Format enabled
+2022-01-03 17:05:29.3496 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:05:29.4300 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:05:29.4300 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:05:29.4300 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:05:29.4300 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:05:29.4300 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:05:29.4779 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:05:29.4965 Info Configuration initialized.
+2022-01-03 17:05:29.4965 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:06:52.4411 Info Message Template Auto Format enabled
+2022-01-03 17:06:52.4411 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:06:52.5431 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:06:52.5431 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:06:52.5431 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:06:52.5431 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:06:52.5511 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:06:52.5935 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:06:52.6199 Info Configuration initialized.
+2022-01-03 17:06:52.6199 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:06:54.8619 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:06:54.8888 Info Logger has been shut down.
+2022-01-03 17:07:51.9261 Info Message Template Auto Format enabled
+2022-01-03 17:07:51.9261 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:07:52.0382 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:07:52.0382 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:07:52.0382 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:07:52.0382 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:07:52.0382 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:07:52.0910 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:07:52.1369 Info Configuration initialized.
+2022-01-03 17:07:52.1369 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:07:54.6191 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:07:54.6471 Info Logger has been shut down.
+2022-01-03 17:08:05.3195 Info Message Template Auto Format enabled
+2022-01-03 17:08:05.3348 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:08:05.4192 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:08:05.4192 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:08:05.4192 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:08:05.4252 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:08:05.4252 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:08:05.4727 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:08:05.4998 Info Configuration initialized.
+2022-01-03 17:08:05.5022 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:08:07.5170 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:08:07.5412 Info Logger has been shut down.
+2022-01-03 17:08:56.7725 Info Message Template Auto Format enabled
+2022-01-03 17:08:56.7725 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:08:56.8738 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:08:56.8849 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:08:56.8849 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:08:56.8849 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:08:56.8849 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:08:56.9288 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:08:56.9522 Info Configuration initialized.
+2022-01-03 17:08:56.9522 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:10:26.6503 Info Message Template Auto Format enabled
+2022-01-03 17:10:26.6608 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:10:26.7544 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:10:26.7544 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:10:26.7544 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:10:26.7544 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:10:26.7544 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:10:26.8163 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:10:26.8494 Info Configuration initialized.
+2022-01-03 17:10:26.8494 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:10:29.3139 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:10:29.3439 Info Logger has been shut down.
+2022-01-03 17:11:05.8828 Info Message Template Auto Format enabled
+2022-01-03 17:11:05.9098 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:11:05.9829 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:11:05.9829 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:11:05.9829 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:11:05.9881 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:11:05.9881 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:11:06.0186 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:11:06.0452 Info Configuration initialized.
+2022-01-03 17:11:06.0452 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:12:07.9527 Info Message Template Auto Format enabled
+2022-01-03 17:12:07.9717 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-03 17:12:08.0703 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:12:08.0703 Info Adding target FileTarget(Name=exceptions)
+2022-01-03 17:12:08.0703 Info Adding target FileTarget(Name=request-time)
+2022-01-03 17:12:08.0703 Info Adding target FileTarget(Name=allfile)
+2022-01-03 17:12:08.0837 Info Adding target FileTarget(Name=ownFile)
+2022-01-03 17:12:08.1357 Info Validating config: TargetNames=ownFile, allfile, exceptions, request-time, ConfigItems=71, FilePath=C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\NLog.config
+2022-01-03 17:12:08.1692 Info Configuration initialized.
+2022-01-03 17:12:08.1692 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2022-01-03 17:12:10.4462 Info AppDomain Shutting down. Logger closing...
+2022-01-03 17:12:10.4707 Info Logger has been shut down.

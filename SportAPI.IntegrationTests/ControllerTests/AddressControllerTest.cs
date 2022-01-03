@@ -79,7 +79,7 @@ namespace SportAPI.IntegrationTests.ControllerTests
       Assert.That(component.Count > 0 && component.TrueForAll(x => x.City != null));
     }
 
-    [TestCase(10074L)]
+    /*[TestCase(10074L)]
     public async Task TestPostMethodForDisplayingListEndpointInAddress(long id)
     {
       //Arrange
@@ -106,6 +106,6 @@ namespace SportAPI.IntegrationTests.ControllerTests
       Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
       Assert.AreEqual(99, addressDto.Id);
       Assert.AreEqual("Katowice", addressDto.City);
-    }
+    }*/
   }
 }
