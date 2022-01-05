@@ -1,0 +1,1 @@
+2022-01-03 18:13:14.4647{$event-properties:item=EventId_Id}{$uppercase:Info}SportAPI.Middlewares.RequestTimeMiddlewareRequest [POST] at /api/User/login took 36840 ms  

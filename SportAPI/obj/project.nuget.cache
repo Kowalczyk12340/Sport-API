@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dlNgwkhN1U6TlTzYZqE1ssxwYKF9xYWGo/bASoSQY4DbibkXJnsXY6nUMjK4E3wVOp3Sgj+1aDIPn7/Y2evG0Q==",
+  "dgSpecHash": "+mfsdiqXp0d6Idy2Y2Ofw0mOPKfqL0W3Tc65jE0weMKV1htj/YaRXlAfStRODIv9nA066zpIobWB0C1t/2nzlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\Desktop\\c#\\SportAPI\\SportAPI\\SportAPI.csproj",
   "expectedPackageFiles": [
@@ -16,8 +16,10 @@
     "C:\\Users\\Dell\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.healthchecks\\2.2.0\\microsoft.aspnetcore.diagnostics.healthchecks.2.2.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.13\\microsoft.aspnetcore.jsonpatch.5.0.13.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.13\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.13.nupkg.sha512",

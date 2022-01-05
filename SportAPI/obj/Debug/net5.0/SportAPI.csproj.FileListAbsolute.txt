@@ -70,7 +70,6 @@ C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.csproj.Core
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\staticwebassets\SportAPI.StaticWebAssets.Manifest.cache
-C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\staticwebassets\SportAPI.StaticWebAssets.xml
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\scopedcss\bundle\SportAPI.styles.css
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI\obj\Debug\net5.0\SportAPI.dll
