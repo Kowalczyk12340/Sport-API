@@ -13,5 +13,10 @@ namespace SportAPI.Sport.Models.Dtos
     public string Street { get; set; }
     public string PostalCode { get; set; }
     public long SportClubId { get; set; }
+
+    public string GetExportObject()
+    {
+        return $"{Id};{City};{Street};{PostalCode};";
+    }
   }
 }

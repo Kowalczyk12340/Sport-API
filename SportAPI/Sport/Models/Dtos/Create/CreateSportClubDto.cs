@@ -22,5 +22,6 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string LastName { get; set; }
     public string Login { get; set; }
     public string Password { get; set; }
-  }
+    public long RoleId { get; set; }
+    }
 }

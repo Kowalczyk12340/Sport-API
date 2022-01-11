@@ -11,6 +11,7 @@ using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Services
@@ -37,7 +38,26 @@ namespace SportAPI.Sport.Services
       return sportClub.Id;
     }
 
-    public async Task Delete(long id)
+        public string SaveToCsv(IEnumerable<SportClubDto> components)
+        {
+            var headers = "Id;SportClubName;Description;Category;HasOwnStadium;Category;Address.City;Address.Street;Address.PostalCode;User.FirstName;User.LastName;Trainings.Count;Coaches.Count;Players.Count;Coaches.Count";
+
+            var csv = new StringBuilder(headers);
+
+            csv.Append(Environment.NewLine);
+
+            foreach (var component in components)
+            {
+                csv.Append(component.GetExportObject());
+                csv.Append(Environment.NewLine);
+            }
+            csv.Append($"Count: {components.Count()}");
+            csv.Append(Environment.NewLine);
+
+            return csv.ToString();
+        }
+
+        public async Task Delete(long id)
     {
       _logger.LogWarning($"Sport Club with id: {id} DELETE action invoked");
 

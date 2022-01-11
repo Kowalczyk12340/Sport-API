@@ -19,7 +19,6 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  //[Authorize]
   public class UserController : ControllerBase
   {
     private readonly IUserService _userService;
@@ -64,8 +63,8 @@ namespace SportAPI.Sport.Controllers
     [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-    [SportAPIAuth]
-    //[Authorize(Roles = "Admin, Manager")]
+    //[SportAPIAuth]
+    [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete([FromRoute] long id)
     {
@@ -83,7 +82,6 @@ namespace SportAPI.Sport.Controllers
     /// <response code="400">User exists, but given parameters were invalid - refer to the error message</response>
     /// <response code="404">User does not exist</response>
     [HttpPut("{id}")]
-    //[Authorize(Policy = "HasNationality")]
     [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
@@ -118,8 +116,8 @@ namespace SportAPI.Sport.Controllers
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
     [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-    //[Authorize("HasDateOfBirth")]
-    //[Authorize("AtLeast18")]
+    [Authorize("AtLeast18")]
+    [AllowAnonymous]
     [HttpPost("register")]
     public async Task<ActionResult> RegisterUser([FromBody]RegisterUserDto dto)
     {
@@ -137,7 +135,7 @@ namespace SportAPI.Sport.Controllers
     [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [HttpPost("login")]
-    //[Authorize(Policy = "AtLeast18")]
+    [AllowAnonymous]
     public async Task<ActionResult<string>> Login([FromBody] LoginDto dto)
     {
       string token = await _userService.GenerateJwt(dto);
@@ -154,7 +152,6 @@ namespace SportAPI.Sport.Controllers
     [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [HttpPost("saveFile")]
-    //[Authorize(Policy = "AtLeast18")]
     public async Task<JsonResult> SaveFile()
     {
       try

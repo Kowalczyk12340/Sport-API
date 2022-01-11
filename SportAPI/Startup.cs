@@ -75,6 +75,7 @@ namespace SportAPI
             {
                 options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality"));
                 options.AddPolicy("HasDateOfBirth", builder => builder.RequireClaim("DateOfBirth"));
+                options.AddPolicy("IsAdmin", policy => policy.RequireClaim("role", "admin"));
                 options.AddPolicy("AtLeast18", builder => builder.AddRequirements(new MinimumAgeRequirement(18)));
             });
 
@@ -121,18 +122,20 @@ namespace SportAPI
             });
 
             //Enable CORS
-            /*services.AddCors(options =>
+            services.AddCors(options =>
             {
-              options.AddPolicy("AllowOrigin", builder =>
-              builder.AllowAnyOrigin().
-                AllowAnyMethod().
-                AllowAnyHeader());
-            });*/
+                var frontendURL = $"http://localhost:3000";//Configuration.GetValue<string>("frontend_url");
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins(frontendURL).AllowAnyMethod().AllowAnyHeader()
+                        .WithExposedHeaders(new string[] { "totalAmountOfRecords" });
+                });
+            });
             //services.AddCors();
-            services.AddCors(c =>
+            /*services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            });
+            });*/
 
             services.AddSingleton<IClock, SystemClock>(x => SystemClock.Instance);
             services.AddSportDbContext(Configuration.GetConnectionString("Database"));
@@ -160,13 +163,12 @@ namespace SportAPI
         {
             seed.Seed();
             //Enable CORS
-            //USE CORS
-            //app.UseCors(options => options.SetIsOriginAllowed(x => true).AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()/*.AllowCredentials()*/);
+            app.UseCors();
             /*app.UseCors(options =>
                options.WithOrigins("http://localhost:3000")
                 .AllowAnyHeader()
                 .AllowAnyMethod());*/
-            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            //app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

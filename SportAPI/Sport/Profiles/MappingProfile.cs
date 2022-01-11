@@ -49,13 +49,14 @@ namespace SportAPI.Sport.Profiles
 
       CreateMap<CreateSportClubDto, SportClub>()
           .ForMember(r => r.Address, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }))
-          .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password }));
+          .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password, RoleId = dto.RoleId }));
 
       CreateMap<RegisterUserDto, User>();
       CreateMap<LoginDto, User>()
         .ForMember(m => m.Login, c => c.MapFrom(s => s.Login))
         .ForMember(m => m.Password, c => c.MapFrom(s => s.Password));
       CreateMap<CreateRoleDto, Role>();
+      CreateMap<CreateAddressDto, Address>();
       CreateMap<CreateTrainingDto, Training>()
         .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClubId));
       CreateMap<CreatePlayerDto, Player>()
