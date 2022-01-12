@@ -34,6 +34,7 @@ using System.Reflection;
 using System.Text;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace SportAPI
 {
@@ -112,7 +113,7 @@ namespace SportAPI
                     Title = "Sport API",
                     Description = "An API for managing and doing CRUD operations for Sport API"
                 });
-          var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
                 options.IncludeXmlComments(xmlPath);
@@ -124,20 +125,17 @@ namespace SportAPI
             services.AddCors(options =>
             {
                 var frontendURL = $"http://localhost:3000";//Configuration.GetValue<string>("frontend_url");
-                options.AddDefaultPolicy(builder =>
+                options.AddPolicy("frontendConnection",builder =>
                 {
-                    builder.WithOrigins(frontendURL).AllowAnyMethod().AllowAnyHeader()
-                        .WithExposedHeaders(new string[] { "totalAmountOfRecords" });
+                    builder.AllowAnyMethod().AllowAnyHeader().WithOrigins(frontendURL);
+                        //.WithExposedHeaders(new string[] { "totalAmountOfRecords" });
                 });
             });
-            //services.AddCors();
-            /*services.AddCors(c =>
-            {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            });*/
 
             services.AddSingleton<IClock, SystemClock>(x => SystemClock.Instance);
             services.AddSportDbContext(Configuration.GetConnectionString("Database"));
+            services.AddDbContext<SportDbContext>
+               (options => options.UseSqlServer(Configuration.GetConnectionString("Database")));
             services.AddMediatR(typeof(Startup));
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<SportClubSeeder>();
@@ -152,22 +150,18 @@ namespace SportAPI
             services.AddScoped<IMatchService, MatchService>();
             services.AddScoped<ICoachService, CoachService>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
+            services.AddScoped<IValidator<SportClubQuery>, SportClubQueryValidator>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<ErrorHandlingMiddleware>();
             services.AddScoped<RequestTimeMiddleware>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SportClubSeeder seed)
         {
             seed.Seed();
+            app.UseStaticFiles();
             //Enable CORS
-            app.UseCors();
-            /*app.UseCors(options =>
-               options.WithOrigins("http://localhost:3000")
-                .AllowAnyHeader()
-                .AllowAnyMethod());*/
-            //app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors("frontendConnection");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -189,13 +183,6 @@ namespace SportAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
-
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
-                RequestPath = "/Photos"
             });
         }
     }
