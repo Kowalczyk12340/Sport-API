@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SportAPI.Sport.Attributes;
 using SportAPI.Sport.Exceptions;
@@ -16,6 +17,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [Authorize(Roles = "User, Admin")]
   public class CoachController : ControllerBase
   {
     private readonly ICoachService _coachService;
@@ -58,10 +60,10 @@ namespace SportAPI.Sport.Controllers
     /// <response code="204">Coach exists and has been successfully deletes</response>
     /// <response code="400">Coach exists, but given parameters were invalid - refer to the error message</response>
     /// <response code="404">Coach does not exist</response>
-    [SportAPIAuth]
     [ProducesResponseType(typeof(bool), StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    //[SportAPIAuth]
     [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete([FromRoute] long id)
     {

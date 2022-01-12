@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Globalization;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
 namespace SportAPI.Sport.Seeders
@@ -159,10 +158,6 @@ namespace SportAPI.Sport.Seeders
         new Role()
         {
           RoleName = "Admin"
-        },
-        new Role()
-        {
-          RoleName = "Manager"
         }
       };
 

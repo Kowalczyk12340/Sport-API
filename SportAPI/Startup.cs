@@ -75,7 +75,6 @@ namespace SportAPI
             {
                 options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality"));
                 options.AddPolicy("HasDateOfBirth", builder => builder.RequireClaim("DateOfBirth"));
-                options.AddPolicy("IsAdmin", policy => policy.RequireClaim("role", "admin"));
                 options.AddPolicy("AtLeast18", builder => builder.AddRequirements(new MinimumAgeRequirement(18)));
             });
 

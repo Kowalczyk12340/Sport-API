@@ -18,6 +18,7 @@ namespace SportAPI.Sport.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "User, Admin")]
     public class SportClubController : ControllerBase
     {
         private readonly ISportClubService _sportClubService;
@@ -39,7 +40,6 @@ namespace SportAPI.Sport.Controllers
         /// <response code="400">Given parameters were invalid - refer to the error message</response>
         [ProducesResponseType(typeof(IEnumerable<SportClubDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SportClubDto>>> GetAll()
         {
@@ -63,6 +63,8 @@ namespace SportAPI.Sport.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(SportClub), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [Authorize(Policy = "AtLeast18")]
+        [Authorize(Policy = "HasNationality")]
         public async Task<ActionResult<SportClub>> Get([FromRoute] long id)
         {
             var sportClub = await _sportClubService.GetById(id);
@@ -125,7 +127,7 @@ namespace SportAPI.Sport.Controllers
         [ProducesResponseType(typeof(bool), StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-        [SportAPIAuth]
+        //[SportAPIAuth]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> Delete([FromRoute] long id)
         {

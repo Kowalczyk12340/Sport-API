@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SportAPI.Sport.Attributes;
 using SportAPI.Sport.Exceptions;
@@ -16,6 +17,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [Authorize(Roles = "User, Admin")]
   public class PlayerController : ControllerBase
   {
     private readonly IPlayerService _playerService;
@@ -61,7 +63,7 @@ namespace SportAPI.Sport.Controllers
     [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-    [SportAPIAuth]
+    //[SportAPIAuth]
     [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete([FromRoute] long id)
     {

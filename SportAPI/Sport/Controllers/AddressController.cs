@@ -18,7 +18,7 @@ namespace SportAPI.Sport.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "User, Admin, Manager")]
+    [Authorize(Roles = "User, Admin")]
     public class AddressController : ControllerBase
     {
         private readonly IAddressService _addressService;
@@ -41,7 +41,6 @@ namespace SportAPI.Sport.Controllers
         [ProducesResponseType(typeof(IEnumerable<AddressDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [HttpGet]
-        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<AddressDto>>> GetAll()
         {
             var addressDtos = await _addressService.GetAll();
@@ -65,6 +64,7 @@ namespace SportAPI.Sport.Controllers
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        //[SportAPIAuth]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> Delete([FromRoute] long id)
         {

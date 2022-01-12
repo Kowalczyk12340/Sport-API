@@ -84,6 +84,7 @@ namespace SportAPI.Sport.Services
                 new Claim(ClaimTypes.Country, $"{user.Nationality}"),
                 new Claim(ClaimTypes.Email, $"{user.Login}"),
                 new Claim(ClaimTypes.Surname, $"{user.LastName}"),
+                new Claim(ClaimTypes.DateOfBirth, $"{user.DateOfBirth}"),
                 new Claim(ClaimTypes.Authentication, $"{user.Password}")
       };
 
