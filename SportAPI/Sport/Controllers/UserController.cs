@@ -139,36 +139,5 @@ namespace SportAPI.Sport.Controllers
       return Ok(token);
     }
 
-    /// <summary>
-    /// Method to add photo for user
-    /// </summary>
-    /// <param name="dto"></param>
-    /// <returns>The photo is added / not added</returns>
-    /// <response code="200">Photo has been successfully added</response>
-    /// <response code="400">Given parameters were invalid - refer to the error message</response>
-    [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-    [HttpPost("saveFile")]
-    public async Task<JsonResult> SaveFile()
-    {
-      try
-      {
-        var httpRequest = Request.Form;
-        var postedFile = httpRequest.Files[0];
-        string fileName = postedFile.FileName;
-        var physicalPath = _webHostEnvironment.ContentRootPath + "/Photos/" + fileName;
-
-        using(var stream = new FileStream(physicalPath, FileMode.Create))
-        {
-          await postedFile.CopyToAsync(stream);
-        }
-
-        return new JsonResult(fileName);
-      }
-      catch(Exception)
-      {
-        return new JsonResult("anonymous.png");
-      }
-    }
   }
 }

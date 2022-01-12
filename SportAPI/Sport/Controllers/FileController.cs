@@ -12,6 +12,15 @@ namespace SportAPI.Sport.Controllers
     [Route("file")]
     public class FileController : ControllerBase
     {
+        /// <summary>
+        /// Method to add photo for user
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns>The photo is added / not added</returns>
+        /// <response code="200">Photo has been successfully added</response>
+        /// <response code="400">Given parameters were invalid - refer to the error message</response>
+        [ProducesResponseType(typeof(File), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [HttpGet]
         [ResponseCache(Duration = 1200, VaryByQueryKeys = new[] { "fileName" })]
         public ActionResult GetFile([FromQuery] string fileName)
@@ -34,6 +43,15 @@ namespace SportAPI.Sport.Controllers
             return File(fileContents, contentType, fileName);
         }
 
+        /// <summary>
+        /// Method to add photo for user
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns>The photo is added / not added</returns>
+        /// <response code="200">Photo has been successfully added</response>
+        /// <response code="400">Given parameters were invalid - refer to the error message</response>
+        [ProducesResponseType(typeof(File), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [HttpPost]
         public ActionResult Upload([FromForm] IFormFile file)
         {
