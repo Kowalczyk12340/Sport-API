@@ -22,6 +22,12 @@ namespace SportAPI.Middlewares
       {
         await next.Invoke(context);
       }
+      catch (ForbiddenException ex)
+      {
+        _logger.LogError(ex, ex.Message);
+        context.Response.StatusCode = 403;
+        await context.Response.WriteAsync(ex.Message);
+      }
       catch (BadRequestException ex)
       {
         _logger.LogError(ex, ex.Message);

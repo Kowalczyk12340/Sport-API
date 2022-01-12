@@ -64,6 +64,7 @@ namespace SportAPI.Sport.Controllers
         [ProducesResponseType(typeof(SportClub), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [Authorize(Policy = "AtLeast18")]
+        [Authorize(Policy = "HasDateOfBirth")]
         [Authorize(Policy = "HasNationality")]
         public async Task<ActionResult<SportClub>> Get([FromRoute] long id)
         {

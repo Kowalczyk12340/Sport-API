@@ -46,7 +46,6 @@ namespace SportAPI
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             var authenticationSettings = new AuthenticationSettings();
@@ -79,6 +78,9 @@ namespace SportAPI
             });
 
             services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
+            //services.AddScoped<IAuthorizationHandler, SportClubResourceOperationRequirementHandler>();
+            //services.AddScoped<IUserContextService, UserContextService>();
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews()
               .AddNewtonsoftJson(options =>
               options.SerializerSettings.ReferenceLoopHandling = Newtonsoft
@@ -110,8 +112,6 @@ namespace SportAPI
                     Title = "Sport API",
                     Description = "An API for managing and doing CRUD operations for Sport API"
                 });
-
-          // Set the comments path for the Swagger JSON and UI.
           var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
