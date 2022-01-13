@@ -124,7 +124,7 @@ namespace SportAPI
             //Enable CORS
             services.AddCors(options =>
             {
-                var frontendURL = $"http://localhost:3000";//Configuration.GetValue<string>("frontend_url");
+                var frontendURL = $"http://localhost:3000";
                 options.AddPolicy("frontendConnection",builder =>
                 {
                     builder.AllowAnyMethod().AllowAnyHeader().WithOrigins(frontendURL);
