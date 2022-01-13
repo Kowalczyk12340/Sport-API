@@ -18,7 +18,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  //[Authorize(Roles = "User, Admin")]
+  [Authorize(Roles = "User, Admin")]
   public class CoachController : ControllerBase
   {
     private readonly ICoachService _coachService;

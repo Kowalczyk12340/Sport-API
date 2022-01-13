@@ -18,7 +18,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/sportclub/{sportClubId}/[controller]")]
   [ApiController]
-  //[Authorize(Roles = "User, Admin")]
+  [Authorize(Roles = "User, Admin")]
   public class PlayerController : ControllerBase
   {
     private readonly IPlayerService _playerService;

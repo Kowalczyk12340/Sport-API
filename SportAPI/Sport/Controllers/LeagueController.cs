@@ -18,7 +18,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  //[Authorize(Roles = "User, Admin")]
+  [Authorize(Roles = "User, Admin")]
   public class LeagueController : ControllerBase
   {
     private readonly ILeagueService _leagueService;
@@ -40,9 +40,9 @@ namespace SportAPI.Sport.Controllers
     /// <response code="400">Given parameters were invalid - refer to the error message</response>
     [ProducesResponseType(typeof(IEnumerable<LeagueDto>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-    //[Authorize(Policy = "AtLeast18")]
-    //[Authorize(Policy = "HasDateOfBirth")]
-    //[Authorize(Policy = "HasNationality")]
+    [Authorize(Policy = "AtLeast18")]
+    [Authorize(Policy = "HasDateOfBirth")]
+    [Authorize(Policy = "HasNationality")]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<LeagueDto>>> GetAll()
     {
