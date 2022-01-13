@@ -11,6 +11,7 @@ using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Controllers
@@ -131,5 +132,27 @@ namespace SportAPI.Sport.Controllers
         return BadRequest(message);
       }
     }
-  }
+
+        /// <summary>
+        /// Method to export chosen coaches to the csv file
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>File with csv extensions</returns>
+        /// <response code="200">Coaches exist and have been successfully save to csv file</response>
+        /// <response code="404">Coaches do not exist</response>
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [HttpGet("exporttoexcel")]
+        public async Task<IActionResult> SaveToCsv()
+        {
+            var date = DateTime.UtcNow;
+            var result = await _coachService.GetAll();
+            if (result == null)
+            {
+                return NotFound();
+            }
+            var csv = _coachService.SaveToCsv(result);
+            return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
+        }
+    }
 }

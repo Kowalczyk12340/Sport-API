@@ -67,7 +67,6 @@ namespace SportAPI.Sport.Controllers
 
                 return Ok();
             }
-
             return BadRequest();
         }
     }

@@ -134,7 +134,7 @@ namespace SportAPI.Sport.Controllers
         }
 
         /// <summary>
-        /// Method to export chosen address to the csv file
+        /// Method to export chosen addresses to the csv file
         /// </summary>
         /// <param name="id"></param>
         /// <returns>File with csv extensions</returns>

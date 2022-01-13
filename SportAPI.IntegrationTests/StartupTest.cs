@@ -6,44 +6,32 @@ using System.Linq;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
+using Microsoft.AspNetCore.Hosting;
+using SportAPI.Sport.Services.Interfaces;
+using Moq;
+using Microsoft.Extensions.Configuration;
+using SportAPI.Sport.Controllers;
+using SportAPI.Sport.Services;
 
 namespace SportAPI.IntegrationTests
 {
     public class StartupTest
     {
-        private readonly List<Type> _controllerTypes;
-        private readonly WebApplicationFactory<Startup> _factory;
-
-        public StartupTest(WebApplicationFactory<Startup> factory)
+        [Test]
+        public void StartupClassForSportClubAndLeagueServiceTest()
         {
-            _controllerTypes = typeof(Startup)
-                .Assembly
-                .GetTypes()
-                .Where(t => t.IsSubclassOf(typeof(ControllerBase)))
-                .ToList();
-
-            _factory = factory.WithWebHostBuilder(builder =>
-            {
-                builder.ConfigureServices(services =>
-                {
-                    _controllerTypes.ForEach(c => services.AddScoped(c));
-                });
-            });
+            var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseStartup<Startup>().Build();
+            Assert.IsNotNull(webHost);
+            Assert.IsNotNull(webHost.Services.GetRequiredService<ISportClubService>());
+            Assert.IsNotNull(webHost.Services.GetRequiredService<ILeagueService>());
         }
 
         [Test]
-        public void ConfigureServicesForControllersRegisterAllDependencies()
+        public void StartupClassForUserServiceTest()
         {
-            //Arrange
-            var scopeFactory = _factory.Services.GetService<IServiceScopeFactory>();
-            using var scope = scopeFactory.CreateScope();
-            //Act
-            //Assert
-            _controllerTypes.ForEach(t =>
-            {
-                var controller = scope.ServiceProvider.GetService(t);
-                controller.Should().NotBeNull();
-            });
+            var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseStartup<Startup>().Build();
+            Assert.IsNotNull(webHost);
+            Assert.IsNotNull(webHost.Services.GetRequiredService<IUserService>());
         }
     }
 }

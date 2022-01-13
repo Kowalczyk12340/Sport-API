@@ -17,5 +17,10 @@ namespace SportAPI.Sport.Models.Dtos
     public int CountForConferenceLeague { get; set; }
     public int CountForDownLeague { get; set; }
     public List<SportClub> SportClubs { get; set; }
-  }
+
+        public string GetExportObject()
+        {
+            return $"{Id};{Name};{Nationality};{IsHigh};{CountForChampionsLeague};{CountForEuropeLeague};{CountForConferenceLeague};{CountForDownLeague};{SportClubs.Count};";
+        }
+    }
 }

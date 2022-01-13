@@ -2,7 +2,6 @@ C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Cov
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\SportAPI.deps.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\SportAPI.runtimeconfig.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\SportAPI.runtimeconfig.dev.json
-C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\nlog.config
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\appsettings.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\SportAPI.exe
@@ -452,3 +451,6 @@ C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\ref
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\refs\WindowsBase.dll
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Testing.dll
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\FluentAssertions.dll
+C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.IntegrationTests\bin\Debug\net5.0\Moq.dll

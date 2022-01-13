@@ -3,7 +3,6 @@ C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\testhost.d
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\SportAPI.deps.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\SportAPI.runtimeconfig.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\SportAPI.runtimeconfig.dev.json
-C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\nlog.config
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\appsettings.json
 C:\Users\Dell\Desktop\c#\SportAPI\SportAPI.UnitTests\bin\Debug\net5.0\SportAPI.exe

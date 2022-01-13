@@ -13,6 +13,7 @@ namespace SportAPI.Sport.Services.Interfaces
     Task<CoachDto> GetById(long id);
     Task<IEnumerable<CoachDto>> GetAll();
     Task<long> Create(CreateCoachDto dto);
+    string SaveToCsv(IEnumerable<CoachDto> components);
     Task Delete(long id);
     Task Update(long id, UpdateCoachDto dto);
   }

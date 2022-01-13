@@ -104,8 +104,8 @@ namespace SportAPI.UnitTests.Sports
     }
 
 
-    [TestCase(10040L)]
-    public async Task ShouldDisplaySuitableClubInLeague(long id)
+    [Test]
+    public async Task ShouldDisplaySuitableClubInLeague()
     {
       //Arrange
       var mediator = new Mock<IMediator>();
@@ -127,7 +127,7 @@ namespace SportAPI.UnitTests.Sports
               {
                 City = "Roma",
                 PostalCode = "31-011",
-                Street = "Frnacesco Totti Street 45"
+                Street = "Francesco Totti Street 45"
               },
               User = new User()
               {
@@ -205,7 +205,7 @@ namespace SportAPI.UnitTests.Sports
 
       //Assert
       Assert.That(context.Leagues.ToList().Count > 0);
-      Assert.That(context.Leagues.ToList().FirstOrDefault(x => x.Id == id).Nationality.Equals("Włochy"));
+      Assert.That(context.Leagues.ToList().FirstOrDefault().Nationality.Equals("Polska"));
     }
   }
 }

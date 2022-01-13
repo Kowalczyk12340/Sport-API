@@ -25,9 +25,9 @@ namespace SportAPI.IntegrationTests.ControllerTests
     {
       var scope = Application.Services.CreateScope();
       var context = scope.ServiceProvider.GetService<SportDbContext>();
-      //var userToAuth = await context.Users.FirstOrDefaultAsync(x => x.Login == "marcinkowalczyk24.7@gmail.com");
-      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/address/3");
-        //.WithAuthHeader(userToAuth);
+      var userToAuth = await context.Users.FirstOrDefaultAsync(x => x.Login == "marcinkowalczyk24.7@gmail.com");
+      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/address/3")
+        .WithAuthHeader(userToAuth);
       var response = await Client.SendAsync(requestMessage);
       var content = await response.Content.ReadAsStringAsync();
       var component = JsonConvert.DeserializeObject<AddressDto>(content);
@@ -55,9 +55,9 @@ namespace SportAPI.IntegrationTests.ControllerTests
     {
       var scope = Application.Services.CreateScope();
       var context = scope.ServiceProvider.GetService<SportDbContext>();
-      //var userToAuth = await context.Users.FirstOrDefaultAsync(x => x.Login == "marcinkowalczyk24.7@gmail.com");
-      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/address");
-      //.WithAuthHeader(userToAuth);
+      var userToAuth = await context.Users.FirstOrDefaultAsync(x => x.Login == "marcinkowalczyk24.7@gmail.com");
+      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/address")
+      .WithAuthHeader(userToAuth);
       var response = await Client.SendAsync(requestMessage);
       var content = await response.Content.ReadAsStringAsync();
       var component = JsonConvert.DeserializeObject<List<AddressDto>>(content);

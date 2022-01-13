@@ -11,6 +11,7 @@ using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Controllers
@@ -55,14 +56,36 @@ namespace SportAPI.Sport.Controllers
       return Ok(leagueDtos);
     }
 
-    /// <summary>
-    /// Method to get league with chosen ID
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns>League with chosen id</returns>
-    /// <response code="200">League exists and has been successfully retrieved</response>
-    /// <response code="404">League does not exist</response>
-    [HttpGet("{id}")]
+        /// <summary>
+        /// Method to export chosen Leagues to the csv file
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>File with csv extensions</returns>
+        /// <response code="200">Leagues exist and have been successfully save to csv file</response>
+        /// <response code="404">Leagues do not exist</response>
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [HttpGet("exporttoexcel")]
+        public async Task<IActionResult> SaveToCsv()
+        {
+            var date = DateTime.UtcNow;
+            var result = await _leagueService.GetAll();
+            if (result == null)
+            {
+                return NotFound();
+            }
+            var csv = _leagueService.SaveToCsv(result);
+            return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
+        }
+
+        /// <summary>
+        /// Method to get league with chosen ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>League with chosen id</returns>
+        /// <response code="200">League exists and has been successfully retrieved</response>
+        /// <response code="404">League does not exist</response>
+        [HttpGet("{id}")]
     [ProducesResponseType(typeof(League), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     public async Task<ActionResult<League>> Get([FromRoute] long id)

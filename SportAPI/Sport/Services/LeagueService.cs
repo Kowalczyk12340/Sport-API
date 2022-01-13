@@ -11,6 +11,7 @@ using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Services
@@ -83,7 +84,26 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
-    public async Task Update(long id, UpdateLeagueDto dto)
+        public string SaveToCsv(IEnumerable<LeagueDto> components)
+        {
+            var headers = "Id;Name;Nationality;IsHigh;CountChampions;CountEurope;CountConference;CountDown;CountClubs";
+
+            var csv = new StringBuilder(headers);
+
+            csv.Append(Environment.NewLine);
+
+            foreach (var component in components)
+            {
+                csv.Append(component.GetExportObject());
+                csv.Append(Environment.NewLine);
+            }
+            csv.Append($"Count: {components.Count()}");
+            csv.Append(Environment.NewLine);
+
+            return csv.ToString();
+        }
+
+        public async Task Update(long id, UpdateLeagueDto dto)
     {
       _logger.LogInformation($"Updating the league by {id}");
 

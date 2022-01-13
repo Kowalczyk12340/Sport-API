@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc.Testing;
+﻿using FluentAssertions;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using SportAPI.IntegrationTests.Infrastructure;
 using SportAPI.Sport.Data;
 using SportAPI.Sport.Models.Dtos;
 using SportAPI.Sport.Services.Interfaces;
@@ -18,55 +20,18 @@ namespace SportAPI.IntegrationTests.ControllerTests
 {
   public class UserControllerTest : BaseControllerTest
   {
-        private HttpClient _client;
-        private Mock<IUserService> _userServiceMock = new Mock<IUserService>();
+    private Mock<IUserService> _userServiceMock = new Mock<IUserService>();
 
-        /*public UserControllerTest(WebApplicationFactory<Startup> factory)
-        {
-            _client = factory
-                  .WithWebHostBuilder(builder =>
-                  {
-                      builder.ConfigureServices(services =>
-                      {
-                          var dbContextOptions = services
-                              .SingleOrDefault(service => service.ServiceType == typeof(DbContextOptions<SportDbContext>));
+    [Test]
+    public async Task DeleteNonExistingUserReturnsUnauthorized()
+    {
+        // act
+        var response = await Client.DeleteAsync("/api/user/3");
 
-                          services.Remove(dbContextOptions);
+        // assert
+        response.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
+    }
 
-                          services.AddSingleton<IUserService>(_userServiceMock.Object);
-
-
-                          services
-                           .AddDbContext<SportDbContext>(options =>
-                           {
-                               options.UseInMemoryDatabase("RestaurantDb");
-                           });
-
-                      });
-                  })
-                .CreateClient();
-        }
-        [Test]
-        public async Task Login_ForRegisteredUser_ReturnsOk()
-        {
-            // arrange
-
-            _userServiceMock
-                .Setup(e => e.GenerateJwt(It.IsAny<LoginDto>()))
-                .Returns(Task.FromResult("jwt"));
-
-            var loginDto = new LoginDto()
-            {
-                Login = "test@test.com",
-                Password = "password123"
-            };
-
-            var httpContent = loginDto.ToJsonHttpContent("frontendConnection");
-            // act
-            var response = await _client.PostAsync("/api/user/login", httpContent);
-            // assert
-            response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-        }*/
     [Test]
     public async Task TestGetMethodForNameOfNationalityAndLoginEndpointInUser()
     {
@@ -117,9 +82,9 @@ namespace SportAPI.IntegrationTests.ControllerTests
     {
       var scope = Application.Services.CreateScope();
       var context = scope.ServiceProvider.GetService<SportDbContext>();
-      //var userToAuth = await context.Users.FirstOrDefaultAsync(x => x.Login == "marcinkowalczyk24.7@gmail.com");
-      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/user");
-      //.WithAuthHeader(userToAuth);
+      var userToAuth = await context.Users.FirstOrDefaultAsync(x => x.Login == "marcinkowalczyk24.7@gmail.com");
+      var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/user")
+      .WithAuthHeader(userToAuth);
       var response = await Client.SendAsync(requestMessage);
       var content = await response.Content.ReadAsStringAsync();
       var component = JsonConvert.DeserializeObject<List<UserDto>>(content);

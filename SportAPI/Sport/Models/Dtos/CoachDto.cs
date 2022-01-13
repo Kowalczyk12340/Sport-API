@@ -16,5 +16,10 @@ namespace SportAPI.Sport.Models.Dtos
     public string EmailAddress { get; set; }
     public string Cash { get; set; }
     public long SportClubId { get; set; }
-  }
+
+    public string GetExportObject()
+    {
+        return $"{Id};{Name};{Surname};{Pesel};{PhoneNumber};{EmailAddress};{Cash};{SportClubId};";
+    }
+    }
 }

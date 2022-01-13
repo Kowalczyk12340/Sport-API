@@ -159,6 +159,7 @@ namespace SportAPI
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SportClubSeeder seed)
         {
             seed.Seed();
+            app.UseResponseCaching();
             app.UseStaticFiles();
             //Enable CORS
             app.UseCors("frontendConnection");
