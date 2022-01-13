@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Services
 {
-  public class RoleService : IRoleService 
+  public class RoleService : IRoleService
   {
     private readonly SportDbContext _dbContext;
     private readonly IMapper _mapper;

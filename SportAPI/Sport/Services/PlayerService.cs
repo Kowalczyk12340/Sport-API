@@ -29,24 +29,36 @@ namespace SportAPI.Sport.Services
       _mapper = mapper;
       _logger = logger;
     }
-    public async Task<long> Create(CreatePlayerDto dto)
+
+    public async Task<long> Create(long sportClubId, CreatePlayerDto dto)
     {
+      var sportClub = await GetSportClubById(sportClubId);
+      var playerEntity = _mapper.Map<Player>(dto);
       _logger.LogInformation("Create a new player");
-      var player = _mapper.Map<Player>(dto);
-      await _dbContext.Players.AddAsync(player);
+      playerEntity.SportClubId = sportClubId;
+      await _dbContext.Players.AddAsync(playerEntity);
       await _dbContext.SaveChangesAsync();
-      return player.Id;
+      return playerEntity.Id;
     }
 
-    public async Task Delete(long id)
+    public async Task DeleteAll(long sportClubId)
+    {
+      var sportClub = await GetSportClubById(sportClubId);
+
+      _dbContext.RemoveRange(sportClub.Players);
+      await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task Delete(long sportClubId, long id)
     {
       _logger.LogInformation($"It will be deleted player with id: {id}");
 
-      var player = await _dbContext
-        .Players
-        .FirstOrDefaultAsync(x => x.Id == id);
+      var club = await GetSportClubById(sportClubId);
 
-      if(player is null)
+      var player = club.Players
+        .FirstOrDefault(x => x.Id == id);
+
+      if (player is null)
       {
         throw new NotFoundException("Player not found");
       }
@@ -55,26 +67,29 @@ namespace SportAPI.Sport.Services
       await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<IEnumerable<PlayerDto>> GetAll()
+    public async Task<IEnumerable<PlayerDto>> GetAll(long sportClubId)
     {
       _logger.LogInformation("Display all the players");
-      var players = await _dbContext
-        .Players
-        .ToListAsync();
+
+      var club = await GetSportClubById(sportClubId);
+
+      var players = club.Players.ToList();
 
       var playerDtos = _mapper.Map<List<PlayerDto>>(players);
       return playerDtos;
     }
 
-    public async Task<PlayerDto> GetById(long id)
+    public async Task<PlayerDto> GetById(long sportClubId, long id)
     {
       _logger.LogInformation($"Display the player with chosen {id}");
-      
-      var player = await _dbContext
-        .Players
-        .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(player is null)
+      var club = await GetSportClubById(sportClubId);
+
+      var player = club
+        .Players
+        .FirstOrDefault(x => x.Id == id);
+
+      if (player is null)
       {
         throw new NotFoundException("Player not found");
       }
@@ -83,33 +98,35 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
-        public string SaveToCsv(IEnumerable<PlayerDto> components)
-        {
-            var headers = "Id;Name;Surname;Pesel;PhoneNumber;Nationality;EmailAddress;BetterFoot;Position;SportClubId";
+    public string SaveToCsv(IEnumerable<PlayerDto> components)
+    {
+      var headers = "Id;Name;Surname;Pesel;PhoneNumber;Nationality;EmailAddress;BetterFoot;Position";
 
-            var csv = new StringBuilder(headers);
+      var csv = new StringBuilder(headers);
 
-            csv.Append(Environment.NewLine);
+      csv.Append(Environment.NewLine);
 
-            foreach (var component in components)
-            {
-                csv.Append(component.GetExportObject());
-                csv.Append(Environment.NewLine);
-            }
-            csv.Append($"Count: {components.Count()}");
-            csv.Append(Environment.NewLine);
+      foreach (var component in components)
+      {
+        csv.Append(component.GetExportObject());
+        csv.Append(Environment.NewLine);
+      }
+      csv.Append($"Count: {components.Count()}");
+      csv.Append(Environment.NewLine);
 
-            return csv.ToString();
-        }
+      return csv.ToString();
+    }
 
-        public async Task Update(long id, UpdatePlayerDto dto)
+    public async Task Update(long sportClubId, long id, UpdatePlayerDto dto)
     {
       _logger.LogInformation($"Edit player with {id}");
-      var player = await _dbContext
-        .Players
-        .FirstOrDefaultAsync(x => x.Id == id);
+      var club = await GetSportClubById(sportClubId);
 
-      if(player is null)
+      var player = club
+        .Players
+        .FirstOrDefault(x => x.Id == id);
+
+      if (player is null)
       {
         throw new NotFoundException("Player not found");
       }
@@ -121,6 +138,20 @@ namespace SportAPI.Sport.Services
       player.PhoneNumber = dto.PhoneNumber;
       player.Position = dto.Position;
       player.EmailAddress = dto.EmailAddress;
+      await _dbContext.SaveChangesAsync();
+    }
+
+    private async Task<SportClub> GetSportClubById(long sportClubId)
+    {
+      var sportClub = await _dbContext
+          .Clubs
+          .Include(r => r.Players)
+          .FirstOrDefaultAsync(r => r.Id == sportClubId);
+
+      if (sportClub is null)
+        throw new NotFoundException("Sport club not found");
+
+      return sportClub;
     }
   }
 }

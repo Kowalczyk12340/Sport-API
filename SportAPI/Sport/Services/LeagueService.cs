@@ -46,7 +46,7 @@ namespace SportAPI.Sport.Services
         .Include(u => u.SportClubs)
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(league is null)
+      if (league is null)
       {
         throw new NotFoundException("League not found");
       }
@@ -75,7 +75,7 @@ namespace SportAPI.Sport.Services
         .Include(x => x.SportClubs)
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(league is null)
+      if (league is null)
       {
         throw new NotFoundException("League not found");
       }
@@ -84,26 +84,26 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
-        public string SaveToCsv(IEnumerable<LeagueDto> components)
-        {
-            var headers = "Id;Name;Nationality;IsHigh;CountChampions;CountEurope;CountConference;CountDown;CountClubs";
+    public string SaveToCsv(IEnumerable<LeagueDto> components)
+    {
+      var headers = "Id;Name;Nationality;IsHigh;CountChampions;CountEurope;CountConference;CountDown;CountClubs";
 
-            var csv = new StringBuilder(headers);
+      var csv = new StringBuilder(headers);
 
-            csv.Append(Environment.NewLine);
+      csv.Append(Environment.NewLine);
 
-            foreach (var component in components)
-            {
-                csv.Append(component.GetExportObject());
-                csv.Append(Environment.NewLine);
-            }
-            csv.Append($"Count: {components.Count()}");
-            csv.Append(Environment.NewLine);
+      foreach (var component in components)
+      {
+        csv.Append(component.GetExportObject());
+        csv.Append(Environment.NewLine);
+      }
+      csv.Append($"Count: {components.Count()}");
+      csv.Append(Environment.NewLine);
 
-            return csv.ToString();
-        }
+      return csv.ToString();
+    }
 
-        public async Task Update(long id, UpdateLeagueDto dto)
+    public async Task Update(long id, UpdateLeagueDto dto)
     {
       _logger.LogInformation($"Updating the league by {id}");
 
@@ -112,7 +112,7 @@ namespace SportAPI.Sport.Services
         .Include(u => u.SportClubs)
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(league is null)
+      if (league is null)
       {
         throw new NotFoundException("League not found");
       }

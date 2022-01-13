@@ -2,7 +2,7 @@
 
 namespace SportAPI.Migrations
 {
-    public partial class ImproveConfigurationId : Migration
+    public partial class AddNullableValueForBool : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

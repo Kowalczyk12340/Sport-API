@@ -11,7 +11,7 @@ namespace SportAPI.Sport.Models
     public string SportClubName { get; set; }
     public string Description { get; set; }
     public string Category { get; set; }
-    public bool HasOwnStadium { get; set; }
+    public bool? HasOwnStadium { get; set; }
     public string ContactEmail { get; set; }
     public string ContactNumber { get; set; }
     public long AddressId { get; set; }

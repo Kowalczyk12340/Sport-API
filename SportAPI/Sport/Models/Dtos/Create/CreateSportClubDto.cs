@@ -12,7 +12,7 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string SportClubName { get; set; }
     public string Description { get; set; }
     public string Category { get; set; }
-    public bool HasOwnStadium { get; set; }
+    public bool? HasOwnStadium { get; set; }
     public string ContactEmail { get; set; }
     public string ContactNumber { get; set; }
     public string City { get; set; }
@@ -21,7 +21,9 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Login { get; set; }
+    public string Nationality { get; set; }
     public string Password { get; set; }
     public long RoleId { get; set; }
-    }
+    public long LeagueId { get; set; }
+  }
 }

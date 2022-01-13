@@ -45,7 +45,7 @@ namespace SportAPI.Sport.Services
         .Trainings
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(training is null)
+      if (training is null)
       {
         throw new NotFoundException("Training not found");
       }
@@ -72,7 +72,7 @@ namespace SportAPI.Sport.Services
         .Trainings
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(training is null)
+      if (training is null)
       {
         throw new NotFoundException("Training not found");
       }
@@ -81,33 +81,32 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
-        public string SaveToCsv(IEnumerable<TrainingDto> components)
-        {
-            var headers = "Id;Name;Description;TimeOfTraining;SportClubId";
+    public string SaveToCsv(IEnumerable<TrainingDto> components)
+    {
+      var headers = "Id;Name;Description;TimeOfTraining";
+      var csv = new StringBuilder(headers);
 
-            var csv = new StringBuilder(headers);
+      csv.Append(Environment.NewLine);
 
-            csv.Append(Environment.NewLine);
+      foreach (var component in components)
+      {
+        csv.Append(component.GetExportObject());
+        csv.Append(Environment.NewLine);
+      }
+      csv.Append($"Count: {components.Count()}");
+      csv.Append(Environment.NewLine);
 
-            foreach (var component in components)
-            {
-                csv.Append(component.GetExportObject());
-                csv.Append(Environment.NewLine);
-            }
-            csv.Append($"Count: {components.Count()}");
-            csv.Append(Environment.NewLine);
+      return csv.ToString();
+    }
 
-            return csv.ToString();
-        }
-
-        public async Task Update(long id, UpdateTrainingDto dto)
+    public async Task Update(long id, UpdateTrainingDto dto)
     {
       _logger.LogInformation($"Edit training with {id}");
       var training = await _dbContext
         .Trainings
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(training is null)
+      if (training is null)
       {
         throw new NotFoundException("Training not found");
       }

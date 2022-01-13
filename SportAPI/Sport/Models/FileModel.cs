@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Models
 {
-    public class FileModel
-    {
-        public string FileName { get; set; }
-        public IFormFile FormFile { get; set; }
-    }
+  public class FileModel
+  {
+    public string FileName { get; set; }
+    public IFormFile FormFile { get; set; }
+  }
 }

@@ -45,7 +45,7 @@ namespace SportAPI.Sport.Services
         .Matches
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(match is null)
+      if (match is null)
       {
         throw new NotFoundException("Match not found");
       }
@@ -73,8 +73,8 @@ namespace SportAPI.Sport.Services
       var match = await _dbContext
         .Matches
         .FirstOrDefaultAsync(x => x.Id == id);
-      
-      if(match is null)
+
+      if (match is null)
       {
         throw new NotFoundException("Match not found");
       }
@@ -83,33 +83,33 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
-        public string SaveToCsv(IEnumerable<MatchDto> components)
-        {
-            var headers = "Id;TeamOne;TeamTwo;InHouse;DateOfMatch;SportClubId";
+    public string SaveToCsv(IEnumerable<MatchDto> components)
+    {
+      var headers = "Id;TeamOne;TeamTwo;InHouse;DateOfMatch";
 
-            var csv = new StringBuilder(headers);
+      var csv = new StringBuilder(headers);
 
-            csv.Append(Environment.NewLine);
+      csv.Append(Environment.NewLine);
 
-            foreach (var component in components)
-            {
-                csv.Append(component.GetExportObject());
-                csv.Append(Environment.NewLine);
-            }
-            csv.Append($"Count: {components.Count()}");
-            csv.Append(Environment.NewLine);
+      foreach (var component in components)
+      {
+        csv.Append(component.GetExportObject());
+        csv.Append(Environment.NewLine);
+      }
+      csv.Append($"Count: {components.Count()}");
+      csv.Append(Environment.NewLine);
 
-            return csv.ToString();
-        }
+      return csv.ToString();
+    }
 
-        public async Task Update(long id, UpdateMatchDto dto)
+    public async Task Update(long id, UpdateMatchDto dto)
     {
       _logger.LogInformation($"Edit match with {id}");
       var match = await _dbContext
         .Matches
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(match is null)
+      if (match is null)
       {
         throw new NotFoundException("Match not found");
       }

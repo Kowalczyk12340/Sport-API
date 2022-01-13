@@ -48,7 +48,7 @@ namespace SportAPI.Sport.Services
         .Include(u => u.Role)
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(user is null)
+      if (user is null)
       {
         throw new NotFoundException("User not found");
       }
@@ -64,14 +64,14 @@ namespace SportAPI.Sport.Services
         .Include(u => u.Role)
         .FirstOrDefaultAsync(x => x.Login == dto.Login);
 
-      if(user is null)
+      if (user is null)
       {
         throw new BadRequestException("Invalid username or password");
       }
 
       var result = _passwordHasher.VerifyHashedPassword(user, user.Password, dto.Password);
 
-      if(result == PasswordVerificationResult.Failed)
+      if (result == PasswordVerificationResult.Failed)
       {
         throw new BadRequestException("Invalid username or password");
       }
@@ -123,7 +123,7 @@ namespace SportAPI.Sport.Services
         .Include(u => u.Role)
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(user is null)
+      if (user is null)
       {
         throw new NotFoundException("User not found");
       }
@@ -132,28 +132,28 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
-        public string SaveToCsv(IEnumerable<UserDto> components)
-        {
-            var headers = "Id;Name;Description;TimeOfTraining;SportClubId";
-
-            var csv = new StringBuilder(headers);
-
-            csv.Append(Environment.NewLine);
-
-            foreach (var component in components)
-            {
-                csv.Append(component.GetExportObject());
-                csv.Append(Environment.NewLine);
-            }
-            csv.Append($"Count: {components.Count()}");
-            csv.Append(Environment.NewLine);
-
-            return csv.ToString();
-        }
-
-        public async Task RegisterUser(RegisterUserDto dto)
+    public string SaveToCsv(IEnumerable<UserDto> components)
     {
-      
+      var headers = "Id;FirstName;LastName;IsActive;DateOfBirth;Login;Nationality;RoleName";
+
+      var csv = new StringBuilder(headers);
+
+      csv.Append(Environment.NewLine);
+
+      foreach (var component in components)
+      {
+        csv.Append(component.GetExportObject());
+        csv.Append(Environment.NewLine);
+      }
+      csv.Append($"Count: {components.Count()}");
+      csv.Append(Environment.NewLine);
+
+      return csv.ToString();
+    }
+
+    public async Task RegisterUser(RegisterUserDto dto)
+    {
+
       var newUser = new User()
       {
         Login = dto.Login,
@@ -181,7 +181,7 @@ namespace SportAPI.Sport.Services
         .Include(u => u.Role)
         .FirstOrDefaultAsync(x => x.Id == id);
 
-      if(user is null)
+      if (user is null)
       {
         throw new NotFoundException("User not found");
       }

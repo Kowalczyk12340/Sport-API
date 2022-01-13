@@ -18,7 +18,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  [Authorize(Roles = "User, Admin")]
+  //[Authorize(Roles = "User, Admin")]
   public class CoachController : ControllerBase
   {
     private readonly ICoachService _coachService;
@@ -45,7 +45,7 @@ namespace SportAPI.Sport.Controllers
     {
       var coachDtos = await _coachService.GetAll();
 
-      if(coachDtos is null)
+      if (coachDtos is null)
       {
         return NotFound();
       }
@@ -126,33 +126,33 @@ namespace SportAPI.Sport.Controllers
         var id = await _coachService.Create(dto);
         return Created($"/api/coach/{id}", null);
       }
-      catch(BadRequestException ex)
+      catch (BadRequestException ex)
       {
         var message = ex.Message;
         return BadRequest(message);
       }
     }
 
-        /// <summary>
-        /// Method to export chosen coaches to the csv file
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>File with csv extensions</returns>
-        /// <response code="200">Coaches exist and have been successfully save to csv file</response>
-        /// <response code="404">Coaches do not exist</response>
-        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-        [HttpGet("exporttoexcel")]
-        public async Task<IActionResult> SaveToCsv()
-        {
-            var date = DateTime.UtcNow;
-            var result = await _coachService.GetAll();
-            if (result == null)
-            {
-                return NotFound();
-            }
-            var csv = _coachService.SaveToCsv(result);
-            return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
-        }
+    /// <summary>
+    /// Method to export chosen coaches to the csv file
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>File with csv extensions</returns>
+    /// <response code="200">Coaches exist and have been successfully save to csv file</response>
+    /// <response code="404">Coaches do not exist</response>
+    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    [HttpGet("exporttoexcel")]
+    public async Task<IActionResult> SaveToCsv()
+    {
+      var date = DateTime.UtcNow;
+      var result = await _coachService.GetAll();
+      if (result == null)
+      {
+        return NotFound();
+      }
+      var csv = _coachService.SaveToCsv(result);
+      return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
     }
+  }
 }

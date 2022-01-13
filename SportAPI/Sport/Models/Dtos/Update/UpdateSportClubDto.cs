@@ -11,8 +11,9 @@ namespace SportAPI.Sport.Models.Dtos.Update
     public string SportClubName { get; set; }
     public string Description { get; set; }
     public string Category { get; set; }
-    public bool HasOwnStadium { get; set; }
+    public bool? HasOwnStadium { get; set; }
     public string ContactEmail { get; set; }
     public string ContactNumber { get; set; }
+    public long LeagueId { get; set; }
   }
 }

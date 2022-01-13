@@ -20,7 +20,7 @@ namespace SportAPI.Sport.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  [Authorize(Roles = "Admin")]
+  //[Authorize(Roles = "Admin")]
   public class UserController : ControllerBase
   {
     private readonly IUserService _userService;
@@ -106,40 +106,40 @@ namespace SportAPI.Sport.Controllers
       return Ok(user);
     }
 
-        /// <summary>
-        /// Method to export chosen Users to the csv file
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>File with csv extensions</returns>
-        /// <response code="200">Users exist and have been successfully save to csv file</response>
-        /// <response code="404">Users do not exist</response>
-        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-        [HttpGet("exporttoexcel")]
-        public async Task<IActionResult> SaveToCsv()
-        {
-            var date = DateTime.UtcNow;
-            var result = await _userService.GetAll();
-            if (result == null)
-            {
-                return NotFound();
-            }
-            var csv = _userService.SaveToCsv(result);
-            return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
-        }
+    /// <summary>
+    /// Method to export chosen Users to the csv file
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>File with csv extensions</returns>
+    /// <response code="200">Users exist and have been successfully save to csv file</response>
+    /// <response code="404">Users do not exist</response>
+    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    [HttpGet("exporttoexcel")]
+    public async Task<IActionResult> SaveToCsv()
+    {
+      var date = DateTime.UtcNow;
+      var result = await _userService.GetAll();
+      if (result == null)
+      {
+        return NotFound();
+      }
+      var csv = _userService.SaveToCsv(result);
+      return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
+    }
 
-        /// <summary>
-        /// Method to register new user
-        /// </summary>
-        /// <param name="dto"></param>
-        /// <returns>The newly registered user</returns>
-        /// <response code="200">User has been successfully created</response>
-        /// <response code="400">Given parameters were invalid - refer to the error message</response>
-        [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
+    /// <summary>
+    /// Method to register new user
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <returns>The newly registered user</returns>
+    /// <response code="200">User has been successfully created</response>
+    /// <response code="400">Given parameters were invalid - refer to the error message</response>
+    [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [AllowAnonymous]
     [HttpPost("register")]
-    public async Task<ActionResult> RegisterUser([FromBody]RegisterUserDto dto)
+    public async Task<ActionResult> RegisterUser([FromBody] RegisterUserDto dto)
     {
       await _userService.RegisterUser(dto);
       return Ok();

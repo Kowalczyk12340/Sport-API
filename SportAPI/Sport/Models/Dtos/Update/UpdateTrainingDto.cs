@@ -11,5 +11,6 @@ namespace SportAPI.Sport.Models.Dtos.Update
     public string Name { get; set; }
     public string Description { get; set; }
     public DateTime TimeOfTraining { get; set; }
+    public long SportClubId { get; set; }
   }
 }

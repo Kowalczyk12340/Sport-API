@@ -21,16 +21,16 @@ namespace SportAPI.Sport.Seeders
 
     public void Seed()
     {
-      if(_dbContext.Database.CanConnect())
+      if (_dbContext.Database.CanConnect())
       {
-        if(!_dbContext.Roles.Any())
+        if (!_dbContext.Roles.Any())
         {
           var roles = GetRoles();
           _dbContext.Roles.AddRange(roles);
           _dbContext.SaveChanges();
         }
 
-        if(!_dbContext.Leagues.Any())
+        if (!_dbContext.Leagues.Any())
         {
           var leagues = GetLeagues();
           _dbContext.Leagues.AddRange(leagues);
@@ -143,7 +143,6 @@ namespace SportAPI.Sport.Seeders
           Nationality = "Anglia"
         },
       };
-
       return leagues;
     }
 
@@ -407,7 +406,7 @@ namespace SportAPI.Sport.Seeders
           {
             FirstName = "Karol",
             LastName = "Strasburger",
-            IsActive = true,
+            IsActive = true,            
             DateOfBirth = DateTime.ParseExact("1991-11-12 08:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
             Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
             Nationality = "Niemcy",
@@ -430,7 +429,7 @@ namespace SportAPI.Sport.Seeders
             {
               Name = "Wojciech",
               Surname = "Łazarek",
-              Pesel = "51010541029",
+              Pesel = "51010541029",              
               Cash = "43 000 PLN",
               PhoneNumber = "+48 500 278 999",
               EmailAddress = "wojciech.lazarek@interia.pl",
@@ -451,7 +450,7 @@ namespace SportAPI.Sport.Seeders
             {
               TeamOne = "Legia Warszawa",
               TeamTwo = "Lech Poznań",
-              InHouse = true,
+              InHouse = true,              
               DateOfMatch = new DateTime(2021,10,23,20,45,0),
               SportClubId = 2
             },
@@ -482,7 +481,7 @@ namespace SportAPI.Sport.Seeders
             },
             new Training()
             {
-              Name = "Trening Meczowy",
+              Name = "Trening Meczowy",              
               Description = "Trening, który odbywa się na boisku treningowym, w którym zawodnicy podzieleni na dwie grupy grają mecz 11x11",
               TimeOfTraining = new DateTime(2021,12,4,13,0,0),
               SportClubId = 2,
@@ -555,7 +554,7 @@ namespace SportAPI.Sport.Seeders
               Surname = "Pekhart",
               BetterFoot = Models.Enums.BetterFoot.LEFT,
               Nationality = "Czechy",
-              Position = "Napastnik",
+              Position = "Napastnik",             
               Pesel = "92032445324",
               EmailAddress = "thomas.pekhart@gmail.com",
               PhoneNumber = "+48 567 050 546",

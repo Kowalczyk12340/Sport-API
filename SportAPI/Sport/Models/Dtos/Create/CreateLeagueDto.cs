@@ -10,7 +10,7 @@ namespace SportAPI.Sport.Models.Dtos.Create
   {
     public string Name { get; set; }
     public string Nationality { get; set; }
-    public bool IsHigh { get; set; }
+    public bool? IsHigh { get; set; }
     public int CountForChampionsLeague { get; set; }
     public int CountForEuropeLeague { get; set; }
     public int CountForConferenceLeague { get; set; }

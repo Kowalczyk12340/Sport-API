@@ -10,7 +10,7 @@ namespace SportAPI.Sport.Models
     public long Id { get; set; }
     public string TeamOne { get; set; }
     public string TeamTwo { get; set; }
-    public bool InHouse { get; set; }
+    public bool? InHouse { get; set; }
     public DateTime DateOfMatch { get; set; }
     public long SportClubId { get; set; }
     public virtual SportClub SportClub { get; set; }

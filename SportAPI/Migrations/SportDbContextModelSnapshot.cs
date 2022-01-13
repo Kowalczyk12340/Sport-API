@@ -125,7 +125,8 @@ namespace SportAPI.Migrations
                     b.Property<int>("CountForEuropeLeague")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsHigh")
+                    b.Property<bool?>("IsHigh")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValueSql("'1'");
@@ -153,7 +154,8 @@ namespace SportAPI.Migrations
                     b.Property<DateTime>("DateOfMatch")
                         .HasColumnType("DateTime");
 
-                    b.Property<bool>("InHouse")
+                    b.Property<bool?>("InHouse")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValueSql("'1'");
@@ -276,7 +278,8 @@ namespace SportAPI.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("HasOwnStadium")
+                    b.Property<bool?>("HasOwnStadium")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValueSql("'1'");
@@ -348,7 +351,8 @@ namespace SportAPI.Migrations
                         .HasMaxLength(120)
                         .HasColumnType("nvarchar(120)");
 
-                    b.Property<bool>("IsActive")
+                    b.Property<bool?>("IsActive")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValueSql("((1))");

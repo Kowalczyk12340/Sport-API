@@ -45,7 +45,7 @@ namespace SportAPI.Sport.Controllers
     {
       var matchDtos = await _matchService.GetAll();
 
-      if(matchDtos is null)
+      if (matchDtos is null)
       {
         return NotFound();
       }
@@ -89,7 +89,7 @@ namespace SportAPI.Sport.Controllers
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     public async Task<ActionResult<MatchDto>> Update([FromBody] UpdateMatchDto dto, [FromRoute] long id)
     {
-      await _matchService.Update(id,dto);
+      await _matchService.Update(id, dto);
       return Ok();
     }
 
@@ -109,36 +109,36 @@ namespace SportAPI.Sport.Controllers
 
       return Ok(match);
     }
-        /// <summary>
-        /// Method to export chosen Matches to the csv file
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>File with csv extensions</returns>
-        /// <response code="200">Matches exist and have been successfully save to csv file</response>
-        /// <response code="404">Matches do not exist</response>
-        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-        [HttpGet("exporttoexcel")]
-        public async Task<IActionResult> SaveToCsv()
-        {
-            var date = DateTime.UtcNow;
-            var result = await _matchService.GetAll();
-            if (result == null)
-            {
-                return NotFound();
-            }
-            var csv = _matchService.SaveToCsv(result);
-            return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
-        }
+    /// <summary>
+    /// Method to export chosen Matches to the csv file
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>File with csv extensions</returns>
+    /// <response code="200">Matches exist and have been successfully save to csv file</response>
+    /// <response code="404">Matches do not exist</response>
+    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    [HttpGet("exporttoexcel")]
+    public async Task<IActionResult> SaveToCsv()
+    {
+      var date = DateTime.UtcNow;
+      var result = await _matchService.GetAll();
+      if (result == null)
+      {
+        return NotFound();
+      }
+      var csv = _matchService.SaveToCsv(result);
+      return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
+    }
 
-        /// <summary>
-        /// Method to add match to the database
-        /// </summary>
-        /// <param name="dto"></param>
-        /// <returns>The newly created match</returns>
-        /// <response code="201">Match has been successfully created</response>
-        /// <response code="400">Given parameters were invalid - refer to the error message</response>
-        [HttpPost]
+    /// <summary>
+    /// Method to add match to the database
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <returns>The newly created match</returns>
+    /// <response code="201">Match has been successfully created</response>
+    /// <response code="400">Given parameters were invalid - refer to the error message</response>
+    [HttpPost]
     [ProducesResponseType(typeof(MatchDto), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<MatchDto>> Create(CreateMatchDto dto)
@@ -148,7 +148,7 @@ namespace SportAPI.Sport.Controllers
         var id = await _matchService.Create(dto);
         return Created($"/api/match/{id}", null);
       }
-      catch(BadRequestException ex)
+      catch (BadRequestException ex)
       {
         var message = ex.Message;
         return BadRequest(message);

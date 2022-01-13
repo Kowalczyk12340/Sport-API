@@ -11,16 +11,16 @@ namespace SportAPI.Sport.Models.Dtos
     public long Id { get; set; }
     public string Name { get; set; }
     public string Nationality { get; set; }
-    public bool IsHigh { get; set; }
+    public bool? IsHigh { get; set; }
     public int CountForChampionsLeague { get; set; }
     public int CountForEuropeLeague { get; set; }
     public int CountForConferenceLeague { get; set; }
     public int CountForDownLeague { get; set; }
     public List<SportClub> SportClubs { get; set; }
 
-        public string GetExportObject()
-        {
-            return $"{Id};{Name};{Nationality};{IsHigh};{CountForChampionsLeague};{CountForEuropeLeague};{CountForConferenceLeague};{CountForDownLeague};{SportClubs.Count};";
-        }
+    public string GetExportObject()
+    {
+      return $"{Id};{Name};{Nationality};{IsHigh};{CountForChampionsLeague};{CountForEuropeLeague};{CountForConferenceLeague};{CountForDownLeague};{SportClubs.Count};";
     }
+  }
 }

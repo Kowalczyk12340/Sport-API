@@ -10,11 +10,12 @@ namespace SportAPI.Sport.Services.Interfaces
 {
   public interface IPlayerService
   {
-    Task<PlayerDto> GetById(long id);
-    Task<IEnumerable<PlayerDto>> GetAll();
-    Task<long> Create(CreatePlayerDto dto);
+    Task<PlayerDto> GetById(long sportClubId, long id);
+    Task<IEnumerable<PlayerDto>> GetAll(long sportClubId);
+    Task<long> Create(long sportClubId, CreatePlayerDto dto);
     string SaveToCsv(IEnumerable<PlayerDto> components);
-    Task Delete(long id);
-    Task Update(long id, UpdatePlayerDto dto);
+    Task DeleteAll(long sportClubId);
+    Task Delete(long sportClubId, long id);
+    Task Update(long sportClubId, long id, UpdatePlayerDto dto);
   }
 }
