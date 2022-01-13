@@ -11,7 +11,12 @@ namespace SportAPI.Sport.Models.Dtos
     public long Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    public DateTime TimeOfTraining { get; set; }
+    public DateTime TimeOfTraining { get; set; } 
     public long SportClubId { get; set; }
-  }
+
+        public string GetExportObject()
+        {
+            return $"{Id};{Name};{Description};{TimeOfTraining.ToString()};{SportClubId}";
+        }
+    }
 }

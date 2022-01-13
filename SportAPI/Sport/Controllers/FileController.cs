@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
+using SportAPI.Sport.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,11 +14,11 @@ namespace SportAPI.Sport.Controllers
     public class FileController : ControllerBase
     {
         /// <summary>
-        /// Method to add photo for user
+        /// Method to get file
         /// </summary>
         /// <param name="dto"></param>
         /// <returns>The photo is added / not added</returns>
-        /// <response code="200">Photo has been successfully added</response>
+        /// <response code="200">File has been successfully found</response>
         /// <response code="400">Given parameters were invalid - refer to the error message</response>
         [ProducesResponseType(typeof(File), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
@@ -44,30 +45,32 @@ namespace SportAPI.Sport.Controllers
         }
 
         /// <summary>
-        /// Method to add photo for user
+        /// Method to upload file
         /// </summary>
         /// <param name="dto"></param>
-        /// <returns>The photo is added / not added</returns>
-        /// <response code="200">Photo has been successfully added</response>
+        /// <returns>The file is added / not added</returns>
+        /// <response code="200">File has been successfully uploaded</response>
         /// <response code="400">Given parameters were invalid - refer to the error message</response>
-        [ProducesResponseType(typeof(File), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(File), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [HttpPost]
-        public ActionResult Upload([FromForm] IFormFile file)
+        public ActionResult Upload([FromForm] FileModel fileModel)
         {
-            if (file != null && file.Length > 0)
+            try
             {
-                var rootPath = Directory.GetCurrentDirectory();
-                var fileName = file.FileName;
-                var fullPath = $"{rootPath}/PrivateFiles/{fileName}";
-                using (var stream = new FileStream(fullPath, FileMode.Create))
+                string path = Path.Combine(Directory.GetCurrentDirectory(), "PrivateFiles", fileModel.FileName);
+
+                using(Stream stream = new FileStream(path, FileMode.Create))
                 {
-                    file.CopyTo(stream);
+                    fileModel.FormFile.CopyTo(stream);
                 }
 
-                return Ok();
+                return StatusCode(StatusCodes.Status201Created);
             }
-            return BadRequest();
+            catch(Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError); ;
+            }
         }
     }
 }

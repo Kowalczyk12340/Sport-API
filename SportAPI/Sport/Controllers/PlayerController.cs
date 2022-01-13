@@ -11,6 +11,7 @@ using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Controllers
@@ -71,17 +72,39 @@ namespace SportAPI.Sport.Controllers
       return NoContent();
     }
 
-    /// <summary>
-    /// Method, when you can edit or update chosen player
-    /// suitable address with ID
-    /// </summary>
-    /// <param name="dto"></param>
-    /// <param name="id"></param>
-    /// <returns>Full player</returns>
-    /// <response code="200">Player exists and has been successfully modified</response>
-    /// <response code="400">Player exists, but given parameters were invalid - refer to the error message</response>
-    /// <response code="404">Player does not exist</response>
-    [HttpPut("{id}")]
+        /// <summary>
+        /// Method to export chosen Players to the csv file
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>File with csv extensions</returns>
+        /// <response code="200">Players exist and have been successfully save to csv file</response>
+        /// <response code="404">Players do not exist</response>
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [HttpGet("exporttoexcel")]
+        public async Task<IActionResult> SaveToCsv()
+        {
+            var date = DateTime.UtcNow;
+            var result = await _playerService.GetAll();
+            if (result == null)
+            {
+                return NotFound();
+            }
+            var csv = _playerService.SaveToCsv(result);
+            return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
+        }
+
+        /// <summary>
+        /// Method, when you can edit or update chosen player
+        /// suitable address with ID
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <param name="id"></param>
+        /// <returns>Full player</returns>
+        /// <response code="200">Player exists and has been successfully modified</response>
+        /// <response code="400">Player exists, but given parameters were invalid - refer to the error message</response>
+        /// <response code="404">Player does not exist</response>
+        [HttpPut("{id}")]
     [ProducesResponseType(typeof(PlayerDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]

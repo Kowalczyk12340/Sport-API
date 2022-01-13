@@ -11,6 +11,7 @@ using SportAPI.Sport.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SportAPI.Sport.Controllers
@@ -86,14 +87,36 @@ namespace SportAPI.Sport.Controllers
       return Ok();
     }
 
-    /// <summary>
-    /// Method to get training with chosen ID
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns>Training with chosen id</returns>
-    /// <response code="200">Training exists and has been successfully retrieved</response>
-    /// <response code="404">Training does not exist</response>
-    [HttpGet("{id}")]
+        /// <summary>
+        /// Method to export chosen Trainings to the csv file
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>File with csv extensions</returns>
+        /// <response code="200">Trainings exist and have been successfully save to csv file</response>
+        /// <response code="404">Trainings do not exist</response>
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [HttpGet("exporttoexcel")]
+        public async Task<IActionResult> SaveToCsv()
+        {
+            var date = DateTime.UtcNow;
+            var result = await _trainingService.GetAll();
+            if (result == null)
+            {
+                return NotFound();
+            }
+            var csv = _trainingService.SaveToCsv(result);
+            return File(new UTF8Encoding().GetBytes(csv), "text/csv", $"Document-{date}.csv");
+        }
+
+        /// <summary>
+        /// Method to get training with chosen ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Training with chosen id</returns>
+        /// <response code="200">Training exists and has been successfully retrieved</response>
+        /// <response code="404">Training does not exist</response>
+        [HttpGet("{id}")]
     [ProducesResponseType(typeof(Training), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Training>> Get([FromRoute] long id)

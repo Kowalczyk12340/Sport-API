@@ -13,6 +13,7 @@ namespace SportAPI.Sport.Services.Interfaces
     Task<UserDto> GetById(long id);
     Task<IEnumerable<UserDto>> GetAll();
     Task Delete(long id);
+    string SaveToCsv(IEnumerable<UserDto> components);
     Task Update(long id, UpdateUserDto dto);
     Task RegisterUser(RegisterUserDto dto);
     Task<string> GenerateJwt(LoginDto dto);

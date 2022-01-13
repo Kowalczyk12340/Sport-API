@@ -14,5 +14,10 @@ namespace SportAPI.Sport.Models.Dtos
     public bool InHouse { get; set; }
     public DateTime DateOfMatch { get; set; }
     public long SportClubId { get; set; }
-  }
+
+        public string GetExportObject()
+        {
+            return $"{Id};{TeamOne};{TeamTwo};{InHouse};{DateOfMatch.ToString()};{SportClubId}";
+        }
+    }
 }

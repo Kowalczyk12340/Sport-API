@@ -19,5 +19,10 @@ namespace SportAPI.Sport.Models.Dtos
     public string Nationality { get; set; }
     public long UserId { get; set; }
     public long SportClubId { get; set; }
+
+        public string GetExportObject()
+        {
+            return $"{Id};{FirstName};{LastName};{IsActive};{DateOfBirth}{Login};{Nationality};{RoleName};{SportClubId}";
+        }
     }
 }

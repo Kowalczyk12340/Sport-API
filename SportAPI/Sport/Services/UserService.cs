@@ -132,7 +132,26 @@ namespace SportAPI.Sport.Services
       return result;
     }
 
-    public async Task RegisterUser(RegisterUserDto dto)
+        public string SaveToCsv(IEnumerable<UserDto> components)
+        {
+            var headers = "Id;Name;Description;TimeOfTraining;SportClubId";
+
+            var csv = new StringBuilder(headers);
+
+            csv.Append(Environment.NewLine);
+
+            foreach (var component in components)
+            {
+                csv.Append(component.GetExportObject());
+                csv.Append(Environment.NewLine);
+            }
+            csv.Append($"Count: {components.Count()}");
+            csv.Append(Environment.NewLine);
+
+            return csv.ToString();
+        }
+
+        public async Task RegisterUser(RegisterUserDto dto)
     {
       
       var newUser = new User()
