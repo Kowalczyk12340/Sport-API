@@ -18,12 +18,6 @@ namespace SportAPI.Sport.Models.Dtos.Create
     public string City { get; set; }
     public string Street { get; set; }
     public string PostalCode { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public string Login { get; set; }
-    public string Nationality { get; set; }
-    public string Password { get; set; }
-    public long RoleId { get; set; }
     public long LeagueId { get; set; }
   }
 }

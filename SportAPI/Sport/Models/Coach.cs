@@ -17,5 +17,6 @@ namespace SportAPI.Sport.Models
     public string Cash { get; set; }
     public long SportClubId { get; set; }
     public virtual SportClub SportClub { get; set; }
+    public List<CoachCourse> CoachCourses { get; set; }
   }
 }

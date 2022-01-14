@@ -16,9 +16,7 @@ namespace SportAPI.Sport.Models.Dtos
     public string ContactEmail { get; set; }
     public string ContactNumber { get; set; }
     public long AddressId { get; set; }
-    public long UserId { get; set; }
     public AddressDto Address { get; set; }
-    public UserDto User { get; set; }
     public List<PlayerDto> Players { get; set; }
     public List<TrainingDto> Trainings { get; set; }
     public List<MatchDto> Matches { get; set; }
@@ -26,7 +24,7 @@ namespace SportAPI.Sport.Models.Dtos
 
     public string GetExportObject()
     {
-      return $"{Id};{SportClubName};{Description};{Category};{HasOwnStadium};{Category};{Address.City};{Address.Street};{Address.PostalCode};{User.FirstName};{User.LastName};{Trainings.Count};{Coaches.Count};{Players.Count};{Coaches.Count}";
+      return $"{Id};{SportClubName};{Description};{Category};{HasOwnStadium};{Category};{Address.City};{Address.Street};{Address.PostalCode};{Trainings.Count};{Coaches.Count};{Players.Count};{Coaches.Count}";
     }
   }
 }

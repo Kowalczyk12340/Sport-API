@@ -149,6 +149,7 @@ namespace SportAPI
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IMatchService, MatchService>();
             services.AddScoped<ICoachService, CoachService>();
+            services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
             services.AddScoped<IValidator<SportClubQuery>, SportClubQueryValidator>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();

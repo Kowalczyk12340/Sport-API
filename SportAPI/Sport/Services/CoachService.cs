@@ -122,17 +122,5 @@ namespace SportAPI.Sport.Services
       coach.Cash = dto.Cash;
       await _dbContext.SaveChangesAsync();
     }
-    private SportClub GetSportClubById(int restaurantId)
-    {
-      var restaurant = _dbContext
-          .Clubs
-          .Include(r => r.Coaches)
-          .FirstOrDefault(r => r.Id == restaurantId);
-
-      if (restaurant is null)
-        throw new NotFoundException("Restaurant not found");
-
-      return restaurant;
-    }
   }
 }

@@ -66,17 +66,6 @@ namespace SportAPI.UnitTests.Sports
                 PostalCode = "70-999",
                 Street = "Wolf Street Centre 563"
               },
-              User = new User()
-              {
-                FirstName = "Alex",
-                LastName = "Fergusson",
-                Nationality = "Scotland",
-                IsActive = true,
-                Login = "alex.fergusson@wp.pl",
-                Password = "Marcingrafik1#",
-                DateOfBirth = DateTime.ParseExact("1951-02-23 11:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-                Role = new Role() { RoleName = "Admin" }
-              },
               Category = "Klub Piłki Nożnej",
               ContactEmail = "manchester.united@manu.com",
               ContactNumber = "+42 94 98 98 123",
@@ -181,17 +170,6 @@ namespace SportAPI.UnitTests.Sports
             City = "Poznań",
             PostalCode = "60-200",
             Street = "Bułgarska 13"
-          },
-          User = new User()
-          {
-            FirstName = "Marcin",
-            LastName = "Kowalczyk",
-            DateOfBirth = DateTime.ParseExact("1999-06-10 16:10", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-            Role = new Role() { RoleName = "Admin" },
-            IsActive = true,
-            Nationality = "Polska",
-            Login = "marcinkowalczyk24.7@gmail.com",
-            Password = "Marcingrafik1#",
           },
           Coaches = new List<Coach>()
           {
@@ -402,17 +380,6 @@ namespace SportAPI.UnitTests.Sports
             City = "Warszawa",
             PostalCode = "11-321",
             Street = "Łazienkowska 3",
-          },
-          User = new User()
-          {
-            FirstName = "Karol",
-            LastName = "Strasburger",
-            IsActive = true,
-            DateOfBirth = DateTime.ParseExact("1991-11-12 08:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-            Role = new Role() { RoleName = "ADMIN" },
-            Nationality = "Niemcy",
-            Login = "karol.strasburger@wp.pl",
-            Password ="Marcingrafik1#",
           },
           Coaches = new List<Coach>()
           {

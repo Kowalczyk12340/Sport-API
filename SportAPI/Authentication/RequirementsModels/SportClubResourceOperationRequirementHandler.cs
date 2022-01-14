@@ -19,10 +19,6 @@ namespace SportAPI.Authentication
             }
 
             var userId = context.User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value;
-            if(club.UserId == long.Parse(userId))
-            {
-                context.Succeed(requirement);
-            }
 
             return Task.CompletedTask;
         }

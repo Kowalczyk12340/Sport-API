@@ -15,6 +15,7 @@ namespace SportAPI.Sport.Models.Dtos
     public string PhoneNumber { get; set; }
     public string EmailAddress { get; set; }
     public string Cash { get; set; }
+    public List<CoachCourseDto> CoachCourses { get; set; }
 
     public string GetExportObject()
     {

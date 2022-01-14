@@ -33,6 +33,7 @@ namespace SportAPI.Sport.Profiles
       CreateMap<Address, AddressDto>();
 
       CreateMap<League, LeagueDto>();
+      CreateMap<Course, CourseDto>();
 
       CreateMap<RegisterUserDto, User>();
       CreateMap<LoginDto, User>()
@@ -49,9 +50,10 @@ namespace SportAPI.Sport.Profiles
       CreateMap<CreateCoachDto, Coach>()
         .ForMember(m => m.SportClubId, c => c.MapFrom(s => s.SportClubId));
       CreateMap<CreateLeagueDto, League>();
+      CreateMap<CreateCourseDto, Course>();
       CreateMap<CreateSportClubDto, SportClub>()
-        .ForMember(r => r.Address, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }))
-        .ForMember(r => r.User, c => c.MapFrom(dto => new User() { FirstName = dto.FirstName, LastName = dto.LastName, Login = dto.Login, Password = dto.Password, RoleId = dto.RoleId, Nationality = dto.Nationality }));
+        .ForMember(r => r.Address, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }));
+      
       ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
     }
 

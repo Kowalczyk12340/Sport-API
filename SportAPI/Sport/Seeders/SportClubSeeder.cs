@@ -30,6 +30,13 @@ namespace SportAPI.Sport.Seeders
           _dbContext.SaveChanges();
         }
 
+        if (!_dbContext.Users.Any())
+        {
+          var users = GetUsers();
+          _dbContext.Users.AddRange(users);
+          _dbContext.SaveChanges();
+        }
+
         if (!_dbContext.Leagues.Any())
         {
           var leagues = GetLeagues();
@@ -70,17 +77,6 @@ namespace SportAPI.Sport.Seeders
                 City = "Manchester",
                 PostalCode = "70-999",
                 Street = "Wolf Street Centre 563"
-              },
-              User = new User()
-              {
-                FirstName = "Alex",
-                LastName = "Fergusson",
-                Nationality = "Scotland",
-                IsActive = true,
-                Login = "alex.fergusson@wp.pl",
-                Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Alex" && x.LastName == "Fergusson"),"Marcingrafik1#"),
-                DateOfBirth = DateTime.ParseExact("1951-02-23 11:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-                Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
               },
               Category = "Klub Piłki Nożnej",
               ContactEmail = "manchester.united@manu.com",
@@ -146,6 +142,70 @@ namespace SportAPI.Sport.Seeders
       return leagues;
     }
 
+    private IEnumerable<User> GetUsers()
+    {
+      var users = new List<User>()
+      {
+        new User
+        {
+          FirstName = "Marcin",
+          LastName = "Kowalczyk",
+          Nationality = "Polska",
+          IsActive = true,
+          Login = "marcinkowalczyk24.7@gmail.com",
+          Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Marcin" && x.LastName == "Kowalczyk"), "Marcingrafik1#"),
+          DateOfBirth = DateTime.ParseExact("1999-06-10 16:10:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture),
+          Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
+        },
+        new User
+        {
+          FirstName = "Alex",
+          LastName = "Fergusson",
+          Nationality = "Scotland",
+          IsActive = true,
+          Login = "alex.fergusson@wp.pl",
+          Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Alex" && x.LastName == "Fergusson"), "Marcingrafik1#"),
+          DateOfBirth = DateTime.ParseExact("1951-02-23 11:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
+          Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
+        },
+        new User
+        {
+          FirstName = "Karol",
+          LastName = "Strasburger",
+          Nationality = "Niemcy",
+          IsActive = true,
+          Login = "karol.strasburger@wp.pl",
+          Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Karol" && x.LastName == "Strasburger"), "Marcingrafik1#"),
+          DateOfBirth = DateTime.ParseExact("1948-09-30 23:46:05", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture),
+          Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "User"),
+        },
+        new User
+        {
+          FirstName = "Alex",
+          LastName = "Fergusson",
+          Nationality = "Scotland",
+          IsActive = true,
+          Login = "alex.fergusson@wp.pl",
+          Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Alex" && x.LastName == "Fergusson"), "Marcingrafik1#"),
+          DateOfBirth = DateTime.ParseExact("1951-02-23 11:23:09", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture),
+          Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
+        },
+        new User
+        {
+          FirstName = "Roy",
+          LastName = "Keane",
+          Nationality = "Anglia",
+          IsActive = true,
+          Login = "roy.keane@wp.pl",
+          Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Roy" && x.LastName == "Keane"), "Marcingrafik1#"),
+          DateOfBirth = DateTime.ParseExact("1971-11-02 13:55:04", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture),
+          Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "User"),
+        }
+      };
+
+      return users;
+    }
+
     private IEnumerable<Role> GetRoles()
     {
       var roles = new List<Role>()
@@ -180,17 +240,6 @@ namespace SportAPI.Sport.Seeders
             City = "Poznań",
             PostalCode = "60-200",
             Street = "Bułgarska 13"
-          },
-          User = new User()
-          {
-            FirstName = "Marcin",
-            LastName = "Kowalczyk",
-            DateOfBirth = DateTime.ParseExact("1999-06-10 16:10", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-            Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
-            IsActive = true,
-            Nationality = "Polska",
-            Login = "marcinkowalczyk24.7@gmail.com",
-            Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Marcin" && x.LastName == "Kowalczyk"),"Marcingrafik1#"),
           },
           Coaches = new List<Coach>()
           {
@@ -401,17 +450,6 @@ namespace SportAPI.Sport.Seeders
             City = "Warszawa",
             PostalCode = "11-321",
             Street = "Łazienkowska 3",
-          },
-          User = new User()
-          {
-            FirstName = "Karol",
-            LastName = "Strasburger",
-            IsActive = true,            
-            DateOfBirth = DateTime.ParseExact("1991-11-12 08:23", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-            Role = _dbContext.Roles.FirstOrDefault(x => x.RoleName == "Admin"),
-            Nationality = "Niemcy",
-            Login = "karol.strasburger@wp.pl",
-            Password = _passwordHasher.HashPassword(this._dbContext.Users.FirstOrDefault(x => x.FirstName == "Karol" && x.LastName == "Strasburger"),"Marcingrafik1#"),
           },
           Coaches = new List<Coach>()
           {

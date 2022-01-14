@@ -129,17 +129,6 @@ namespace SportAPI.UnitTests.Sports
                 PostalCode = "31-011",
                 Street = "Francesco Totti Street 45"
               },
-              User = new User()
-              {
-                FirstName = "Francesco",
-                LastName = "Totti",
-                Nationality = "Italy",
-                IsActive = true,
-                Login = "francesco.totti@wp.pl",
-                Password = "Marcingrafik1#",
-                DateOfBirth = DateTime.ParseExact("1972-07-14 12:11", "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-                Role = new Role() { RoleName = "Admin" }
-              },
               Category = "Klub Piłki Nożnej",
               ContactEmail = "asroma.roma@roma.com",
               ContactNumber = "+41 56 45 34 452",

@@ -34,14 +34,6 @@ namespace SportAPI.IntegrationTests.Infrastructure
           PostalCode = "60-200",
           Street = "Bułgarska 13"
         },
-        User = new User()
-        {
-          FirstName = "Marcin",
-          LastName = "Kowalczyk",
-          IsActive = true,
-          Login = "marcinkowalczyk24.7",
-          Password = BCrypt.Net.BCrypt.HashPassword("Marcingrafik1#"),
-        },
         Coaches = new List<Coach>()
           {
             new Coach()

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportAPI.Sport.Data;
 
 namespace SportAPI.Migrations
 {
     [DbContext(typeof(SportDbContext))]
-    partial class SportDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220114152418_CoachCourseManyToManyRelationship")]
+    partial class CoachCourseManyToManyRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -336,12 +338,18 @@ namespace SportAPI.Migrations
                         .HasMaxLength(140)
                         .HasColumnType("nvarchar(140)");
 
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AddressId")
                         .IsUnique();
 
                     b.HasIndex("LeagueId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("SportClub", "Sport");
                 });
@@ -487,7 +495,15 @@ namespace SportAPI.Migrations
                         .WithMany("SportClubs")
                         .HasForeignKey("LeagueId");
 
+                    b.HasOne("SportAPI.Sport.Models.User", "User")
+                        .WithOne("SportClub")
+                        .HasForeignKey("SportAPI.Sport.Models.SportClub", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Address");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("SportAPI.Sport.Models.Training", b =>
@@ -541,6 +557,11 @@ namespace SportAPI.Migrations
                     b.Navigation("Players");
 
                     b.Navigation("Trainings");
+                });
+
+            modelBuilder.Entity("SportAPI.Sport.Models.User", b =>
+                {
+                    b.Navigation("SportClub");
                 });
 #pragma warning restore 612, 618
         }

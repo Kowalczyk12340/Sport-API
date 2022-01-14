@@ -15,9 +15,7 @@ namespace SportAPI.Sport.Models
     public string ContactEmail { get; set; }
     public string ContactNumber { get; set; }
     public long AddressId { get; set; }
-    public long UserId { get; set; }
     public virtual Address Address { get; set; }
-    public virtual User User { get; set; }
     public virtual List<Player> Players { get; set; }
     public virtual List<Training> Trainings { get; set; }
     public virtual List<Match> Matches { get; set; }

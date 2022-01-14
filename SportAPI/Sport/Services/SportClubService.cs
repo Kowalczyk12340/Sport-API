@@ -81,7 +81,6 @@ namespace SportAPI.Sport.Services
       var sportClubs = await _dbContext
         .Clubs
         .Include(x => x.Address)
-        .Include(x => x.User)
         .Include(x => x.Matches)
         .Include(x => x.Coaches)
         .Include(x => x.Players)
@@ -98,7 +97,6 @@ namespace SportAPI.Sport.Services
       var sportClub = await _dbContext
         .Clubs
         .Include(x => x.Address)
-        .Include(x => x.User)
         .Include(x => x.Matches)
         .Include(x => x.Coaches)
         .Include(x => x.Players)
