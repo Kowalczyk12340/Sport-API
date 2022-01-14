@@ -42,7 +42,7 @@ namespace SportAPI.Sport.Services
 
     public string SaveToCsv(IEnumerable<SportClubDto> components)
     {
-      var headers = "Id;SportClubName;Description;Category;HasOwnStadium;Category;City;Street;PostalCode;FirstName;LastName;Trainings.Count;Coaches.Count;Players.Count;Coaches.Count";
+      var headers = "Id;SportClubName;Description;Category;HasOwnStadium;Category;Address.City;Address.Street;Address.PostalCode;User.FirstName;User.LastName;Trainings.Count;Coaches.Count;Players.Count;Coaches.Count";
 
       var csv = new StringBuilder(headers);
 

@@ -14,17 +14,9 @@ namespace SportAPI.Sport.Profiles
   {
     public MappingProfile()
     {
-      CreateMap<SportClub, SportClubDto>()
-      .ForMember(m => m.City, c => c.MapFrom(s => s.Address.City))
-      .ForMember(m => m.Street, c => c.MapFrom(s => s.Address.Street))
-      .ForMember(m => m.PostalCode, c => c.MapFrom(s => s.Address.PostalCode));
+      CreateMap<SportClub, SportClubDto>();
 
-      CreateMap<SportClub, SportClubDto>()
-      .ForMember(m => m.FirstName, c => c.MapFrom(s => s.User.FirstName))
-      .ForMember(m => m.LastName, c => c.MapFrom(s => s.User.LastName))
-      .ForMember(m => m.Login, c => c.MapFrom(s => s.User.Login))
-      .ForMember(m => m.Nationality, c => c.MapFrom(s => s.User.Nationality))
-      .ForMember(m => m.DateOfBirth, c => c.MapFrom(s => s.User.DateOfBirth));
+      CreateMap<SportClub, SportClubDto>();
 
       CreateMap<Match, MatchDto>();
       CreateMap<Player, PlayerDto>();

@@ -162,7 +162,6 @@ namespace SportAPI.Sport.Services
         LastName = dto.LastName,
         Nationality = dto.Nationality,
         RoleId = dto.RoleId,
-        IsActive = dto.IsActive
       };
 
       var hashedPassword = _passwordHasher.HashPassword(newUser, dto.Password);

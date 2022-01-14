@@ -14,7 +14,6 @@ namespace SportAPI.Sport.Models.Dtos
     public string ConfirmPassword { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public bool? IsActive { get; set; }
     public string Nationality { get; set; }
     public DateTime? DateOfBirth { get; set; }
     public long RoleId { get; set; }
