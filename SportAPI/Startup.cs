@@ -127,7 +127,7 @@ namespace SportAPI
                 var frontendURL = $"http://localhost:3000";
                 options.AddPolicy("frontendConnection",builder =>
                 {
-                    builder.AllowAnyMethod().AllowAnyHeader().WithOrigins(frontendURL);
+                    builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins(frontendURL);
                         //.WithExposedHeaders(new string[] { "totalAmountOfRecords" });
                 });
             });
