@@ -155,6 +155,7 @@ namespace SportAPI
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<ErrorHandlingMiddleware>();
             services.AddScoped<RequestTimeMiddleware>();
+            services.AddScoped<RequestResponseLoggingMiddleware>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SportClubSeeder seed)
@@ -174,7 +175,6 @@ namespace SportAPI
             app.UseMiddleware<SportTokenAuthMiddleware>();
             app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseMiddleware<RequestTimeMiddleware>();
-            app.UseMiddleware<RequestResponseLoggingMiddleware>();
             app.UseAuthentication();
             app.UseHttpsRedirection();
 
